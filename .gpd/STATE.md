@@ -55,7 +55,21 @@ None yet.
 - Metric signature: euclidean
 - Fourier convention: physics
 - Natural units: natural
+- Gauge choice: not applicable (no gauge field in gate-model circuit benchmark)
+- Regularization scheme: not applicable (finite-dimensional Hilbert space; no UV regulator)
+- Renormalization scheme: not applicable (no renormalized continuum coupling in current scope)
+- Coordinate system: Qiskit qubit index ordering 0..n-1
+- Spin basis: computational basis with Pauli operators X,Y,Z in the standard qubit basis
 - State normalization: non-relativistic
+- Coupling convention: brickwork gate angles are used directly; no separate continuum coupling convention
+- Index positioning: qubit and operator labels are positional only; no covariant/contravariant distinction
+- Time ordering: circuit gates are ordered by layer depth from left to right in circuit time
+- Commutation convention: [A,B]=AB-BA; Pauli commutators use [X,Z]=-2iY and [Z,X]=2iY
+- Levi-Civita sign: epsilon_xyz = +1 for Pauli-axis orientation when used
+- Generator normalization: single-qubit Pauli generators square to identity; use X_q, Y_q, Z_q without 1/2 factors unless stated
+- Covariant derivative sign: not applicable (no covariant derivative in the circuit benchmark)
+- Gamma matrix convention: not applicable (no gamma matrices in the circuit benchmark)
+- Creation/annihilation order: not applicable (no creation/annihilation ordering is used in the current scope)
 
 *Custom conventions:*
 - Observable Normalization: Tr(O^2)=1
