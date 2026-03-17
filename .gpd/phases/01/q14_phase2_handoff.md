@@ -123,3 +123,10 @@ Phase 2 can start once the execution note does all of the following in one place
 - keeps the q80 subset/full split explicit
 
 If any of those items is missing, Phase 2 would be forced to reopen Phase 1 semantics instead of executing the benchmark.
+
+## Phase 1 Deliverable Checklist
+
+- q14 manifest anchor and current exact baseline artifact
+- Required overlap-support and disjoint-support variants
+- delta^2 fit-window and intercept-stability checks
+- Hardware-ready carry-forward paragraph and q80 subset/full guardrail

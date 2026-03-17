@@ -5,24 +5,26 @@
 See: .gpd/PROJECT.md (updated 2026-03-17)
 
 **Core research question:** Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
-**Current focus:** Phase 1 - Formal OLE Bridge
+**Current focus:** Phase 2 - q14 Exact Benchmark
 
 ## Current Position
 
-**Current Phase:** 01
-**Current Phase Name:** Formal OLE Bridge
+**Current Phase:** 02
+**Current Phase Name:** q14 Exact Benchmark
 **Total Phases:** 3
 **Current Plan:** 0
-**Total Plans in Phase:** 2
-**Status:** Ready to execute
+**Total Plans in Phase:** 3
+**Status:** Ready to plan
 **Last Activity:** 2026-03-17
-**Last Activity Description:** Phase 1 research and plan files created
+**Last Activity Description:** Phase 1 executed and verified; Phase 2 handoff is ready
 
-**Progress:** [░░░░░░░░░░] 0%
+**Progress:** [███░░░░░░░] 33%
 
 ## Active Calculations
 
-None yet.
+- Phase 1 lock fixed the first benchmark to `P = Z_0`, overlap `G = X_0`, disjoint control `G = X_10`.
+- Phase 1 bridge fixed the plotted quantity to `F_delta(P)` with `f_delta(O) = 2^-14 F_delta(P)` as the normalized translation.
+- Phase 1 verification confirmed the depth-0 limits `kappa_overlap = 4`, `kappa_disjoint = 0`, and `F_delta(Z_0; I, X_0) = cos(2 delta)`.
 
 ## Intermediate Results
 
@@ -30,25 +32,28 @@ None yet.
 
 ## Open Questions
 
-- Which fixed observable placement should be the default first implementation for the q14 benchmark?
 - Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target
+- How small the accepted q14 fit window must be before the overlap coefficient stabilizes numerically at nonzero scrambling depth
 - Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path
 
 ## Performance Metrics
 
 | Label | Duration | Tasks | Files |
 | ----- | -------- | ----- | ----- |
-| -     | -        | -     | -     |
+| Phase 01 | 2 plans + verification | 2 plan summaries, 1 verification report | 7 primary docs |
 
 ## Accumulated Context
 
 ### Decisions
 
-None yet.
+- Report the first q14 benchmark as `F_delta(P)` and carry `f_delta(O) = 2^-14 F_delta(P)` as the normalized translation.
+- Keep the primary bridge in the fixed picture `A_P(U) = U P U^dagger`; rotate `G` as well if an alternate `U^dagger O U` picture is used.
+- Treat `perturbed_echo` only as a labeled same-family baseline and not as the OLE quantity itself.
 
 ### Active Approximations
 
-None yet.
+- Small-`delta` expansion: use only shrinking `delta^2` windows where the intercept and quadratic coefficient remain stable.
+- Depth-0 locality control: overlap and disjoint branches are exact sanity checks before nontrivial scrambling depth is introduced.
 
 **Convention Lock:**
 
@@ -92,5 +97,5 @@ None
 ## Session Continuity
 
 **Last session:** 2026-03-17
-**Stopped at:** Ready to execute Phase 1
+**Stopped at:** Phase 1 complete; next step is `$gpd-plan-phase 2`
 **Resume file:** —

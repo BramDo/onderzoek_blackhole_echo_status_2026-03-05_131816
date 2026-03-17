@@ -2,12 +2,12 @@
   "project_reference": {
     "project_md_updated": "2026-03-17",
     "core_research_question": "Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?",
-    "current_focus": "Phase 1 - Formal OLE Bridge"
+    "current_focus": "Phase 2 - q14 Exact Benchmark"
   },
   "project_contract": {
     "schema_version": 1,
     "scope": {
-      "question": "Can the existing q14/q80 perturbed_echo workflow be extended into a fixed-observable OLE path that starts with a q14 small-delta f_delta(O) vs delta^2 benchmark against the current perturbed_echo baseline and stays hardware-ready while keeping both q80 subset and possible full-q80 directions in view?",
+      "question": "Can the existing q14/q80 perturbed_echo workflow be extended into a fixed-observable OLE path that starts with a q14 small-delta F_delta(P) vs delta^2 benchmark, with explicit normalized translation to f_delta(O), against the current perturbed_echo baseline and stays hardware-ready while keeping both q80 subset and possible full-q80 directions in view?",
       "in_scope": [
         "Fixed-observable OLE built from the existing q14/q80 perturbed_echo workflow",
         "q14 small-delta OLE-vs-delta^2 benchmark against the current perturbed_echo baseline as the first success gate",
@@ -50,11 +50,10 @@
         "Subset-observable locality evidence in the q80/level-B artifact trail"
       ],
       "context_gaps": [
-        "A stronger external benchmark beyond the Algorithmiq OLE theory note has not yet been selected",
-        "Exact fixed-observable placement and first default generator pairing are not yet frozen"
+        "A stronger external benchmark beyond the Algorithmiq OLE theory note has not yet been selected"
       ],
       "crucial_inputs": [
-        "First success signal: a q14 small-delta OLE-vs-delta^2 benchmark against the current perturbed_echo baseline",
+        "First success signal: a q14 small-delta F_delta(P)-vs-delta^2 benchmark with explicit f_delta(O) translation against the current perturbed_echo baseline",
         "Reject false progress from a classical-only curve with no hardware-ready protocol",
         "Carry both overlap-support and disjoint-support variants forward"
       ]
@@ -91,7 +90,7 @@
         "id": "obs-q14-ole-curve",
         "name": "q14 fixed-observable OLE curve",
         "kind": "curve",
-        "definition": "The q14 small-delta fixed-observable operator Loschmidt echo f_delta(O) plotted against delta^2 for the chosen fixed observable and perturbation generator.",
+        "definition": "The q14 small-delta fixed-observable operator Loschmidt echo reported first as F_delta(P) plotted against delta^2 for the chosen Pauli observable and perturbation generator, with explicit normalized translation to f_delta(O).",
         "regime": null,
         "units": null
       },
@@ -397,29 +396,34 @@
     }
   },
   "position": {
-    "current_phase": "01",
-    "current_phase_name": "Formal OLE Bridge",
+    "current_phase": "02",
+    "current_phase_name": "q14 Exact Benchmark",
     "total_phases": 3,
     "current_plan": "0",
-    "total_plans_in_phase": 2,
-    "status": "Ready to execute",
+    "total_plans_in_phase": 3,
+    "status": "Ready to plan",
     "last_activity": "2026-03-17",
-    "last_activity_desc": "Phase 1 research and plan files created",
-    "progress_percent": 0,
+    "last_activity_desc": "Phase 1 executed and verified; Phase 2 handoff is ready",
+    "progress_percent": 33,
     "paused_at": null
   },
   "active_calculations": [],
   "intermediate_results": [],
   "open_questions": [
-    "Which fixed observable placement should be the default first implementation for the q14 benchmark?",
     "Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target",
+    "How small the accepted q14 fit window must be before the overlap coefficient stabilizes numerically at nonzero scrambling depth",
     "Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path"
   ],
   "performance_metrics": {
-    "rows": []
+    "rows": [
+      {
+        "label": "Phase 01",
+        "duration": "2 plans + verification",
+        "tasks": "2 plan summaries, 1 verification report",
+        "files": "7 primary docs"
+      }
+    ]
   },
-  "decisions": [],
-  "approximations": [],
   "convention_lock": {
     "metric_signature": "euclidean",
     "fourier_convention": "physics",
@@ -440,8 +444,8 @@
     "gamma_matrix_convention": "not applicable (no gamma matrices in the circuit benchmark)",
     "creation_annihilation_order": "not applicable (no creation/annihilation ordering is used in the current scope)",
     "custom_conventions": {
-      "observable_normalization": "Tr(O^2)=1",
-      "operator_picture": "Use f_delta(O)=2^{-n} Tr(U O U^dagger V_delta^dagger U O U^dagger V_delta) as the defining expression and translate the small-delta commutator form consistently from that choice.",
+      "observable_normalization": "Report the first q14 benchmark as F_delta(P) with F_0(P)=1 for Pauli P, and keep f_delta(O) = 2^-n F_delta(P) as the normalized translation with Tr(O^2)=1.",
+      "operator_picture": "Use the fixed bridge picture A_P(U)=U P U^dagger and rotate the generator as well when translating into an alternate U^dagger O U picture.",
       "qubit_indexing": "Qubits are indexed 0..n-1 as in Qiskit; subset observables must report their support S explicitly.",
       "perturbed_echo_baseline": "perturbed_echo denotes the state-return benchmark |<psi0|U^dagger X U|psi0>|^2 for psi0=|0...0>; it is a baseline and must not be labeled as OLE."
     }
@@ -451,7 +455,7 @@
   "blockers": [],
   "session": {
     "last_date": "2026-03-17",
-    "stopped_at": "Ready to execute Phase 1",
+    "stopped_at": "Phase 1 complete; next step is $gpd-plan-phase 2",
     "resume_file": null
   }
 }

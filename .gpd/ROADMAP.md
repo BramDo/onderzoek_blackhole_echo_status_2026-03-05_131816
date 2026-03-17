@@ -26,7 +26,7 @@ Working wording for planning:
 
 ## Phases
 
-- [ ] **Phase 1: Formal OLE Bridge** - Freeze the fixed observable, perturbation generator, and small-`delta` formalism so OLE is explicit and distinct from `perturbed_echo`.
+- [x] **Phase 1: Formal OLE Bridge** - Freeze the fixed observable, perturbation generator, and small-`delta` formalism so OLE is explicit and distinct from `perturbed_echo`. Completed 2026-03-17.
 - [ ] **Phase 2: q14 Exact Benchmark** - Produce the decisive exact q14 `F_delta(P)` versus `delta^2` benchmark, with explicit normalized translation to `f_delta(O)`, and compare it against the active q14 baseline.
 - [ ] **Phase 3: Hardware Mapping and q80 Scope** - Translate the benchmark into a hardware-ready path and define the q80 subset/full boundary without overclaiming.
 
@@ -50,8 +50,8 @@ Working wording for planning:
 
 Plans:
 
-- [ ] 01-01: Freeze q14 observable/generator and normalization guardrails
-- [ ] 01-02: Derive small-`delta` bridge and q14 benchmark handoff
+- [x] 01-01: Freeze q14 observable/generator and normalization guardrails
+- [x] 01-02: Derive small-`delta` bridge and q14 benchmark handoff
 
 ### Phase 2: q14 Exact Benchmark
 
@@ -101,6 +101,6 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 | ----- | -------------- | ------ | --------- |
-| 1. Formal OLE Bridge | 0/2 | Ready to execute | - |
-| 2. q14 Exact Benchmark | 0/3 | Not started | - |
+| 1. Formal OLE Bridge | 2/2 | Verified | 2026-03-17 |
+| 2. q14 Exact Benchmark | 0/3 | Ready to plan | - |
 | 3. Hardware Mapping and q80 Scope | 0/2 | Not started | - |

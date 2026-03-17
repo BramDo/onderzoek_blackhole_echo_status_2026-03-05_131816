@@ -218,6 +218,13 @@ That makes `perturbed_echo` a comparison baseline, not an identity or a hidden s
 - Keep `perturbed_echo` as a labeled baseline overlay or comparison marker only.
 - Do not write `[G, U^\dagger O U]` unless the perturbation has also been rotated into the same picture.
 
+## Phase 1 Deliverable Checklist
+
+- Defining expression in one fixed operator picture
+- Explicit translation to any alternate picture used in the literature
+- delta=0 intercept and O(delta^2) coefficient structure
+- Depth-0 overlap and disjoint control limits
+
 ## Anchors Used
 
 - Algorithmiq OLE theory note: definition and small-`delta` commutator framing

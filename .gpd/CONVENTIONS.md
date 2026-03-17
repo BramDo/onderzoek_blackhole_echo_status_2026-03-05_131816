@@ -133,6 +133,12 @@
 | **Dependencies** | theory notes, glossary entries, later manuscript notation |
 | **Test value** | For `n = 14`, `f_0(O) = 2^{-14}` |
 
+### Phase 1 Deliverable Checklist
+
+- Observable normalization rule for the first OLE benchmark
+- Picture choice expressed in one fixed operator convention
+- No-relabeling guardrail for perturbed_echo
+
 ### Canonical Bookkeeping Lock Completion
 
 These canonical fields are now explicitly set in `state.json.convention_lock` so formalism and derivation phases pass the GPD convention gate. For this circuit-model project they are bookkeeping guardrails, not active continuum assumptions.

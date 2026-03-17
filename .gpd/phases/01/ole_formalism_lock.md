@@ -145,6 +145,13 @@ This is the control separation Phase 2 must preserve when it moves to nontrivial
 - Plot `F_delta(P)` against `delta^2`
 - When normalized notation is required, report `f_delta(O) = 2^{-14} F_delta(P)` explicitly
 
+## Phase 1 Deliverable Checklist
+
+- Default fixed observable P = Z_0 and normalized operator O = Z_0 / sqrt(2^14)
+- Overlap generator G = X_0 and disjoint control G = X_10
+- Support labels and qubit-indexing assumptions
+- Explicit delta=0 intercept for the chosen reporting convention
+
 ## Anchors Used
 
 - Algorithmiq OLE theory note: fixes the operator-correlator definition and the small-`delta` commutator interpretation.
