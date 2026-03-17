@@ -4,8 +4,8 @@
 
 See: .gpd/PROJECT.md (updated 2026-03-17)
 
-**Core research question:** Can the existing q14/q80 `perturbed_echo` pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-`delta` benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
-**Current focus:** Phase 1 — Formal OLE Bridge
+**Core research question:** Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
+**Current focus:** Phase 1 - Formal OLE Bridge
 
 ## Current Position
 
@@ -52,7 +52,16 @@ None yet.
 
 **Convention Lock:**
 
-No conventions locked yet.
+- Metric signature: euclidean
+- Fourier convention: physics
+- Natural units: natural
+- State normalization: non-relativistic
+
+*Custom conventions:*
+- Observable Normalization: Tr(O^2)=1
+- Operator Picture: Use f_delta(O)=2^{-n} Tr(U O U^dagger V_delta^dagger U O U^dagger V_delta) as the defining expression and translate the small-delta commutator form consistently from that choice.
+- Qubit Indexing: Qubits are indexed 0..n-1 as in Qiskit; subset observables must report their support S explicitly.
+- Perturbed Echo Baseline: perturbed_echo denotes the state-return benchmark |<psi0|U^dagger X U|psi0>|^2 for psi0=|0...0>; it is a baseline and must not be labeled as OLE.
 
 ### Propagated Uncertainties
 
@@ -64,7 +73,7 @@ None yet.
 
 ### Blockers/Concerns
 
-None yet.
+None
 
 ## Session Continuity
 
