@@ -144,3 +144,10 @@ This is the control separation Phase 2 must preserve when it moves to nontrivial
 - Disjoint control generator: `G = X_10`
 - Plot `F_delta(P)` against `delta^2`
 - When normalized notation is required, report `f_delta(O) = 2^{-14} F_delta(P)` explicitly
+
+## Anchors Used
+
+- Algorithmiq OLE theory note: fixes the operator-correlator definition and the small-`delta` commutator interpretation.
+- `STATUS.md`: preserves the q14-only claim boundary and prevents relabeling the current baseline as OLE.
+- `files/quantum-math-lab/benchmarks/q14_only_manifest.json`: freezes the q14 benchmark family and qubit-label range.
+- `files/quantum-math-lab/qiskit_black_hole_scrambling.py`: fixes the existing local X-kick semantics that the OLE bridge reuses.
