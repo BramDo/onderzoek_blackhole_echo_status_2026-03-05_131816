@@ -27,7 +27,7 @@ Working wording for planning:
 ## Phases
 
 - [ ] **Phase 1: Formal OLE Bridge** - Freeze the fixed observable, perturbation generator, and small-`delta` formalism so OLE is explicit and distinct from `perturbed_echo`.
-- [ ] **Phase 2: q14 Exact Benchmark** - Produce the decisive exact q14 `f_delta(O)` versus `delta^2` benchmark and compare it against the active q14 baseline.
+- [ ] **Phase 2: q14 Exact Benchmark** - Produce the decisive exact q14 `F_delta(P)` versus `delta^2` benchmark, with explicit normalized translation to `f_delta(O)`, and compare it against the active q14 baseline.
 - [ ] **Phase 3: Hardware Mapping and q80 Scope** - Translate the benchmark into a hardware-ready path and define the q80 subset/full boundary without overclaiming.
 
 ## Phase Details
@@ -55,7 +55,7 @@ Plans:
 
 ### Phase 2: q14 Exact Benchmark
 
-**Goal:** Produce the decisive exact q14 benchmark artifact for the fixed-observable OLE bridge.
+**Goal:** Produce the decisive exact q14 benchmark artifact for the fixed-observable OLE bridge without reopening the Phase 1 picture or intercept choice.
 **Depends on:** Phase 1
 **Requirements:** `NUMR-01`, `NUMR-02`, `NUMR-03`, `VALD-01`
 **Contract Coverage:**
@@ -65,8 +65,8 @@ Plans:
 - Forbidden proxies: classical-only curve with no explicit observable semantics; too-large-`delta` fit presented as small-`delta` theory
 **Success Criteria** (what must be TRUE):
 
-1. Exact q14 `f_delta(O)` data exist for a controlled small-`delta` sweep on the active exact-short task family.
-2. The benchmark artifact overlays the OLE curve with the current q14 `perturbed_echo` baseline on a `delta^2` axis.
+1. Exact q14 `F_delta(P)` data exist for a controlled small-`delta` sweep on the active exact-short task family, with `f_delta(O) = 2^-14 F_delta(P)` carried as the normalized translation.
+2. The benchmark artifact overlays or juxtaposes the Pauli-specialized OLE onset curve with the current q14 `perturbed_echo` baseline on a clearly labeled `delta^2` comparison figure.
 3. Overlap-support and disjoint-support variants are compared in the exact regime.
 4. Fit-window stability and intercept behavior support the small-`delta` interpretation.
 
