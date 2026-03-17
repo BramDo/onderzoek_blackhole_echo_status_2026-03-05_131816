@@ -13,6 +13,29 @@ Use this wording consistently:
 - Therefore `perturbed_echo` is a state-return benchmark, while OLE is an operator-space scrambling diagnostic. The project may compare or bridge them, but it must not describe `perturbed_echo` itself as OLE unless the fixed observable and perturbation unitary are made explicit.
 - For this project, OLE is the more informative target because it opens a larger probing space: explicit choice of `O`, explicit choice of `G`, overlap versus disjoint support tests, subset-observable variants, and a controlled small-`delta` link to commutator/OTOC growth. `perturbed_echo` remains valuable because it is already implemented, benchmarked, and hardware-tested in this repo.
 
+## Phase 1 Default Lock
+
+Phase 1 freezes the first q14 benchmark as a Pauli-specialized fixed-observable OLE bridge:
+
+- Fixed observable: `P = Z_0`
+- Hilbert-Schmidt-normalized translation: `O = Z_0 / sqrt(2^14)`
+- Overlap generator: `G = X_0`
+- Disjoint control generator: `G = X_10`
+
+The report-level q14 benchmark quantity is
+
+$$
+F_\delta(P) = 2^{-n} \operatorname{Tr}(U P U^\dagger V_\delta^\dagger U P U^\dagger V_\delta),
+$$
+
+with `F_0(P) = 1` because `P^2 = I`. When normalized-operator notation is needed, the project uses
+
+$$
+f_\delta(O) = 2^{-n} F_\delta(P),
+$$
+
+so `f_0(O) = 2^{-n}`. This explicit translation resolves the initialization ambiguity between the normalized `Tr(O^2)=1` convention and the unit-intercept onset language needed for the first `delta^2` benchmark.
+
 ## Core Research Question
 
 Can the existing q14/q80 `perturbed_echo` pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
@@ -84,7 +107,6 @@ Can the existing q14/q80 `perturbed_echo` pipeline be turned into a fixed-observ
 
 ### Open Contract Questions
 
-- Which fixed observable placement should be the default first implementation for the q14 benchmark?
 - Will full-q80 OLE admit a meaningful feasible proxy, or remain a longer-horizon target?
 - Should later phases use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path?
 
@@ -95,6 +117,7 @@ Can the existing q14/q80 `perturbed_echo` pipeline be turned into a fixed-observ
 - [x] The repository already supports a q14 exact-short `perturbed_echo` baseline and the current narrow q14-only runtime-positive claim.
 - [x] The broader legacy Level-C two-size claim is not currently established because q12 remains the blocker under `IBM quantum_seconds`.
 - [x] q80 subset observables already show locality-sensitive evidence, but only at subset level rather than as a full-system global observable.
+- [x] The default first fixed-observable q14 bridge is now frozen as `P = Z_0` with overlap `G = X_0` and disjoint control `G = X_10`, reported through `F_delta(P)` with an explicit normalized-operator translation.
 
 ### Active
 
