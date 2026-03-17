@@ -1,0 +1,452 @@
+{
+  "project_reference": {
+    "project_md_updated": "2026-03-17",
+    "core_research_question": "Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?",
+    "current_focus": "Initialization: derive requirements and roadmap for the q14 OLE bridge while keeping q80 subset and full-q80 directions explicit"
+  },
+  "project_contract": {
+    "schema_version": 1,
+    "scope": {
+      "question": "Can the existing q14/q80 perturbed_echo workflow be extended into a fixed-observable OLE path that starts with a q14 small-delta f_delta(O) vs delta^2 benchmark against the current perturbed_echo baseline and stays hardware-ready while keeping both q80 subset and possible full-q80 directions in view?",
+      "in_scope": [
+        "Fixed-observable OLE built from the existing q14/q80 perturbed_echo workflow",
+        "q14 small-delta OLE-vs-delta^2 benchmark against the current perturbed_echo baseline as the first success gate",
+        "Classical exact/reference and hardware-ready measurement paths",
+        "Both overlap-support and disjoint-support variants between the fixed observable and perturbation generator",
+        "q80 subset observables as the immediate scalable route",
+        "Full-q80 OLE kept visible as a later extension rather than dropped"
+      ],
+      "out_of_scope": [
+        "Restoring the legacy full Level-C two-size claim during initial project setup",
+        "Presenting q80 subset results as if they already settle full-q80 global OLE",
+        "Relabeling existing perturbed_echo outputs as OLE without implementing the fixed-observable protocol"
+      ],
+      "unresolved_questions": [
+        "Which fixed observable placement should be the default first implementation for the q14 benchmark?",
+        "Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target",
+        "Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path"
+      ]
+    },
+    "context_intake": {
+      "must_read_refs": [
+        "ref-algorithmiq-ole",
+        "ref-status",
+        "ref-q14-manifest",
+        "ref-levelb-evidence"
+      ],
+      "must_include_prior_outputs": [
+        "STATUS.md",
+        "files/quantum-math-lab/benchmarks/q14_only_manifest.json",
+        "files/quantum-math-lab/results/hardware/summary/levelb_evidence_report.md"
+      ],
+      "user_asserted_anchors": [
+        "Stay centered on the existing q14-q80 workflow",
+        "Both classical and hardware-ready paths must remain in scope",
+        "Use fixed observables rather than an observable-family search",
+        "Keep q80 as subset or as full in sight"
+      ],
+      "known_good_baselines": [
+        "Current perturbed_echo baseline in the q14-only exact-short campaign",
+        "Subset-observable locality evidence in the q80/level-B artifact trail"
+      ],
+      "context_gaps": [
+        "A stronger external benchmark beyond the Algorithmiq OLE theory note has not yet been selected",
+        "Exact fixed-observable placement and first default generator pairing are not yet frozen"
+      ],
+      "crucial_inputs": [
+        "First success signal: a q14 small-delta OLE-vs-delta^2 benchmark against the current perturbed_echo baseline",
+        "Reject false progress from a classical-only curve with no hardware-ready protocol",
+        "Carry both overlap-support and disjoint-support variants forward"
+      ]
+    },
+    "approach_policy": {
+      "formulations": [
+        "Fixed-observable operator Loschmidt echo f_delta(O) with small-delta expansion connected to the OTOC/commutator diagnostic",
+        "Bridge from existing state-echo perturbed_echo machinery to measurement protocols for fixed O = Z_Q or related fixed observables"
+      ],
+      "allowed_estimator_families": [
+        "Exact classical estimator for q14 small-delta OLE curves",
+        "Hardware-ready parity-correlator or equivalent fixed-observable measurement protocols consistent with the Algorithmiq OLE note",
+        "Subset-observable estimators for q80 as an explicitly scoped partial observable"
+      ],
+      "forbidden_estimator_families": [
+        "Proxy-only reuse of perturbed_echo with no fixed-observable OLE implementation",
+        "Implicitly treating subset-only q80 observables as full-system global OLE"
+      ],
+      "allowed_fit_families": [
+        "Near-zero-delta fits in delta^2 motivated by the small-delta OLE expansion",
+        "Direct baseline overlays against current perturbed_echo outputs where the observable definitions remain explicit"
+      ],
+      "forbidden_fit_families": [
+        "Convenience fits that hide whether the result is truly OLE or only a renamed perturbed_echo proxy"
+      ],
+      "stop_and_rethink_conditions": [
+        "The first benchmark only reproduces a qualitative trend and cannot be tied to an explicit fixed-observable OLE definition",
+        "The hardware-ready protocol collapses back to a classical-only state-overlap proxy rather than a fixed-observable measurement path",
+        "A q80 subset result is being interpreted as if the full-q80 global question were already answered"
+      ]
+    },
+    "observables": [
+      {
+        "id": "obs-q14-ole-curve",
+        "name": "q14 fixed-observable OLE curve",
+        "kind": "curve",
+        "definition": "The q14 small-delta fixed-observable operator Loschmidt echo f_delta(O) plotted against delta^2 for the chosen fixed observable and perturbation generator.",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-q14-pert-echo-baseline",
+        "name": "q14 perturbed_echo baseline",
+        "kind": "curve",
+        "definition": "The existing q14 perturbed_echo baseline from the current exact-short workflow used as the immediate comparison anchor for the first OLE benchmark.",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-q80-scope-path",
+        "name": "q80 OLE scope path",
+        "kind": "other",
+        "definition": "The explicit distinction between immediate q80 subset-observable OLE work and the longer-horizon full-q80 global OLE direction.",
+        "regime": null,
+        "units": null
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-q14-ole-bridge",
+        "statement": "The project's first decisive result is a q14 small-delta fixed-observable OLE benchmark that can be compared directly against the current perturbed_echo baseline while preserving a hardware-ready path.",
+        "observables": [
+          "obs-q14-ole-curve",
+          "obs-q14-pert-echo-baseline"
+        ],
+        "deliverables": [
+          "deliv-q14-benchmark-figure",
+          "deliv-hardware-ready-note"
+        ],
+        "acceptance_tests": [
+          "test-q14-benchmark",
+          "test-hardware-ready"
+        ],
+        "references": [
+          "ref-algorithmiq-ole",
+          "ref-status",
+          "ref-q14-manifest"
+        ]
+      },
+      {
+        "id": "claim-q80-visibility",
+        "statement": "The project must keep q80 subset observables as the immediate scalable route while keeping the full-q80 OLE direction explicit rather than silently collapsing scope to subsets only.",
+        "observables": [
+          "obs-q80-scope-path"
+        ],
+        "deliverables": [
+          "deliv-q80-scope-note"
+        ],
+        "acceptance_tests": [
+          "test-q80-scope-guard"
+        ],
+        "references": [
+          "ref-levelb-evidence",
+          "ref-status"
+        ]
+      }
+    ],
+    "deliverables": [
+      {
+        "id": "deliv-q14-benchmark-figure",
+        "kind": "figure",
+        "path": "files/quantum-math-lab/results/ole/q14_ole_vs_delta2_benchmark.md",
+        "description": "Report or figure overlaying the q14 small-delta fixed-observable OLE curve with the current q14 perturbed_echo baseline.",
+        "must_contain": [
+          "delta^2 horizontal axis",
+          "explicit fixed observable definition",
+          "baseline overlay to current perturbed_echo output"
+        ]
+      },
+      {
+        "id": "deliv-hardware-ready-note",
+        "kind": "note",
+        "path": ".gpd/research/OLE_HARDWARE_PATH.md",
+        "description": "A hardware-ready note describing how the fixed-observable OLE measurement path maps onto the existing pipeline.",
+        "must_contain": [
+          "fixed observable measurement protocol",
+          "classical-to-hardware bridge",
+          "limitations called out explicitly"
+        ]
+      },
+      {
+        "id": "deliv-q80-scope-note",
+        "kind": "note",
+        "path": ".gpd/research/Q80_SCOPE.md",
+        "description": "A note that separates immediate q80 subset-observable OLE work from longer-horizon full-q80 global OLE goals.",
+        "must_contain": [
+          "subset route",
+          "full-q80 kept in view",
+          "no overclaiming of subset as full-system result"
+        ]
+      }
+    ],
+    "acceptance_tests": [
+      {
+        "id": "test-q14-benchmark",
+        "subject": "claim-q14-ole-bridge",
+        "kind": "benchmark",
+        "procedure": "Produce the q14 small-delta fixed-observable OLE-vs-delta^2 benchmark and compare it against the current perturbed_echo baseline with the observable definitions stated explicitly.",
+        "pass_condition": "A q14 benchmark artifact exists with the OLE curve, the perturbed_echo baseline overlay, and explicit fixed-observable definitions.",
+        "evidence_required": [
+          "deliv-q14-benchmark-figure",
+          "ref-q14-manifest",
+          "ref-status"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-hardware-ready",
+        "subject": "claim-q14-ole-bridge",
+        "kind": "consistency",
+        "procedure": "Show that the first-step OLE framing includes an explicit hardware-ready measurement path rather than stopping at a classical-only construction.",
+        "pass_condition": "A hardware-ready note exists that maps the fixed-observable OLE protocol onto the existing measurement pipeline and names its current limitations.",
+        "evidence_required": [
+          "deliv-hardware-ready-note",
+          "ref-algorithmiq-ole"
+        ],
+        "automation": "human"
+      },
+      {
+        "id": "test-q80-scope-guard",
+        "subject": "claim-q80-visibility",
+        "kind": "human_review",
+        "procedure": "Review project artifacts to confirm that q80 subset observables are presented as the immediate route while full-q80 global OLE remains an explicit unresolved extension.",
+        "pass_condition": "Project artifacts preserve both q80 subset and full-q80 directions without presenting subset-only results as settling the full-q80 question.",
+        "evidence_required": [
+          "deliv-q80-scope-note",
+          "ref-levelb-evidence",
+          "ref-status"
+        ],
+        "automation": "human"
+      }
+    ],
+    "references": [
+      {
+        "id": "ref-algorithmiq-ole",
+        "kind": "spec",
+        "locator": "Algorithmiq, 'Model Description and Theory: Information flow in complex materials' (PDF, accessed 2026-03-17)",
+        "aliases": [
+          "Algorithmiq OLE theory note",
+          "OLE theory PDF"
+        ],
+        "role": "definition",
+        "why_it_matters": "Provides the fixed-observable OLE definition, its small-delta expansion, and the hardware-oriented measurement framing used to bridge from the existing pipeline.",
+        "applies_to": [
+          "claim-q14-ole-bridge"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare",
+          "cite"
+        ]
+      },
+      {
+        "id": "ref-status",
+        "kind": "prior_artifact",
+        "locator": "STATUS.md",
+        "aliases": [
+          "repo status"
+        ],
+        "role": "must_consider",
+        "why_it_matters": "Freezes the current narrow q14-only claim language and records the q12 blocker and q80 subset-only interpretation limits.",
+        "applies_to": [
+          "claim-q14-ole-bridge",
+          "claim-q80-visibility"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use",
+          "avoid"
+        ]
+      },
+      {
+        "id": "ref-q14-manifest",
+        "kind": "prior_artifact",
+        "locator": "files/quantum-math-lab/benchmarks/q14_only_manifest.json",
+        "aliases": [
+          "q14-only manifest"
+        ],
+        "role": "benchmark",
+        "why_it_matters": "Defines the active q14 exact-short campaign settings that the first OLE benchmark must stay aligned with.",
+        "applies_to": [
+          "claim-q14-ole-bridge"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use",
+          "compare"
+        ]
+      },
+      {
+        "id": "ref-levelb-evidence",
+        "kind": "prior_artifact",
+        "locator": "files/quantum-math-lab/results/hardware/summary/levelb_evidence_report.md",
+        "aliases": [
+          "q80 subset evidence"
+        ],
+        "role": "benchmark",
+        "why_it_matters": "Carries forward the current q80 subset-observable evidence trail and its locality interpretation without overstating it as full-system validation.",
+        "applies_to": [
+          "claim-q80-visibility"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use",
+          "avoid"
+        ]
+      }
+    ],
+    "forbidden_proxies": [
+      {
+        "id": "fp-classical-only",
+        "subject": "claim-q14-ole-bridge",
+        "proxy": "A clean q14 classical-only curve with no hardware-ready protocol",
+        "reason": "Would look like progress while dropping the hardware-ready requirement the user explicitly kept in scope."
+      },
+      {
+        "id": "fp-rename-pert-echo",
+        "subject": "claim-q14-ole-bridge",
+        "proxy": "Renaming or refitting existing perturbed_echo outputs without implementing fixed-observable OLE",
+        "reason": "Would hide the distinction between the current state-echo observable and the requested fixed-observable OLE path."
+      },
+      {
+        "id": "fp-q80-subset-as-full",
+        "subject": "claim-q80-visibility",
+        "proxy": "Presenting q80 subset-observable results as if they already settle the full-q80 global OLE question",
+        "reason": "Would overclaim beyond the explicit scope boundary and blur the unresolved full-q80 extension."
+      }
+    ],
+    "links": [
+      {
+        "id": "link-q14-support",
+        "source": "claim-q14-ole-bridge",
+        "target": "deliv-q14-benchmark-figure",
+        "relation": "supports",
+        "verified_by": [
+          "test-q14-benchmark"
+        ]
+      },
+      {
+        "id": "link-hardware-path",
+        "source": "claim-q14-ole-bridge",
+        "target": "deliv-hardware-ready-note",
+        "relation": "supports",
+        "verified_by": [
+          "test-hardware-ready"
+        ]
+      },
+      {
+        "id": "link-q80-visibility",
+        "source": "claim-q80-visibility",
+        "target": "deliv-q80-scope-note",
+        "relation": "supports",
+        "verified_by": [
+          "test-q80-scope-guard"
+        ]
+      }
+    ],
+    "uncertainty_markers": {
+      "weakest_anchors": [
+        "The external benchmark layer is currently anchored mainly by the Algorithmiq theory note rather than a broader literature set"
+      ],
+      "unvalidated_assumptions": [
+        "The current perturbed_echo workflow can be cleanly bridged to a fixed-observable OLE implementation without hidden estimator mismatches",
+        "A hardware-ready fixed-observable measurement path can stay aligned with the existing q14/q80 pipeline constraints"
+      ],
+      "competing_explanations": [
+        "Apparent agreement in the small-delta regime could come from a renamed or closely related perturbed_echo proxy rather than a genuine fixed-observable OLE implementation"
+      ],
+      "disconfirming_observations": [
+        "The first q14 benchmark cannot be expressed as an explicit fixed-observable OLE curve against delta^2",
+        "Keeping q80 subset and full-q80 directions both visible proves operationally incoherent under the current pipeline"
+      ]
+    }
+  },
+  "position": {
+    "current_phase": null,
+    "current_phase_name": null,
+    "total_phases": null,
+    "current_plan": null,
+    "total_plans_in_phase": null,
+    "status": null,
+    "last_activity": null,
+    "last_activity_desc": null,
+    "progress_percent": 0,
+    "paused_at": null
+  },
+  "active_calculations": [],
+  "intermediate_results": [],
+  "open_questions": [
+    "Which fixed observable placement should be the default first implementation for the q14 benchmark?",
+    "Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target",
+    "Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path"
+  ],
+  "performance_metrics": {
+    "rows": []
+  },
+  "decisions": [],
+  "approximations": [],
+  "convention_lock": {
+    "metric_signature": null,
+    "fourier_convention": null,
+    "natural_units": null,
+    "gauge_choice": null,
+    "regularization_scheme": null,
+    "renormalization_scheme": null,
+    "coordinate_system": null,
+    "spin_basis": null,
+    "state_normalization": null,
+    "coupling_convention": null,
+    "index_positioning": null,
+    "time_ordering": null,
+    "commutation_convention": null,
+    "levi_civita_sign": null,
+    "generator_normalization": null,
+    "covariant_derivative_sign": null,
+    "gamma_matrix_convention": null,
+    "creation_annihilation_order": null,
+    "custom_conventions": {}
+  },
+  "propagated_uncertainties": [],
+  "pending_todos": [],
+  "blockers": [],
+  "session": {
+    "last_date": null,
+    "stopped_at": null,
+    "resume_file": null
+  }
+}
