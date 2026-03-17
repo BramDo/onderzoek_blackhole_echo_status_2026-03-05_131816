@@ -50,8 +50,8 @@ Working wording for planning:
 
 Plans:
 
-- [ ] 01-01: TBD during `$gpd-plan-phase 1`
-- [ ] 01-02: TBD during `$gpd-plan-phase 1`
+- [ ] 01-01: Freeze q14 observable/generator and normalization guardrails
+- [ ] 01-02: Derive small-`delta` bridge and q14 benchmark handoff
 
 ### Phase 2: q14 Exact Benchmark
 
@@ -101,6 +101,6 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 | ----- | -------------- | ------ | --------- |
-| 1. Formal OLE Bridge | 0/2 | Ready to plan | - |
+| 1. Formal OLE Bridge | 0/2 | Ready to execute | - |
 | 2. q14 Exact Benchmark | 0/3 | Not started | - |
 | 3. Hardware Mapping and q80 Scope | 0/2 | Not started | - |
