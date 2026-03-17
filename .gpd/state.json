@@ -2,7 +2,7 @@
   "project_reference": {
     "project_md_updated": "2026-03-17",
     "core_research_question": "Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?",
-    "current_focus": "Initialization: derive requirements and roadmap for the q14 OLE bridge while keeping q80 subset and full-q80 directions explicit"
+    "current_focus": "Phase 1 - Formal OLE Bridge"
   },
   "project_contract": {
     "schema_version": 1,
@@ -397,14 +397,14 @@
     }
   },
   "position": {
-    "current_phase": null,
-    "current_phase_name": null,
-    "total_phases": null,
-    "current_plan": null,
-    "total_plans_in_phase": null,
-    "status": null,
-    "last_activity": null,
-    "last_activity_desc": null,
+    "current_phase": "01",
+    "current_phase_name": "Formal OLE Bridge",
+    "total_phases": 3,
+    "current_plan": "0",
+    "total_plans_in_phase": 2,
+    "status": "Ready to plan",
+    "last_activity": "2026-03-17",
+    "last_activity_desc": "Roadmap drafted during project initialization",
     "progress_percent": 0,
     "paused_at": null
   },
@@ -445,8 +445,8 @@
   "pending_todos": [],
   "blockers": [],
   "session": {
-    "last_date": null,
-    "stopped_at": null,
+    "last_date": "2026-03-17",
+    "stopped_at": "Ready to plan Phase 1",
     "resume_file": null
   }
 }

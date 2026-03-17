@@ -77,23 +77,23 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 | ----------- | ----- | ------ |
-| FORM-01 | Roadmap pending | Pending |
-| FORM-02 | Roadmap pending | Pending |
-| NUMR-01 | Roadmap pending | Pending |
-| NUMR-02 | Roadmap pending | Pending |
-| NUMR-03 | Roadmap pending | Pending |
-| PROT-01 | Roadmap pending | Pending |
-| PROT-02 | Roadmap pending | Pending |
-| VALD-01 | Roadmap pending | Pending |
-| VALD-02 | Roadmap pending | Pending |
+| FORM-01 | Phase 1: Formal OLE Bridge | Pending |
+| FORM-02 | Phase 1: Formal OLE Bridge | Pending |
+| NUMR-01 | Phase 2: q14 Exact Benchmark | Pending |
+| NUMR-02 | Phase 2: q14 Exact Benchmark | Pending |
+| NUMR-03 | Phase 2: q14 Exact Benchmark | Pending |
+| PROT-01 | Phase 3: Hardware Mapping and q80 Scope | Pending |
+| PROT-02 | Phase 3: Hardware Mapping and q80 Scope | Pending |
+| VALD-01 | Phase 2: q14 Exact Benchmark | Pending |
+| VALD-02 | Phase 3: Hardware Mapping and q80 Scope | Pending |
 
 **Coverage:**
 
 - Primary requirements: 9 total
-- Mapped to phases: 0
-- Unmapped: 9
+- Mapped to phases: 9
+- Unmapped: 0
 
 ---
 
 _Requirements defined: 2026-03-17_
-_Last updated: 2026-03-17 after literature survey_
+_Last updated: 2026-03-17 after roadmap drafting_

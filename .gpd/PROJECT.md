@@ -4,6 +4,15 @@
 
 This project continues the existing q14/q80 black-hole scrambling benchmark repository by extending the current `perturbed_echo` state-echo workflow into a fixed-observable operator Loschmidt echo (OLE) program. The immediate deliverable is a q14 small-delta OLE-vs-delta^2 benchmark against the active q14 `perturbed_echo` baseline, with a hardware-ready measurement path and explicit q80 subset/full scope discipline.
 
+## Working Distinction
+
+Use this wording consistently:
+
+- `perturbed_echo` is the repo's state-return echo observable: for the fixed input state `|0...0>`, it measures the return probability after `U`, a local kick, and `U^dagger`, i.e. a state-overlap quantity of the form `|<psi0|U^dagger X U|psi0>|^2`.
+- OLE is a fixed-observable operator correlator: `f_delta(O) = 2^{-n} Tr(U O U^dagger V_delta^dagger U O U^dagger V_delta)` for an explicitly chosen observable `O` and perturbation `V_delta = exp(-i delta G)`.
+- Therefore `perturbed_echo` is a state-return benchmark, while OLE is an operator-space scrambling diagnostic. The project may compare or bridge them, but it must not describe `perturbed_echo` itself as OLE unless the fixed observable and perturbation unitary are made explicit.
+- For this project, OLE is the more informative target because it opens a larger probing space: explicit choice of `O`, explicit choice of `G`, overlap versus disjoint support tests, subset-observable variants, and a controlled small-`delta` link to commutator/OTOC growth. `perturbed_echo` remains valuable because it is already implemented, benchmarked, and hardware-tested in this repo.
+
 ## Core Research Question
 
 Can the existing q14/q80 `perturbed_echo` pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
@@ -108,6 +117,13 @@ The physical system is an `n`-qubit gate-model scrambling toy model built from r
 ### Theoretical Framework
 
 This is a quantum-information scrambling benchmark framed through Loschmidt-echo-style observables, OTOC-related diagnostics, and hardware-oriented measurement pipelines. The extension under study is a fixed-observable OLE formulation whose small-delta behavior is tied to the commutator/OTOC structure while remaining compatible with the repo's current q14/q80 benchmarking architecture.
+
+More explicitly for this project:
+
+- `perturbed_echo` lives in state space and is read as a return probability for a fixed prepared state.
+- OLE lives in operator space and is read as the self-correlation of a fixed observable under a controlled perturbation.
+- OLE is therefore the broader and potentially more informative object, while `perturbed_echo` is the narrower baseline already available in the repo.
+- The bridge question is whether the existing state-return workflow can be upgraded into an explicit fixed-observable operator diagnostic without changing the task family or overclaiming what the old observable already means.
 
 ### Key Parameters and Scales
 
