@@ -5,42 +5,45 @@
 See: .gpd/PROJECT.md (updated 2026-03-17)
 
 **Core research question:** Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?
-**Current focus:** Phase 2 - q14 Exact Benchmark
+**Current focus:** Phase 3 - Hardware Mapping and q80 Scope
 
 ## Current Position
 
-**Current Phase:** 02
-**Current Phase Name:** q14 Exact Benchmark
+**Current Phase:** 03
+**Current Phase Name:** Hardware Mapping and q80 Scope
 **Total Phases:** 3
 **Current Plan:** 0
-**Total Plans in Phase:** 3
-**Status:** Ready to execute
+**Total Plans in Phase:** 2
+**Status:** Ready to plan
 **Last Activity:** 2026-03-18
-**Last Activity Description:** Phase 2 research, experiment design, and plan files created
+**Last Activity Description:** Phase 2 executed; q14 exact benchmark, validation note, and Phase 3 handoff completed with verifier follow-up checks recorded
 
-**Progress:** [███░░░░░░░] 33%
+**Progress:** [███████░░░] 67%
 
 ## Active Calculations
 
-- Phase 1 lock fixed the first benchmark to `P = Z_0`, overlap `G = X_0`, disjoint control `G = X_10`.
-- Phase 1 bridge fixed the plotted quantity to `F_delta(P)` with `f_delta(O) = 2^-14 F_delta(P)` as the normalized translation.
-- Phase 1 verification confirmed the depth-0 limits `kappa_overlap = 4`, `kappa_disjoint = 0`, and `F_delta(Z_0; I, X_0) = cos(2 delta)`.
+- Exact q14 OLE artifact now exists on the active manifest with mean term counts `3, 12, 39, 195` across depths `1..4`.
+- The overlap branch `G = X_0` has validated small-`delta` fits; the preferred quoted coefficient window is `delta <= 0.10`.
+- The disjoint branch `G = X_10` is now locked as an exact flat control on the active q14 manifest.
 
 ## Intermediate Results
 
-None yet.
+- `qiskit_black_hole_ole_exact.py` produces exact q14 `F_delta(Z_0)` and `f_delta(O)` artifacts without dense 14-qubit operators.
+- `q14_ole_vs_delta2_benchmark.md` and the matching CSV now provide the decisive q14 benchmark artifact against the existing `perturbed_echo` baseline.
+- `q14_small_delta_validation.md` records passing shrinking-window fits and explicit baseline exclusion from the quadratic regression.
 
 ## Open Questions
 
-- Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target
-- How small the accepted q14 fit window must be before the overlap coefficient stabilizes numerically at nonzero scrambling depth
-- Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path
+- Which fixed-observable hardware estimator is the cleanest Phase 3 continuation of the local-Pauli q14 benchmark
+- How q80 subset observables should be mapped onto an OLE-compatible fixed-observable correlator without relabeling existing subset-return outputs
+- Whether full-q80 OLE will admit a meaningful justified proxy or remain a longer-horizon target
 
 ## Performance Metrics
 
 | Label | Duration | Tasks | Files |
 | ----- | -------- | ----- | ----- |
 | Phase 01 | 2 plans + verification | 2 plan summaries, 1 verification report | 7 primary docs |
+| Phase 02 | 3 plans + verification | 3 plan summaries, 1 verification report | exact runner, benchmark report, validation + handoff docs |
 
 ## Accumulated Context
 
@@ -49,11 +52,14 @@ None yet.
 - Report the first q14 benchmark as `F_delta(P)` and carry `f_delta(O) = 2^-14 F_delta(P)` as the normalized translation.
 - Keep the primary bridge in the fixed picture `A_P(U) = U P U^dagger`; rotate `G` as well if an alternate `U^dagger O U` picture is used.
 - Treat `perturbed_echo` only as a labeled same-family baseline and not as the OLE quantity itself.
+- Prefer `delta <= 0.10` for quoted overlap coefficients while allowing `delta <= 0.20` as a broader presentation window.
+- Keep q80 immediate work subset-scoped until a later phase justifies any fuller proxy explicitly.
 
 ### Active Approximations
 
 - Small-`delta` expansion: use only shrinking `delta^2` windows where the intercept and quadratic coefficient remain stable.
 - Depth-0 locality control: overlap and disjoint branches are exact sanity checks before nontrivial scrambling depth is introduced.
+- Hardware-ready continuity: Phase 2 preserves only the local-Pauli measurement direction, not a solved hardware estimator.
 
 **Convention Lock:**
 
@@ -97,5 +103,5 @@ None
 ## Session Continuity
 
 **Last session:** 2026-03-18
-**Stopped at:** Ready to execute Phase 2
+**Stopped at:** Ready to plan Phase 3
 **Resume file:** —

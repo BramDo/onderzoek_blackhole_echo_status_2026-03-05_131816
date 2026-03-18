@@ -15,19 +15,19 @@ Working wording for planning:
 
 | Contract Item | Advanced By Phase(s) | Status |
 | ------------- | -------------------- | ------ |
-| `claim-q14-ole-bridge` | Phase 1, Phase 2, Phase 3 | Planned |
-| `deliv-q14-benchmark-figure` | Phase 2 | Planned |
+| `claim-q14-ole-bridge` | Phase 1, Phase 2, Phase 3 | Advanced through Phase 2 |
+| `deliv-q14-benchmark-figure` | Phase 2 | Completed |
 | `deliv-hardware-ready-note` | Phase 3 | Planned |
 | `claim-q80-visibility` | Phase 3 | Planned |
 | `deliv-q80-scope-note` | Phase 3 | Planned |
-| `ref-algorithmiq-ole` | Phase 1, Phase 2, Phase 3 | Planned |
-| `ref-q14-manifest` | Phase 1, Phase 2 | Planned |
-| `ref-levelb-evidence` | Phase 2, Phase 3 | Planned |
+| `ref-algorithmiq-ole` | Phase 1, Phase 2, Phase 3 | Surfaced |
+| `ref-q14-manifest` | Phase 1, Phase 2 | Completed |
+| `ref-levelb-evidence` | Phase 2, Phase 3 | Surfaced through Phase 2 |
 
 ## Phases
 
 - [x] **Phase 1: Formal OLE Bridge** - Freeze the fixed observable, perturbation generator, and small-`delta` formalism so OLE is explicit and distinct from `perturbed_echo`. Completed 2026-03-17.
-- [ ] **Phase 2: q14 Exact Benchmark** - Produce the decisive exact q14 `F_delta(P)` versus `delta^2` benchmark, with explicit normalized translation to `f_delta(O)`, and compare it against the active q14 baseline.
+- [x] **Phase 2: q14 Exact Benchmark** - Produce the decisive exact q14 `F_delta(P)` versus `delta^2` benchmark, with explicit normalized translation to `f_delta(O)`, and compare it against the active q14 baseline. Executed 2026-03-18 with verifier follow-up checks recorded for future figure/hardware closure.
 - [ ] **Phase 3: Hardware Mapping and q80 Scope** - Translate the benchmark into a hardware-ready path and define the q80 subset/full boundary without overclaiming.
 
 ## Phase Details
@@ -72,9 +72,9 @@ Plans:
 
 Plans:
 
-- [ ] 02-01: Implement exact q14 sparse-Pauli OLE evaluator
-- [ ] 02-02: Build q14 delta^2 benchmark artifact against perturbed_echo baseline
-- [ ] 02-03: Validate small-delta windows and write Phase 3 handoff
+- [x] 02-01: Implement exact q14 sparse-Pauli OLE evaluator
+- [x] 02-02: Build q14 delta^2 benchmark artifact against perturbed_echo baseline
+- [x] 02-03: Validate small-delta windows and write Phase 3 handoff
 
 ### Phase 3: Hardware Mapping and q80 Scope
 
@@ -102,5 +102,5 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 | ----- | -------------- | ------ | --------- |
 | 1. Formal OLE Bridge | 2/2 | Verified | 2026-03-17 |
-| 2. q14 Exact Benchmark | 0/3 | Ready to execute | - |
+| 2. q14 Exact Benchmark | 3/3 | Executed; verification follow-ups recorded | 2026-03-18 |
 | 3. Hardware Mapping and q80 Scope | 0/2 | Not started | - |

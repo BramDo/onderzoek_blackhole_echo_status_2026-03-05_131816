@@ -2,7 +2,7 @@
   "project_reference": {
     "project_md_updated": "2026-03-17",
     "core_research_question": "Can the existing q14/q80 perturbed_echo pipeline be turned into a fixed-observable OLE workflow that yields a decisive q14 small-delta benchmark and a credible hardware-ready path without overclaiming the meaning of q80 subset observables?",
-    "current_focus": "Phase 2 - q14 Exact Benchmark"
+    "current_focus": "Phase 3 - Hardware Mapping and q80 Scope"
   },
   "project_contract": {
     "schema_version": 1,
@@ -396,23 +396,31 @@
     }
   },
   "position": {
-    "current_phase": "02",
-    "current_phase_name": "q14 Exact Benchmark",
+    "current_phase": "03",
+    "current_phase_name": "Hardware Mapping and q80 Scope",
     "total_phases": 3,
     "current_plan": "0",
-    "total_plans_in_phase": 3,
-    "status": "Ready to execute",
+    "total_plans_in_phase": 2,
+    "status": "Ready to plan",
     "last_activity": "2026-03-18",
-    "last_activity_desc": "Phase 2 research, experiment design, and plan files created",
-    "progress_percent": 33,
+    "last_activity_desc": "Phase 2 executed; q14 exact benchmark, validation note, and Phase 3 handoff completed with verifier follow-up checks recorded",
+    "progress_percent": 67,
     "paused_at": null
   },
-  "active_calculations": [],
-  "intermediate_results": [],
+  "active_calculations": [
+    "Exact q14 OLE artifact now exists on the active manifest with mean term counts 3, 12, 39, 195 across depths 1..4",
+    "The overlap branch G = X_0 has validated small-delta fits; the preferred quoted coefficient window is delta <= 0.10",
+    "The disjoint branch G = X_10 is now locked as an exact flat control on the active q14 manifest"
+  ],
+  "intermediate_results": [
+    "qiskit_black_hole_ole_exact.py produces exact q14 F_delta(Z_0) and f_delta(O) artifacts without dense 14-qubit operators",
+    "q14_ole_vs_delta2_benchmark.md and the matching CSV now provide the decisive q14 benchmark artifact against the existing perturbed_echo baseline",
+    "q14_small_delta_validation.md records passing shrinking-window fits and explicit baseline exclusion from the quadratic regression"
+  ],
   "open_questions": [
-    "Whether full-q80 OLE will admit a feasible meaningful proxy or remain a longer-horizon target",
-    "How small the accepted q14 fit window must be before the overlap coefficient stabilizes numerically at nonzero scrambling depth",
-    "Whether later phases should use explicit PLE terminology for a Pauli-specialized fixed-observable OLE path"
+    "Which fixed-observable hardware estimator is the cleanest Phase 3 continuation of the local-Pauli q14 benchmark",
+    "How q80 subset observables should be mapped onto an OLE-compatible fixed-observable correlator without relabeling existing subset-return outputs",
+    "Whether full-q80 OLE will admit a meaningful justified proxy or remain a longer-horizon target"
   ],
   "performance_metrics": {
     "rows": [
@@ -421,6 +429,12 @@
         "duration": "2 plans + verification",
         "tasks": "2 plan summaries, 1 verification report",
         "files": "7 primary docs"
+      },
+      {
+        "label": "Phase 02",
+        "duration": "3 plans + verification",
+        "tasks": "3 plan summaries, 1 verification report",
+        "files": "exact runner, benchmark report, validation + handoff docs"
       }
     ]
   },
@@ -455,7 +469,7 @@
   "blockers": [],
   "session": {
     "last_date": "2026-03-18",
-    "stopped_at": "Ready to execute Phase 2",
+    "stopped_at": "Ready to plan Phase 3",
     "resume_file": null
   }
 }
