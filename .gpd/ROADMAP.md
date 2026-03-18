@@ -72,9 +72,9 @@ Plans:
 
 Plans:
 
-- [ ] 02-01: TBD during future phase planning
-- [ ] 02-02: TBD during future phase planning
-- [ ] 02-03: TBD during future phase planning
+- [ ] 02-01: Implement exact q14 sparse-Pauli OLE evaluator
+- [ ] 02-02: Build q14 delta^2 benchmark artifact against perturbed_echo baseline
+- [ ] 02-03: Validate small-delta windows and write Phase 3 handoff
 
 ### Phase 3: Hardware Mapping and q80 Scope
 
@@ -102,5 +102,5 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 | ----- | -------------- | ------ | --------- |
 | 1. Formal OLE Bridge | 2/2 | Verified | 2026-03-17 |
-| 2. q14 Exact Benchmark | 0/3 | Ready to plan | - |
+| 2. q14 Exact Benchmark | 0/3 | Ready to execute | - |
 | 3. Hardware Mapping and q80 Scope | 0/2 | Not started | - |

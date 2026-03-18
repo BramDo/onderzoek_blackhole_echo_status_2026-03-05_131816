@@ -13,7 +13,7 @@
 ### Numerical Benchmarks
 
 - [ ] **NUMR-01**: Implement exact q14 fixed-observable OLE evaluation on the active exact-short manifest over a controlled small-`delta` sweep.
-- [ ] **NUMR-02**: Produce the decisive q14 benchmark artifact: `f_delta(O)` versus `delta^2`, overlaid with the current q14 `perturbed_echo` baseline and labeled with the explicit observable definition.
+- [ ] **NUMR-02**: Produce the decisive q14 benchmark artifact: `F_delta(P)` versus `delta^2`, with explicit normalized translation `f_delta(O) = 2^-14 F_delta(P)`, overlaid or juxtaposed with the current q14 `perturbed_echo` baseline and labeled with the explicit observable definition.
 - [ ] **NUMR-03**: Evaluate both overlap-support and disjoint-support variants for the first q14 benchmark so the locality sensitivity of the fixed-observable construction is visible.
 
 ### Hardware Translation

@@ -401,9 +401,9 @@
     "total_phases": 3,
     "current_plan": "0",
     "total_plans_in_phase": 3,
-    "status": "Ready to plan",
-    "last_activity": "2026-03-17",
-    "last_activity_desc": "Phase 1 executed and verified; Phase 2 handoff is ready",
+    "status": "Ready to execute",
+    "last_activity": "2026-03-18",
+    "last_activity_desc": "Phase 2 research, experiment design, and plan files created",
     "progress_percent": 33,
     "paused_at": null
   },
@@ -454,8 +454,8 @@
   "pending_todos": [],
   "blockers": [],
   "session": {
-    "last_date": "2026-03-17",
-    "stopped_at": "Phase 1 complete; next step is $gpd-plan-phase 2",
+    "last_date": "2026-03-18",
+    "stopped_at": "Ready to execute Phase 2",
     "resume_file": null
   }
 }
