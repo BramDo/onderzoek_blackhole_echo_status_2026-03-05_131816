@@ -1,0 +1,2347 @@
+{
+  "config": {
+    "qubits": 14,
+    "trials": 3,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "seed": 424242,
+    "delta_grid": [
+      0.0,
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "delta_squared_grid": [
+      0.0,
+      0.0006250000000000001,
+      0.0025000000000000005,
+      0.005625,
+      0.010000000000000002,
+      0.015625,
+      0.0225,
+      0.04000000000000001,
+      0.0625,
+      0.09
+    ],
+    "observable": {
+      "label": "Z_0",
+      "axis": "Z",
+      "qubit": 0,
+      "normalized_translation": "Z_0 / sqrt(2^14)"
+    },
+    "branches": {
+      "overlap": {
+        "generator_label": "X_0",
+        "qubit": 0
+      },
+      "disjoint": {
+        "generator_label": "X_10",
+        "qubit": 10
+      }
+    },
+    "report_quantity": "F_delta(P)",
+    "normalized_quantity": "f_delta(O)",
+    "normalized_translation_rule": "f_delta(O) = 2^-14 F_delta(P)"
+  },
+  "manifest_ref": "files/quantum-math-lab/benchmarks/q14_only_manifest.json",
+  "manifest_snapshot": {
+    "benchmark_id": "black-hole-echo-q14-only-v1",
+    "created_utc": "2026-03-16T16:30:00Z",
+    "supersedes": "black-hole-echo-levelc-v1 for the active day-to-day campaign target",
+    "task_definition": {
+      "family": "Loschmidt echo / black-hole scrambling toy",
+      "state_preparation": "|0...0>",
+      "circuit": "random brickwork scrambler U plus perturbed echo U^dagger X U",
+      "observable": "perturbed_echo",
+      "accuracy_metric": "MAE versus exact reference over fixed seeds per depth",
+      "aggregation": "mean/std over fixed seeds per depth"
+    },
+    "fixed_parameters": {
+      "qubits": 14,
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "trials_per_day": 3,
+      "shots": 4000,
+      "seed": 424242,
+      "perturb_qubit": 0,
+      "optimization_level": 1,
+      "preferred_backend": "ibm_fez",
+      "runtime_metric": "IBM quantum_seconds"
+    },
+    "classical_track": {
+      "script": "qiskit_black_hole_scrambling.py",
+      "qubits": [
+        14
+      ],
+      "runtime_capture": "/usr/bin/time -v",
+      "reference_artifact": "results/benchmark/classical/black_hole_scrambling_q14_exact_short.json",
+      "reference_wall_time_seconds": 51.05
+    },
+    "hardware_track": {
+      "script": "qiskit_black_hole_hardware_runner.py",
+      "qubits": [
+        14
+      ],
+      "config": {
+        "name": "raw_exact_short",
+        "readout_mitigation": false,
+        "depths": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "trials": 3,
+        "shots": 4000
+      },
+      "output_dir": "results/hardware"
+    },
+    "claim_criteria": {
+      "q14_only_claim": {
+        "same_task_and_accuracy_target": true,
+        "hardware_beats_matching_classical_on_q14": true,
+        "mae_perturbed_echo_max": 0.05,
+        "reproduced_on_three_independent_days": true
+      }
+    },
+    "notes": [
+      "This is a narrower campaign claim than the legacy Level C hardware-advantage definition.",
+      "Do not describe this as two-consecutive-size hardware advantage.",
+      "If backend changes mid-campaign, restart the 3-day count."
+    ]
+  },
+  "baseline_ref": "files/quantum-math-lab/results/benchmark/classical/black_hole_scrambling_q14_exact_short.json",
+  "self_checks": {
+    "gate_rules": {
+      "passed": true,
+      "checked_cases": 24,
+      "max_abs_error": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    "dense_cross_check": {
+      "passed": true,
+      "n_qubits": 3,
+      "depth": 2,
+      "seed": 123456,
+      "max_abs_error": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    }
+  },
+  "sanity_checks": {
+    "depth0_overlap": {
+      "branch": "overlap",
+      "generator_label": "X_0",
+      "expected_kappa": 4.0,
+      "computed": {
+        "w_anti": 1.0,
+        "kappa": 4.0,
+        "small_delta_quadratic_coeff": -2.0,
+        "F_delta": [
+          1.0,
+          0.9987502603949663,
+          0.9950041652780258,
+          0.9887710779360422,
+          0.9800665778412416,
+          0.9689124217106447,
+          0.955336489125606,
+          0.9210609940028851,
+          0.8775825618903728,
+          0.8253356149096783
+        ],
+        "f_delta": [
+          6.103515625e-05,
+          6.0958878197934954e-05,
+          6.073023469714513e-05,
+          6.0349797237307266e-05,
+          5.981851671394297e-05,
+          5.9137721051675094e-05,
+          5.830911188510779e-05,
+          5.6217101684746405e-05,
+          5.35633887872542e-05,
+          5.0374488214702046e-05
+        ]
+      },
+      "expected_formula": "cos(2 delta)"
+    },
+    "depth0_disjoint": {
+      "branch": "disjoint",
+      "generator_label": "X_10",
+      "expected_kappa": 0.0,
+      "computed": {
+        "w_anti": 0.0,
+        "kappa": 0.0,
+        "small_delta_quadratic_coeff": -0.0,
+        "F_delta": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "f_delta": [
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05,
+          6.103515625e-05
+        ]
+      },
+      "expected_formula": "1"
+    }
+  },
+  "results": [
+    {
+      "depth": 1,
+      "operator_stats": {
+        "term_count": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3.0,
+          "max": 3.0
+        },
+        "hilbert_schmidt_norm": {
+          "mean": 1.0,
+          "std": 1.2819751242557092e-16,
+          "min": 1.0,
+          "max": 1.0000000000000002
+        },
+        "support_max_qubit": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "branches": {
+        "overlap": {
+          "generator_label": "X_0",
+          "w_anti": {
+            "mean": 0.9906680586430053,
+            "std": 0.009100370836938926,
+            "min": 0.9778615091668769,
+            "max": 0.9981755715534391
+          },
+          "kappa": {
+            "mean": 3.9626722345720213,
+            "std": 0.036401483347755705,
+            "min": 3.9114460366675075,
+            "max": 3.9927022862137562
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              0.998761922891672,
+              0.9950507861146806,
+              0.9888758655782454,
+              0.9802525953678712,
+              0.969202529168172,
+              0.9557532863898833,
+              0.9217976481776295,
+              0.8787249542438853,
+              0.8269655727084967
+            ],
+            "std": [
+              0.0,
+              1.1373093855402631e-05,
+              4.5463948610006994e-05,
+              0.00010218735488110732,
+              0.00018140153369396346,
+              0.00028290849085548376,
+              0.0004064545118366404,
+              0.0007183742280731064,
+              0.0011140440837056548,
+              0.0015895106763278719
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.095959002024365e-05,
+              6.073308020719486e-05,
+              6.03561929674222e-05,
+              5.982987032274605e-05,
+              5.915542780567456e-05,
+              5.833455117125753e-05,
+              5.626206348740415e-05,
+              5.363311488304964e-05,
+              5.047397294363383e-05
+            ],
+            "std": [
+              0.0,
+              6.941585605104145e-10,
+              2.774899207153747e-09,
+              6.237021171942585e-09,
+              1.10718709530007e-08,
+              1.7267363943816148e-08,
+              2.480801463846682e-08,
+              4.384608325641519e-08,
+              6.799585471836272e-08,
+              9.701603249071484e-08
+            ]
+          }
+        },
+        "disjoint": {
+          "generator_label": "X_10",
+          "w_anti": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "kappa": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "samples": [
+        {
+          "trial": 1,
+          "seed": 2100976124,
+          "term_count": 3,
+          "hilbert_schmidt_norm": 1.0,
+          "support_qubits": [
+            0,
+            1
+          ],
+          "support_max_qubit": 1,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.9184053002982551,
+              "coeff_imag": 0.0,
+              "weight": 0.8434682956159281
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.3905109468283469,
+              "coeff_imag": 0.0,
+              "weight": 0.152498799592772
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.06350515562771232,
+              "coeff_imag": 0.0,
+              "weight": 0.004032904791299962
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.9959670952087001,
+              "kappa": 3.9838683808348003,
+              "small_delta_quadratic_coeff": -1.9919341904174002,
+              "F_delta": [
+                1.0,
+                0.9987553004758073,
+                0.9950243130038127,
+                0.9888163631096352,
+                0.9801469674349726,
+                0.9690377949540778,
+                0.9555166128126076,
+                0.9213793474983913,
+                0.8780762597630637,
+                0.8260400197451785
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.09591858200566e-05,
+                6.073146441673661e-05,
+                6.035256122495332e-05,
+                5.982342330535722e-05,
+                5.91453732271776e-05,
+                5.8320105762488256e-05,
+                5.623653244008736e-05,
+                5.359352171405418e-05,
+                5.0417481673900054e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 2,
+          "seed": 2038377967,
+          "term_count": 3,
+          "hilbert_schmidt_norm": 1.0000000000000002,
+          "support_qubits": [
+            0,
+            1
+          ],
+          "support_max_qubit": 1,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.8074082197292368,
+              "coeff_imag": 0.0,
+              "weight": 0.6519080332863356
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": 0.5709233537704875,
+              "coeff_imag": 0.0,
+              "weight": 0.32595347588054124
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.14879008983505337,
+              "coeff_imag": 0.0,
+              "weight": 0.022138490833123255
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.9778615091668769,
+              "kappa": 3.9114460366675075,
+              "small_delta_quadratic_coeff": -1.9557230183337537,
+              "F_delta": [
+                1.0,
+                0.9987779277437561,
+                0.9951147655192221,
+                0.989019669324221,
+                0.980507873724976,
+                0.9696006537776276,
+                0.9563252718516738,
+                0.9228085844635281,
+                0.8802926992217772,
+                0.8292024207978735
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.096056687889136e-05,
+                6.073698520014783e-05,
+                6.036497005152716e-05,
+                5.984545127715918e-05,
+                5.9179727403419654e-05,
+                5.836946239329064e-05,
+                5.632376614157276e-05,
+                5.3728802442735426e-05,
+                5.061049931627646e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 3,
+          "seed": 4191763410,
+          "term_count": 3,
+          "hilbert_schmidt_norm": 1.0,
+          "support_qubits": [
+            0,
+            1
+          ],
+          "support_max_qubit": 1,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": -0.9982901133514905,
+              "coeff_imag": 0.0,
+              "weight": 0.9965831504153319
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.04271332867573126,
+              "coeff_imag": 0.0,
+              "weight": 0.001824428446561046
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": 0.03990515177401495,
+              "coeff_imag": 0.0,
+              "weight": 0.0015924211381071684
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.9981755715534391,
+              "kappa": 3.9927022862137562,
+              "small_delta_quadratic_coeff": -1.9963511431068781,
+              "F_delta": [
+                1.0,
+                0.9987525404554525,
+                0.995013279821007,
+                0.9887915643008799,
+                0.9801029449436653,
+                0.9689691387728105,
+                0.9554179745053685,
+                0.9212050125709694,
+                0.8778059037468151,
+                0.8256542775824381
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.095901736178299e-05,
+                6.073079100470013e-05,
+                6.0351047625786126e-05,
+                5.982073638572176e-05,
+                5.9141182786426425e-05,
+                5.831408535799368e-05,
+                5.622589188055233e-05,
+                5.357702049235932e-05,
+                5.0393937840724984e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "depth": 2,
+      "operator_stats": {
+        "term_count": {
+          "mean": 12.0,
+          "std": 0.0,
+          "min": 12.0,
+          "max": 12.0
+        },
+        "hilbert_schmidt_norm": {
+          "mean": 1.0,
+          "std": 1.8129866073473578e-16,
+          "min": 0.9999999999999998,
+          "max": 1.0000000000000002
+        },
+        "support_max_qubit": {
+          "mean": 2.0,
+          "std": 0.0,
+          "min": 2.0,
+          "max": 2.0
+        }
+      },
+      "branches": {
+        "overlap": {
+          "generator_label": "X_0",
+          "w_anti": {
+            "mean": 0.5858215374345187,
+            "std": 0.11086171646350931,
+            "min": 0.4374685881408211,
+            "max": 0.7039187599432778
+          },
+          "kappa": {
+            "mean": 2.343286149738075,
+            "std": 0.44344686585403725,
+            "min": 1.7498743525632845,
+            "max": 2.815675039773111
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              0.9992678756231864,
+              0.9970733324224043,
+              0.9934218556127599,
+              0.9883225719846248,
+              0.981788227091414,
+              0.9738351533923391,
+              0.9537558301432174,
+              0.9282852281978231,
+              0.897677841391333
+            ],
+            "std": [
+              0.0,
+              0.00013854827774643336,
+              0.0005538468124460428,
+              0.0012448575740453068,
+              0.0022098533955117114,
+              0.003446422289851677,
+              0.004951473478821941,
+              0.008751313700763381,
+              0.013571407313898711,
+              0.019363593536156458
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.099047092426675e-05,
+              6.0856526637109635e-05,
+              6.063365817948974e-05,
+              6.032242260648345e-05,
+              5.9923597844934937e-05,
+              5.943818074904413e-05,
+              5.8212636117139734e-05,
+              5.665803394762104e-05,
+              5.478990731148273e-05
+            ],
+            "std": [
+              0.0,
+              8.456315780421958e-09,
+              3.380412673620867e-08,
+              7.598007654085124e-08,
+              1.3487874728465035e-07,
+              2.103529229645799e-07,
+              3.0221395744762823e-07,
+              5.341377991188587e-07,
+              8.283329659362007e-07,
+              1.1818599570407994e-06
+            ]
+          }
+        },
+        "disjoint": {
+          "generator_label": "X_10",
+          "w_anti": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "kappa": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "samples": [
+        {
+          "trial": 1,
+          "seed": 451347887,
+          "term_count": 12,
+          "hilbert_schmidt_norm": 1.0000000000000002,
+          "support_qubits": [
+            0,
+            1,
+            2
+          ],
+          "support_max_qubit": 2,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": -0.6118985578570154,
+              "coeff_imag": 0.0,
+              "weight": 0.37441984510749526
+            },
+            {
+              "physical_label": "XYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYX",
+              "coeff_real": -0.373064111137634,
+              "coeff_imag": 0.0,
+              "weight": 0.13917683101891293
+            },
+            {
+              "physical_label": "XIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIX",
+              "coeff_real": 0.3196279908727654,
+              "coeff_imag": 0.0,
+              "weight": 0.10216205254936059
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": -0.2997057867214468,
+              "coeff_imag": 0.0,
+              "weight": 0.08982355859432137
+            },
+            {
+              "physical_label": "YYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYY",
+              "coeff_real": -0.28943025589750626,
+              "coeff_imag": 0.0,
+              "weight": 0.08376987302889596
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": -0.2432502395169951,
+              "coeff_imag": 0.0,
+              "weight": 0.05917067902507548
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.23251746805725165,
+              "coeff_imag": 0.0,
+              "weight": 0.05406437295175504
+            },
+            {
+              "physical_label": "XXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXX",
+              "coeff_real": 0.2296960896879796,
+              "coeff_imag": 0.0,
+              "weight": 0.05276029361794837
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.616077264219457,
+              "kappa": 2.464309056877828,
+              "small_delta_quadratic_coeff": -1.232154528438914,
+              "F_delta": [
+                1.0,
+                0.9992300638431442,
+                0.9969221798119936,
+                0.9930821164147035,
+                0.9877194718099006,
+                0.9808476498162858,
+                0.9724838264100674,
+                0.9513674731450942,
+                0.9245813996366662,
+                0.8923932434769809
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.098816307636378e-05,
+                6.0847301013915625e-05,
+                6.0612922144452115e-05,
+                6.0285612293084754e-05,
+                5.986618956398229e-05,
+                5.935570229553634e-05,
+                5.80668623745785e-05,
+                5.6431970192667614e-05,
+                5.446736105206182e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 2,
+          "seed": 1322332347,
+          "term_count": 12,
+          "hilbert_schmidt_norm": 0.9999999999999998,
+          "support_qubits": [
+            0,
+            1,
+            2
+          ],
+          "support_max_qubit": 2,
+          "top_terms": [
+            {
+              "physical_label": "XXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXX",
+              "coeff_real": -0.6443160525833335,
+              "coeff_imag": 0.0,
+              "weight": 0.41514317561656894
+            },
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": -0.37956057822020955,
+              "coeff_imag": 0.0,
+              "weight": 0.1440662325388598
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.36613647522229503,
+              "coeff_imag": 0.0,
+              "weight": 0.13405591848820628
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": 0.34366721075045814,
+              "coeff_imag": 0.0,
+              "weight": 0.1181071517449998
+            },
+            {
+              "physical_label": "YXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXY",
+              "coeff_real": 0.3041457072150714,
+              "coeff_imag": 0.0,
+              "weight": 0.09250461121735593
+            },
+            {
+              "physical_label": "ZXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXZ",
+              "coeff_real": 0.19339193104834507,
+              "coeff_imag": 0.0,
+              "weight": 0.037400438994607856
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.1728326288740348,
+              "coeff_imag": 0.0,
+              "weight": 0.02987111760350985
+            },
+            {
+              "physical_label": "ZZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZZ",
+              "coeff_real": -0.1098961289053343,
+              "coeff_imag": 0.0,
+              "weight": 0.012077159148377854
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.4374685881408211,
+              "kappa": 1.7498743525632845,
+              "small_delta_quadratic_coeff": -0.8749371762816422,
+              "F_delta": [
+                1.0,
+                0.9994532781794422,
+                0.997814479237593,
+                0.9950876993183371,
+                0.991279753951393,
+                0.9864001610170385,
+                0.9804611169563666,
+                0.9654666644972023,
+                0.946446216186365,
+                0.9235898180560523
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.100178699825697e-05,
+                6.090176264877887e-05,
+                6.073533321034772e-05,
+                6.050291466988483e-05,
+                6.0205087952700106e-05,
+                5.984259747048136e-05,
+                5.892740872175307e-05,
+                5.776649268715607e-05,
+                5.6371448855960226e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 3,
+          "seed": 1237866825,
+          "term_count": 12,
+          "hilbert_schmidt_norm": 1.0,
+          "support_qubits": [
+            0,
+            1,
+            2
+          ],
+          "support_max_qubit": 2,
+          "top_terms": [
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.6989667213919156,
+              "coeff_imag": 0.0,
+              "weight": 0.4885544776133638
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.5138353612543896,
+              "coeff_imag": 0.0,
+              "weight": 0.264026778475429
+            },
+            {
+              "physical_label": "ZZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZZ",
+              "coeff_real": -0.3746141867065931,
+              "coeff_imag": 0.0,
+              "weight": 0.14033578888184217
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": -0.16107737563237626,
+              "coeff_imag": 0.0,
+              "weight": 0.02594592094061364
+            },
+            {
+              "physical_label": "YYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYY",
+              "coeff_real": 0.1604490685941462,
+              "coeff_imag": 0.0,
+              "weight": 0.025743903612729033
+            },
+            {
+              "physical_label": "XIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIX",
+              "coeff_real": -0.13204504789676094,
+              "coeff_imag": 0.0,
+              "weight": 0.01743589467405789
+            },
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.11942502936582819,
+              "coeff_imag": 0.0,
+              "weight": 0.014262337639028925
+            },
+            {
+              "physical_label": "XYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYX",
+              "coeff_real": -0.1179518317550576,
+              "coeff_imag": 0.0,
+              "weight": 0.013912634614373417
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.7039187599432778,
+              "kappa": 2.815675039773111,
+              "small_delta_quadratic_coeff": -1.4078375198865556,
+              "F_delta": [
+                1.0,
+                0.9991202848469727,
+                0.9964833382176264,
+                0.9920957511052392,
+                0.9859684901925809,
+                0.9781168704409174,
+                0.9685605168105834,
+                0.944433352787356,
+                0.9138280687704382,
+                0.8770504626409656
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.0981462698179485e-05,
+                6.082051624863442e-05,
+                6.055271918366938e-05,
+                6.017874085648077e-05,
+                5.96995160181224e-05,
+                5.911624248111471e-05,
+                5.7643637255087644e-05,
+                5.577563896303944e-05,
+                5.3530912026426126e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "depth": 3,
+      "operator_stats": {
+        "term_count": {
+          "mean": 39.0,
+          "std": 0.0,
+          "min": 39.0,
+          "max": 39.0
+        },
+        "hilbert_schmidt_norm": {
+          "mean": 1.0,
+          "std": 6.409875621278546e-17,
+          "min": 0.9999999999999999,
+          "max": 1.0
+        },
+        "support_max_qubit": {
+          "mean": 3.0,
+          "std": 0.0,
+          "min": 3.0,
+          "max": 3.0
+        }
+      },
+      "branches": {
+        "overlap": {
+          "generator_label": "X_0",
+          "w_anti": {
+            "mean": 0.47799607344665335,
+            "std": 0.048170207632463005,
+            "min": 0.4326307054680334,
+            "max": 0.5446905842119016
+          },
+          "kappa": {
+            "mean": 1.9119842937866134,
+            "std": 0.19268083052985202,
+            "min": 1.7305228218721336,
+            "max": 2.1787623368476066
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              0.9994026293759631,
+              0.9976120106193079,
+              0.9946326193443896,
+              0.990471902477759,
+              0.9851402596447226,
+              0.9786510171756978,
+              0.9622674650915973,
+              0.9414849452621995,
+              0.9165111097558519
+            ],
+            "std": [
+              0.0,
+              6.0200216261022836e-05,
+              0.00024065039585496596,
+              0.0005408995073095733,
+              0.0009601970842129192,
+              0.0014974951009886943,
+              0.002151450592414303,
+              0.0038025083091812327,
+              0.00589687341157496,
+              0.008413619695797236
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.099869564062275e-05,
+              6.088940494502612e-05,
+              6.070755733303159e-05,
+              6.045360732896478e-05,
+              6.0128189675581215e-05,
+              5.973211774754015e-05,
+              5.8732145086157064e-05,
+              5.7463680741101044e-05,
+              5.593939878880932e-05
+            ],
+            "std": [
+              0.0,
+              3.6743296057753196e-09,
+              1.46881345126322e-08,
+              3.3013885944187825e-08,
+              5.860577906572993e-08,
+              9.139984747245449e-08,
+              1.3131412307216205e-07,
+              2.3208668879279985e-07,
+              3.5991659006194826e-07,
+              5.135265927610618e-07
+            ]
+          }
+        },
+        "disjoint": {
+          "generator_label": "X_10",
+          "w_anti": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "kappa": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "samples": [
+        {
+          "trial": 1,
+          "seed": 2877251197,
+          "term_count": 39,
+          "hilbert_schmidt_norm": 1.0,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "support_max_qubit": 3,
+          "top_terms": [
+            {
+              "physical_label": "YYYZIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIZYYY",
+              "coeff_real": 0.4589316259978312,
+              "coeff_imag": 0.0,
+              "weight": 0.21061823734101323
+            },
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.45892542439914175,
+              "coeff_imag": 0.0,
+              "weight": 0.21061254515993236
+            },
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.4204635813089187,
+              "coeff_imag": 0.0,
+              "weight": 0.1767896232071217
+            },
+            {
+              "physical_label": "XYYZIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIZYYX",
+              "coeff_real": -0.3829073423795891,
+              "coeff_imag": 0.0,
+              "weight": 0.14661803284819988
+            },
+            {
+              "physical_label": "IXYZIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIZYXI",
+              "coeff_real": -0.3638885905489908,
+              "coeff_imag": 0.0,
+              "weight": 0.13241490633173109
+            },
+            {
+              "physical_label": "YYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYY",
+              "coeff_real": -0.15668529183419896,
+              "coeff_imag": 0.0,
+              "weight": 0.024550280677168097
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.15046327107106036,
+              "coeff_imag": 0.0,
+              "weight": 0.02263919594140339
+            },
+            {
+              "physical_label": "XYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYX",
+              "coeff_real": 0.1307296017260902,
+              "coeff_imag": 0.0,
+              "weight": 0.017090228767462162
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.4566669306600251,
+              "kappa": 1.8266677226401005,
+              "small_delta_quadratic_coeff": -0.9133338613200502,
+              "F_delta": [
+                1.0,
+                0.9994292852504449,
+                0.9977185674914313,
+                0.9948721226264318,
+                0.9908970652852093,
+                0.9858033310409469,
+                0.9796036515764899,
+                0.9639511664219442,
+                0.9440960042792129,
+                0.9202365513651821
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.100032258608673e-05,
+                6.089590866036568e-05,
+                6.072217545327342e-05,
+                6.04795572073492e-05,
+                6.016866034185467e-05,
+                5.979026193704162e-05,
+                5.883491005993312e-05,
+                5.762304713618243e-05,
+                5.616678169953504e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 2,
+          "seed": 1033149845,
+          "term_count": 39,
+          "hilbert_schmidt_norm": 1.0,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "support_max_qubit": 3,
+          "top_terms": [
+            {
+              "physical_label": "XZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZX",
+              "coeff_real": 0.7273544981692162,
+              "coeff_imag": 0.0,
+              "weight": 0.5290445660069922
+            },
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.6393562548432612,
+              "coeff_imag": 0.0,
+              "weight": 0.40877642060720115
+            },
+            {
+              "physical_label": "XYIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIYX",
+              "coeff_real": -0.13248242990770293,
+              "coeff_imag": 0.0,
+              "weight": 0.01755159423424942
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": 0.12188469779202768,
+              "coeff_imag": 0.0,
+              "weight": 0.014855879555853917
+            },
+            {
+              "physical_label": "XXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXX",
+              "coeff_real": 0.08265339755867492,
+              "coeff_imag": 0.0,
+              "weight": 0.006831584127992368
+            },
+            {
+              "physical_label": "IXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXI",
+              "coeff_real": -0.060326365542565444,
+              "coeff_imag": 0.0,
+              "weight": 0.003639270379575227
+            },
+            {
+              "physical_label": "ZZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZZ",
+              "coeff_real": -0.055500648940161566,
+              "coeff_imag": 0.0,
+              "weight": 0.003080322032779057
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": 0.04978788062235329,
+              "coeff_imag": 0.0,
+              "weight": 0.002478833056865702
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.4326307054680334,
+              "kappa": 1.7305228218721336,
+              "small_delta_quadratic_coeff": -0.8652614109360668,
+              "F_delta": [
+                1.0,
+                0.999459324273023,
+                0.9978386484998306,
+                0.9951420235258244,
+                0.9913761895090643,
+                0.9865505590733835,
+                0.9806771937817317,
+                0.9658485621465228,
+                0.9470384573890427,
+                0.9244348238582338
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.1002156022523375e-05,
+                6.090323782347599e-05,
+                6.0738648896839866e-05,
+                6.050880062921535e-05,
+                6.021426752156882e-05,
+                5.985578575327952e-05,
+                5.8950717904450855e-05,
+                5.780264022149919e-05,
+                5.642302391712853e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 3,
+          "seed": 476211274,
+          "term_count": 39,
+          "hilbert_schmidt_norm": 0.9999999999999999,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "support_max_qubit": 3,
+          "top_terms": [
+            {
+              "physical_label": "ZZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZZ",
+              "coeff_real": -0.6269480839067738,
+              "coeff_imag": 0.0,
+              "weight": 0.39306389991437507
+            },
+            {
+              "physical_label": "XIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIX",
+              "coeff_real": -0.5423527649197232,
+              "coeff_imag": 0.0,
+              "weight": 0.2941465216160685
+            },
+            {
+              "physical_label": "IYIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIYI",
+              "coeff_real": -0.3117820038776031,
+              "coeff_imag": 0.0,
+              "weight": 0.0972080179419337
+            },
+            {
+              "physical_label": "YXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXY",
+              "coeff_real": 0.26971265435811453,
+              "coeff_imag": 0.0,
+              "weight": 0.07274491592089975
+            },
+            {
+              "physical_label": "IYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYI",
+              "coeff_real": -0.22200793920356782,
+              "coeff_imag": 0.0,
+              "weight": 0.04928752506941506
+            },
+            {
+              "physical_label": "YXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXY",
+              "coeff_real": 0.19205197806950966,
+              "coeff_imag": 0.0,
+              "weight": 0.03688396228041142
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": -0.13025189011630195,
+              "coeff_imag": 0.0,
+              "weight": 0.016965554878869197
+            },
+            {
+              "physical_label": "ZZZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZZZ",
+              "coeff_real": 0.11117106870409423,
+              "coeff_imag": 0.0,
+              "weight": 0.012359006516810439
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.5446905842119016,
+              "kappa": 2.1787623368476066,
+              "small_delta_quadratic_coeff": -1.0893811684238033,
+              "F_delta": [
+                1.0,
+                0.9993192786044214,
+                0.9972788158666618,
+                0.993883711880913,
+                0.9891424526390035,
+                0.9830668888198378,
+                0.9756722061688717,
+                0.9570026667063247,
+                0.9333203741183428,
+                0.9048619540441402
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.099360831325814e-05,
+                6.086906835123668e-05,
+                6.0661847648981504e-05,
+                6.03724641503298e-05,
+                6.000164116332018e-05,
+                5.95503055522993e-05,
+                5.84108072940872e-05,
+                5.696535486562151e-05,
+                5.5228390749764414e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "depth": 4,
+      "operator_stats": {
+        "term_count": {
+          "mean": 195.0,
+          "std": 0.0,
+          "min": 195.0,
+          "max": 195.0
+        },
+        "hilbert_schmidt_norm": {
+          "mean": 0.9999999999999999,
+          "std": 6.409875621278546e-17,
+          "min": 0.9999999999999998,
+          "max": 0.9999999999999999
+        },
+        "support_max_qubit": {
+          "mean": 4.0,
+          "std": 0.0,
+          "min": 4.0,
+          "max": 4.0
+        }
+      },
+      "branches": {
+        "overlap": {
+          "generator_label": "X_0",
+          "w_anti": {
+            "mean": 0.6444586614348625,
+            "std": 0.21605271552251107,
+            "min": 0.3658975779762222,
+            "max": 0.8924634227003005
+          },
+          "kappa": {
+            "mean": 2.57783464573945,
+            "std": 0.8642108620900443,
+            "min": 1.4635903119048888,
+            "max": 3.569853690801202
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              0.9991945944869979,
+              0.9967803910423267,
+              0.9927634239173054,
+              0.9871537334377506,
+              0.9799653409083907,
+              0.9712162135669066,
+              0.9491270738601006,
+              0.9211070216995845,
+              0.887436024184348
+            ],
+            "std": [
+              0.0,
+              0.0002700096353635384,
+              0.0010793636579842058,
+              0.0024260391043087084,
+              0.004306669987056348,
+              0.006716555708433858,
+              0.009649672809182056,
+              0.01705498660632444,
+              0.02644861993089387,
+              0.037736714703833614
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.0985998198669304e-05,
+              6.083864691420451e-05,
+              6.0593470698077724e-05,
+              6.025108236314396e-05,
+              5.9812337701928144e-05,
+              5.927833334758951e-05,
+              5.7930119254156534e-05,
+              5.621991099240628e-05,
+              5.416479639797046e-05
+            ],
+            "std": [
+              0.0,
+              1.6480080283419092e-08,
+              6.587912951563756e-08,
+              1.4807367580009207e-07,
+              2.628582755771697e-07,
+              4.0994602712609e-07,
+              5.889692876698032e-07,
+              1.0409537723586694e-06,
+              1.6142956500789715e-06,
+              2.303266278310157e-06
+            ]
+          }
+        },
+        "disjoint": {
+          "generator_label": "X_10",
+          "w_anti": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "kappa": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "F_delta": {
+            "mean": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "f_delta": {
+            "mean": [
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05,
+              6.103515625e-05
+            ],
+            "std": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "samples": [
+        {
+          "trial": 1,
+          "seed": 3058314195,
+          "term_count": 195,
+          "hilbert_schmidt_norm": 0.9999999999999998,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "support_max_qubit": 4,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": -0.41372833374688633,
+              "coeff_imag": 0.0,
+              "weight": 0.17117113414497498
+            },
+            {
+              "physical_label": "YXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXY",
+              "coeff_real": -0.2833501995004189,
+              "coeff_imag": 0.0,
+              "weight": 0.08028733555692719
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": 0.2575674221639771,
+              "coeff_imag": 0.0,
+              "weight": 0.0663409769601964
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": 0.2542438894515515,
+              "coeff_imag": 0.0,
+              "weight": 0.06463995532345275
+            },
+            {
+              "physical_label": "XXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXX",
+              "coeff_real": 0.22574590374625753,
+              "coeff_imag": 0.0,
+              "weight": 0.05096121305821457
+            },
+            {
+              "physical_label": "ZXZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZXZ",
+              "coeff_real": -0.21950647373281473,
+              "coeff_imag": 0.0,
+              "weight": 0.04818309201061489
+            },
+            {
+              "physical_label": "IYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYI",
+              "coeff_real": 0.2150772510932951,
+              "coeff_imag": 0.0,
+              "weight": 0.04625822393784831
+            },
+            {
+              "physical_label": "XXIZIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIZIXX",
+              "coeff_real": -0.17320685833503127,
+              "coeff_imag": 0.0,
+              "weight": 0.03000061577429159
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.675014983628065,
+              "kappa": 2.70005993451226,
+              "small_delta_quadratic_coeff": -1.35002996725613,
+              "F_delta": [
+                1.0,
+                0.9991564070409689,
+                0.996627736706938,
+                0.9924203093568368,
+                0.9865446413678544,
+                0.9790154188499747,
+                0.9698514609383491,
+                0.9467149881592418,
+                0.9173663950186404,
+                0.8820989229578504
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.0983667421934135e-05,
+                6.0829329632991824e-05,
+                6.057252864726787e-05,
+                6.0213906333487204e-05,
+                5.97543590606674e-05,
+                5.919503545766291e-05,
+                5.7782897226516224e-05,
+                5.5991601258461937e-05,
+                5.383904559068911e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 2,
+          "seed": 64606459,
+          "term_count": 195,
+          "hilbert_schmidt_norm": 0.9999999999999999,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "support_max_qubit": 4,
+          "top_terms": [
+            {
+              "physical_label": "XZZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZZX",
+              "coeff_real": -0.5155938183549921,
+              "coeff_imag": 0.0,
+              "weight": 0.2658369855258806
+            },
+            {
+              "physical_label": "YIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIY",
+              "coeff_real": 0.380533536944683,
+              "coeff_imag": 0.0,
+              "weight": 0.1448057727396304
+            },
+            {
+              "physical_label": "XXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXX",
+              "coeff_real": -0.32130245174026634,
+              "coeff_imag": 0.0,
+              "weight": 0.10323526549430617
+            },
+            {
+              "physical_label": "XYIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIYX",
+              "coeff_real": 0.2507724178809174,
+              "coeff_imag": 0.0,
+              "weight": 0.06288680556984147
+            },
+            {
+              "physical_label": "IXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXI",
+              "coeff_real": 0.24980312318681933,
+              "coeff_imag": 0.0,
+              "weight": 0.06240160035388923
+            },
+            {
+              "physical_label": "ZZZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZZZ",
+              "coeff_real": 0.22077693571230347,
+              "coeff_imag": 0.0,
+              "weight": 0.04874245534251458
+            },
+            {
+              "physical_label": "IYIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIYI",
+              "coeff_real": 0.20720676004173944,
+              "coeff_imag": 0.0,
+              "weight": 0.04293464140699499
+            },
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": 0.20397019639881156,
+              "coeff_imag": 0.0,
+              "weight": 0.04160384101896976
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.3658975779762222,
+              "kappa": 1.4635903119048888,
+              "small_delta_quadratic_coeff": -0.7317951559524444,
+              "F_delta": [
+                1.0,
+                0.9995427233054172,
+                0.9981720361752602,
+                0.9958913646135141,
+                0.9927064091113328,
+                0.9886251303987788,
+                0.9836577295471446,
+                0.9711164088978052,
+                0.9552077558936333,
+                0.9360907245367451
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.100724629549665e-05,
+                6.092358619233766e-05,
+                6.0784385047211556e-05,
+                6.058999079048662e-05,
+                6.0340889306566086e-05,
+                6.003770321943021e-05,
+                5.927224175401643e-05,
+                5.8301254632179765e-05,
+                5.713444363627595e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        },
+        {
+          "trial": 3,
+          "seed": 2294287624,
+          "term_count": 195,
+          "hilbert_schmidt_norm": 0.9999999999999999,
+          "support_qubits": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "support_max_qubit": 4,
+          "top_terms": [
+            {
+              "physical_label": "ZIIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIIZ",
+              "coeff_real": -0.8500983485503069,
+              "coeff_imag": 0.0,
+              "weight": 0.722667202207959
+            },
+            {
+              "physical_label": "YYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYY",
+              "coeff_real": -0.3062520147406788,
+              "coeff_imag": 0.0,
+              "weight": 0.09379029653272496
+            },
+            {
+              "physical_label": "XZYIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIYZX",
+              "coeff_real": -0.2091126956815314,
+              "coeff_imag": 0.0,
+              "weight": 0.04372811949519676
+            },
+            {
+              "physical_label": "YYXIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIXYY",
+              "coeff_real": -0.1498212912199237,
+              "coeff_imag": 0.0,
+              "weight": 0.02244641930280519
+            },
+            {
+              "physical_label": "XYZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZYX",
+              "coeff_real": 0.14886299572728434,
+              "coeff_imag": 0.0,
+              "weight": 0.022160191496901478
+            },
+            {
+              "physical_label": "YZIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIZY",
+              "coeff_real": 0.13762549518431844,
+              "coeff_imag": 0.0,
+              "weight": 0.018940776924728855
+            },
+            {
+              "physical_label": "XIZIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIZIX",
+              "coeff_real": -0.12933994323871947,
+              "coeff_imag": 0.0,
+              "weight": 0.016728820916995176
+            },
+            {
+              "physical_label": "YXIIIIIIIIIIII",
+              "qiskit_label": "IIIIIIIIIIIIXY",
+              "coeff_real": 0.0926671488748257,
+              "coeff_imag": 0.0,
+              "weight": 0.00858720048058911
+            }
+          ],
+          "branches": {
+            "overlap": {
+              "generator_label": "X_0",
+              "w_anti": 0.8924634227003005,
+              "kappa": 3.569853690801202,
+              "small_delta_quadratic_coeff": -1.784926845400601,
+              "F_delta": [
+                1.0,
+                0.9988846531146075,
+                0.9955414002447819,
+                0.9899785977815654,
+                0.9822101498340645,
+                0.9722554734764185,
+                0.9601394502152262,
+                0.9295498245232553,
+                0.8907469141864799,
+                0.8441184250584481
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.096708087857712e-05,
+                6.076302491728405e-05,
+                6.0423498399753747e-05,
+                5.994934996545804e-05,
+                5.9341764738550934e-05,
+                5.8602261365675426e-05,
+                5.673521878193697e-05,
+                5.436687708657714e-05,
+                5.15208999669463e-05
+              ]
+            },
+            "disjoint": {
+              "generator_label": "X_10",
+              "w_anti": 0.0,
+              "kappa": 0.0,
+              "small_delta_quadratic_coeff": -0.0,
+              "F_delta": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "f_delta": [
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05,
+                6.103515625e-05
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
