@@ -1,0 +1,56 @@
+{
+  "benchmark_id": "black-hole-echo-q14-only-v1",
+  "created_utc": "2026-03-16T16:30:00Z",
+  "supersedes": "black-hole-echo-levelc-v1 for the active day-to-day campaign target",
+  "task_definition": {
+    "family": "Loschmidt echo / black-hole scrambling toy",
+    "state_preparation": "|0...0>",
+    "circuit": "random brickwork scrambler U plus perturbed echo U^dagger X U",
+    "observable": "perturbed_echo",
+    "accuracy_metric": "MAE versus exact reference over fixed seeds per depth",
+    "aggregation": "mean/std over fixed seeds per depth"
+  },
+  "fixed_parameters": {
+    "qubits": 14,
+    "depths": [1, 2, 3, 4],
+    "trials_per_day": 3,
+    "shots": 4000,
+    "seed": 424242,
+    "perturb_qubit": 0,
+    "optimization_level": 1,
+    "preferred_backend": "ibm_fez",
+    "runtime_metric": "IBM quantum_seconds"
+  },
+  "classical_track": {
+    "script": "qiskit_black_hole_scrambling.py",
+    "qubits": [14],
+    "runtime_capture": "/usr/bin/time -v",
+    "reference_artifact": "results/benchmark/classical/black_hole_scrambling_q14_exact_short.json",
+    "reference_wall_time_seconds": 51.05
+  },
+  "hardware_track": {
+    "script": "qiskit_black_hole_hardware_runner.py",
+    "qubits": [14],
+    "config": {
+      "name": "raw_exact_short",
+      "readout_mitigation": false,
+      "depths": [1, 2, 3, 4],
+      "trials": 3,
+      "shots": 4000
+    },
+    "output_dir": "results/hardware"
+  },
+  "claim_criteria": {
+    "q14_only_claim": {
+      "same_task_and_accuracy_target": true,
+      "hardware_beats_matching_classical_on_q14": true,
+      "mae_perturbed_echo_max": 0.05,
+      "reproduced_on_three_independent_days": true
+    }
+  },
+  "notes": [
+    "This is a narrower campaign claim than the legacy Level C hardware-advantage definition.",
+    "Do not describe this as two-consecutive-size hardware advantage.",
+    "If backend changes mid-campaign, restart the 3-day count."
+  ]
+}

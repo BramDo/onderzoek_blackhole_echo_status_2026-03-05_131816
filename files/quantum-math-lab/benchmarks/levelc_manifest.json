@@ -1,0 +1,93 @@
+{
+  "benchmark_id": "black-hole-echo-levelc-v1",
+  "created_utc": "2026-03-04T20:45:00Z",
+  "task_definition": {
+    "family": "Loschmidt echo / black-hole scrambling toy",
+    "state_preparation": "|0...0>",
+    "circuit": "random brickwork scrambler U plus perturbed echo U^dagger X U",
+    "metrics": [
+      "ideal_echo",
+      "perturbed_echo",
+      "absolute_error_vs_exact (when exact feasible)"
+    ],
+    "aggregation": "mean/std over fixed seeds per depth"
+  },
+  "fixed_parameters": {
+    "depths": [1, 2, 3, 4, 5, 6, 8, 10],
+    "trials_pilot": 3,
+    "trials_target": 10,
+    "shots_set": [5000, 10000],
+    "seed": 424242,
+    "perturb_qubit": 0,
+    "optimization_level": 1
+  },
+  "classical_track": {
+    "script": "qiskit_black_hole_scrambling.py",
+    "qubits": [8, 10, 12],
+    "runtime_capture": "/usr/bin/time -v",
+    "output_dir": "results/benchmark/classical"
+  },
+  "hardware_track": {
+    "script": "qiskit_black_hole_hardware_runner.py",
+    "backend": "auto (least_busy)",
+    "qubits_pilot": [8, 10],
+    "qubits_large": [80],
+    "configs": [
+      {
+        "name": "raw",
+        "readout_mitigation": false
+      },
+      {
+        "name": "readout_mitigated",
+        "readout_mitigation": true,
+        "cal_shots": 4000
+      },
+      {
+        "name": "readout_mitigated_subset01",
+        "readout_mitigation": true,
+        "cal_shots": 6000,
+        "subset_qubits": "0-9",
+        "skip_exact": true
+      },
+      {
+        "name": "readout_mitigated_subset02",
+        "readout_mitigation": true,
+        "cal_shots": 6000,
+        "subset_qubits": "10-19",
+        "skip_exact": true
+      },
+      {
+        "name": "readout_mitigated_subset01_xsup",
+        "readout_mitigation": true,
+        "cal_shots": 6000,
+        "subset_qubits": "0-9",
+        "skip_exact": true,
+        "extra_error_suppression": {
+          "dd_sequence": "XY4",
+          "twirl_randomizations": 8
+        }
+      }
+    ],
+    "output_dir": "results/hardware"
+  },
+  "claim_criteria": {
+    "level_a": {
+      "median_abs_error_improvement_min_fraction": 0.7,
+      "catastrophic_degradation_max_fraction": 0.1
+    },
+    "level_b": {
+      "at_least_one_nontrivial_size": ">=10 qubits",
+      "requires_stable_confidence_intervals": true
+    },
+    "level_c": {
+      "same_task_and_accuracy_target": true,
+      "hardware_beats_best_classical_on_two_consecutive_sizes": true,
+      "reproduced_on_three_independent_days": true
+    }
+  },
+  "notes": [
+    "For >24 qubits exact statevector reference is not feasible in this workflow.",
+    "For 80-qubit runs use subset observables with subset readout mitigation.",
+    "Use this manifest unchanged for fair cross-run comparison."
+  ]
+}
