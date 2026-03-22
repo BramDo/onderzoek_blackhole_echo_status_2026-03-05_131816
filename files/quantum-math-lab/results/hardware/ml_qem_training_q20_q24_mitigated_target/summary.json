@@ -1,0 +1,52 @@
+{
+  "dataset": "results/hardware/ml_qem_dataset/q20_q24_hardware_mitigated_subset.npz",
+  "feature_names": [
+    "qubits",
+    "subset_size",
+    "depth",
+    "trial",
+    "branch_overlap",
+    "perturb_qubit_norm",
+    "raw_perturbed_echo",
+    "mitigated_perturbed_echo",
+    "mitigation_gain",
+    "transpiled_depth",
+    "two_qubit_gate_count",
+    "zne_factor",
+    "optimization_level",
+    "seed_transpiler",
+    "extra_error_suppression",
+    "twirl_randomizations"
+  ],
+  "baseline_feature": "mitigated_perturbed_echo",
+  "train_samples": 54,
+  "val_samples": 18,
+  "unique_groups": 72,
+  "best_epoch_mlp": 400,
+  "metrics": {
+    "baseline_train": {
+      "mae": 0.0,
+      "rmse": 0.0
+    },
+    "baseline_val": {
+      "mae": 0.0,
+      "rmse": 0.0
+    },
+    "ridge_like_train": {
+      "mae": 0.007782224100083113,
+      "rmse": 0.011777285486459732
+    },
+    "ridge_like_val": {
+      "mae": 0.012041966430842876,
+      "rmse": 0.017972461879253387
+    },
+    "mlp_train": {
+      "mae": 0.011407781392335892,
+      "rmse": 0.016880987212061882
+    },
+    "mlp_val": {
+      "mae": 0.04473106563091278,
+      "rmse": 0.053584516048431396
+    }
+  }
+}

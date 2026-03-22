@@ -1,0 +1,48 @@
+{
+  "feature_names": [
+    "total_qubits",
+    "subset_size",
+    "depth",
+    "trial",
+    "branch_overlap",
+    "perturb_qubit_norm",
+    "raw_subset_perturbed_echo",
+    "mitigated_subset_perturbed_echo",
+    "mitigation_gain",
+    "logical_pert_depth",
+    "logical_pert_two_qubit_count",
+    "zne_factor",
+    "noise_dep_effective",
+    "noise_readout_effective",
+    "suppression_enabled"
+  ],
+  "dataset_samples": 2,
+  "unique_logical_circuits": 2,
+  "surrogate_qubits": 12,
+  "subset_qubits": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "depths": [
+    1
+  ],
+  "trials": 1,
+  "shots": 4000,
+  "zne_factors": [
+    1.0
+  ],
+  "include_suppressed": false,
+  "backend_modes": {
+    "aer depolarizing+readout": 4
+  },
+  "target": "exact_perturbed_subset_echo",
+  "observable_shape": "q80-subset-like perturbed_subset_echo surrogate"
+}

@@ -1,0 +1,41 @@
+{
+  "diagnostic_only": true,
+  "source_json": "C:\\Users\\Lenna\\SynologyDrive\\qlab\\onderzoek_blackhole_echo_status_2026-03-05_131816\\files\\quantum-math-lab\\results\\hardware\\bonus_full_q80_2026-03-21\\depth2_paired_capture\\full_q80_q0_q79_paired_t5.json",
+  "rule": {
+    "type": "median_absolute_deviation",
+    "z_threshold": 3.0,
+    "raw_median": 0.014684492411018685,
+    "raw_mad": 0.007325535099583381,
+    "robust_scale": 0.01086083833864232,
+    "trim_threshold": 0.03258251501592696
+  },
+  "paired_relative_perturbed_echo_delta": {
+    "raw_values": [
+      -0.6702839846223341,
+      0.022010027510602066,
+      0.7597425378378649,
+      0.014684492411018685,
+      0.009498525489260431
+    ],
+    "kept_values": [
+      0.022010027510602066,
+      0.014684492411018685,
+      0.009498525489260431
+    ],
+    "dropped_values": [
+      -0.6702839846223341,
+      0.7597425378378649
+    ],
+    "kept_count": 3,
+    "dropped_count": 2,
+    "kept_mean": 0.015397681803627059,
+    "kept_std": 0.005132634154103575,
+    "kept_median": 0.014684492411018685,
+    "kept_mad": 0.005185966921758253,
+    "kept_positive_count": 3,
+    "dropped_indices": [
+      0,
+      2
+    ]
+  }
+}

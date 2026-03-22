@@ -1,0 +1,1080 @@
+{
+  "config": {
+    "qubits": 80,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "trials": 3,
+    "seed": 424242,
+    "shots": 4000,
+    "perturb_qubit": 0,
+    "optimization_level": 1,
+    "readout_mitigation": true,
+    "cal_shots": 6000,
+    "skip_exact": true,
+    "subset_qubits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "extra_error_suppression": true,
+    "dd_sequence": "XY4",
+    "twirl_randomizations": 8
+  },
+  "runtime": {
+    "timestamp_utc": "2026-03-04T19:30:16.840043+00:00",
+    "sampler_interface": "SamplerV2",
+    "hardware_job_id": "d6k8ft860irc7395fep0",
+    "calibration_job_id": "d6k8g8860irc7395ff4g",
+    "sampler_options": {
+      "dynamical_decoupling": {
+        "enable": true,
+        "sequence_type": "XY4",
+        "scheduling_method": "alap"
+      },
+      "twirling": {
+        "enable_gates": true,
+        "num_randomizations": 8,
+        "strategy": "active-accum"
+      }
+    }
+  },
+  "backend": {
+    "name": "ibm_torino",
+    "backend_version": "1.0.108",
+    "num_qubits": 133,
+    "properties_last_update": "2026-03-04 19:42:40+01:00"
+  },
+  "calibration": {
+    "shots_all0": 6000,
+    "shots_all1": 6000,
+    "p01_per_qubit": [
+      0.10216666666666667,
+      0.0695,
+      0.07383333333333333,
+      0.025666666666666667,
+      0.037,
+      0.0335,
+      0.0025,
+      0.107,
+      0.08816666666666667,
+      0.005,
+      0.06266666666666666,
+      0.005833333333333334,
+      0.025666666666666667,
+      0.034833333333333334,
+      0.06116666666666667,
+      0.003,
+      0.027,
+      0.006166666666666667,
+      0.006,
+      0.03883333333333333,
+      0.008166666666666666,
+      0.06233333333333333,
+      0.023166666666666665,
+      0.04633333333333333,
+      0.041,
+      0.107,
+      0.045,
+      0.0725,
+      0.0055,
+      0.02666666666666667,
+      0.023333333333333334,
+      0.083,
+      0.010333333333333333,
+      0.06333333333333334,
+      0.03916666666666667,
+      0.014666666666666666,
+      0.0026666666666666666,
+      0.0028333333333333335,
+      0.09433333333333334,
+      0.04566666666666667,
+      0.035333333333333335,
+      0.030833333333333334,
+      0.11366666666666667,
+      0.0085,
+      0.058,
+      0.0045,
+      0.043833333333333335,
+      0.005333333333333333,
+      0.028833333333333332,
+      0.0185,
+      0.10016666666666667,
+      0.006666666666666667,
+      0.012333333333333333,
+      0.499999,
+      0.022166666666666668,
+      0.007666666666666666,
+      0.0185,
+      0.042333333333333334,
+      0.016,
+      0.0565,
+      0.0105,
+      0.0175,
+      0.008666666666666666,
+      0.03283333333333333,
+      0.074,
+      0.009166666666666667,
+      0.003,
+      0.028666666666666667,
+      0.010166666666666666,
+      0.034,
+      0.06716666666666667,
+      0.03166666666666667,
+      0.0055,
+      0.031166666666666665,
+      0.018,
+      0.0045,
+      0.052333333333333336,
+      0.0365,
+      0.024666666666666667,
+      0.0065
+    ],
+    "p10_per_qubit": [
+      0.15216666666666667,
+      0.03966666666666667,
+      0.11683333333333333,
+      0.015666666666666666,
+      0.04616666666666667,
+      0.020833333333333332,
+      0.019833333333333335,
+      0.0595,
+      0.056666666666666664,
+      0.0325,
+      0.047,
+      0.009666666666666667,
+      0.017333333333333333,
+      0.0265,
+      0.04083333333333333,
+      0.039,
+      0.018166666666666668,
+      0.009166666666666667,
+      0.0065,
+      0.072,
+      0.0225,
+      0.06916666666666667,
+      0.029666666666666668,
+      0.13266666666666665,
+      0.018333333333333333,
+      0.09383333333333334,
+      0.07366666666666667,
+      0.0435,
+      0.011833333333333333,
+      0.008833333333333334,
+      0.005666666666666667,
+      0.04533333333333334,
+      0.018333333333333333,
+      0.029666666666666668,
+      0.024333333333333332,
+      0.010833333333333334,
+      0.008,
+      0.006333333333333333,
+      0.058333333333333334,
+      0.030166666666666668,
+      0.019833333333333335,
+      0.1555,
+      0.153,
+      0.017,
+      0.024333333333333332,
+      0.013333333333333334,
+      0.0485,
+      0.0325,
+      0.043833333333333335,
+      0.015666666666666666,
+      0.07366666666666667,
+      0.006333333333333333,
+      0.017166666666666667,
+      0.060333333333333336,
+      0.0135,
+      0.0105,
+      0.010666666666666666,
+      0.0095,
+      0.019,
+      0.04566666666666667,
+      0.006666666666666667,
+      0.011166666666666667,
+      0.013333333333333334,
+      0.05216666666666667,
+      0.059166666666666666,
+      0.013166666666666667,
+      0.012333333333333333,
+      0.0805,
+      0.004,
+      0.046,
+      0.03783333333333333,
+      0.05216666666666667,
+      0.005833333333333334,
+      0.01633333333333333,
+      0.006333333333333333,
+      0.005833333333333334,
+      0.011666666666666667,
+      0.02,
+      0.05516666666666667,
+      0.071
+    ],
+    "local_model": "independent per-qubit asymmetric readout",
+    "calibration_job_id": "d6k8g8860irc7395ff4g",
+    "p01_mean": 0.040858320833333336,
+    "p10_mean": 0.036968749999999995,
+    "mitigation_qubits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mitigation_qubit_count": 10,
+    "assignment_condition_number": 3.4880075575532183
+  },
+  "runs": [
+    {
+      "depth": 1,
+      "trial": 0,
+      "seed": 2100976124,
+      "raw": {
+        "ideal_echo": 0.01325,
+        "perturbed_echo": 0.00125,
+        "ideal_subset_echo": 0.69125,
+        "perturbed_subset_echo": 0.104,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9735120714813102,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.27555997016886635,
+        "perturbed_negative_mass_before_clip": 0.21602112665061526
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 1,
+      "seed": 2038377967,
+      "raw": {
+        "ideal_echo": 0.01375,
+        "perturbed_echo": 0.00025,
+        "ideal_subset_echo": 0.68925,
+        "perturbed_subset_echo": 0.04,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.969836743638771,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.27540562591804635,
+        "perturbed_negative_mass_before_clip": 0.22020377298212312
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 2,
+      "seed": 4191763410,
+      "raw": {
+        "ideal_echo": 0.01725,
+        "perturbed_echo": 0.001,
+        "ideal_subset_echo": 0.66275,
+        "perturbed_subset_echo": 0.05425,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9779399191193742,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.2126279759448205,
+        "perturbed_negative_mass_before_clip": 0.2282359767387996
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 0,
+      "seed": 451347887,
+      "raw": {
+        "ideal_echo": 0.01375,
+        "perturbed_echo": 0.002,
+        "ideal_subset_echo": 0.69225,
+        "perturbed_subset_echo": 0.10275,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8749893447992093,
+        "perturbed_subset_echo": 0.026535435888055493,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.43196322961691547,
+        "perturbed_negative_mass_before_clip": 0.1952067812347777
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 1,
+      "seed": 1322332347,
+      "raw": {
+        "ideal_echo": 0.01575,
+        "perturbed_echo": 0.001,
+        "ideal_subset_echo": 0.70225,
+        "perturbed_subset_echo": 0.04375,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8885026327316408,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.4311306144530707,
+        "perturbed_negative_mass_before_clip": 0.3701552744066145
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 2,
+      "seed": 1237866825,
+      "raw": {
+        "ideal_echo": 0.0125,
+        "perturbed_echo": 0.001,
+        "ideal_subset_echo": 0.715,
+        "perturbed_subset_echo": 0.03875,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8899178912007359,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.45827997086645045,
+        "perturbed_negative_mass_before_clip": 0.3030252702282466
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 0,
+      "seed": 2877251197,
+      "raw": {
+        "ideal_echo": 0.0135,
+        "perturbed_echo": 0.0,
+        "ideal_subset_echo": 0.7755,
+        "perturbed_subset_echo": 0.0065,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8621215589857282,
+        "perturbed_subset_echo": 0.00303709035482693,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6457670486459326,
+        "perturbed_negative_mass_before_clip": 0.3015953269365239
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 1,
+      "seed": 1033149845,
+      "raw": {
+        "ideal_echo": 0.011,
+        "perturbed_echo": 0.00025,
+        "ideal_subset_echo": 0.7605,
+        "perturbed_subset_echo": 0.0115,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8621128735045273,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6125134170657686,
+        "perturbed_negative_mass_before_clip": 0.4478310918177771
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 2,
+      "seed": 476211274,
+      "raw": {
+        "ideal_echo": 0.014,
+        "perturbed_echo": 0.004,
+        "ideal_subset_echo": 0.76975,
+        "perturbed_subset_echo": 0.27075,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8567865200004223,
+        "perturbed_subset_echo": 0.3047941630268202,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6442909734211003,
+        "perturbed_negative_mass_before_clip": 0.2760676447246552
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 0,
+      "seed": 3058314195,
+      "raw": {
+        "ideal_echo": 0.01025,
+        "perturbed_echo": 0.0025,
+        "ideal_subset_echo": 0.7685,
+        "perturbed_subset_echo": 0.264,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8532691521686805,
+        "perturbed_subset_echo": 0.3068092323682288,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6482945567655424,
+        "perturbed_negative_mass_before_clip": 0.2639077086646957
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 1,
+      "seed": 64606459,
+      "raw": {
+        "ideal_echo": 0.0115,
+        "perturbed_echo": 0.002,
+        "ideal_subset_echo": 0.7655,
+        "perturbed_subset_echo": 0.0985,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8535386474463347,
+        "perturbed_subset_echo": 0.10582646372756903,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6409727943967288,
+        "perturbed_negative_mass_before_clip": 0.25714310746878827
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 2,
+      "seed": 2294287624,
+      "raw": {
+        "ideal_echo": 0.01025,
+        "perturbed_echo": 0.00025,
+        "ideal_subset_echo": 0.78425,
+        "perturbed_subset_echo": 0.01725,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.8566667000358592,
+        "perturbed_subset_echo": 0.0,
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_negative_mass_before_clip": 0.6770049702580867,
+        "perturbed_negative_mass_before_clip": 0.3400627900937955
+      }
+    }
+  ],
+  "summary_by_depth": [
+    {
+      "depth": 1,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.01475,
+          "std": 0.0017795130420052193
+        },
+        "perturbed_echo": {
+          "mean": 0.0008333333333333334,
+          "std": 0.00042491829279939875
+        },
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.6810833333333334,
+          "std": 0.01298931184559918
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.06608333333333333,
+          "std": 0.027435024249224848
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9737629114131519,
+          "std": 0.003312859159992232
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.0,
+          "std": 0.0
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.013999999999999999,
+          "std": 0.001338531533684084
+        },
+        "perturbed_echo": {
+          "mean": 0.0013333333333333333,
+          "std": 0.0004714045207910317
+        },
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.7031666666666667,
+          "std": 0.009310239285622848
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.06175,
+          "std": 0.02906314963431642
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.884469956243862,
+          "std": 0.006728656832629929
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.008845145296018498,
+          "std": 0.012508924438789943
+        }
+      }
+    },
+    {
+      "depth": 3,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.012833333333333334,
+          "std": 0.0013123346456686356
+        },
+        "perturbed_echo": {
+          "mean": 0.0014166666666666668,
+          "std": 0.001829541533341679
+        },
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.7685833333333334,
+          "std": 0.006179041637305553
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.09625,
+          "std": 0.12340701627811389
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.8603403174968927,
+          "std": 0.002512916810379874
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.10261041779388237,
+          "std": 0.14297087373953477
+        }
+      }
+    },
+    {
+      "depth": 4,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.010666666666666666,
+          "std": 0.0005892556509887893
+        },
+        "perturbed_echo": {
+          "mean": 0.0015833333333333335,
+          "std": 0.0009646530752325188
+        },
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.7727499999999999,
+          "std": 0.008223442101699284
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.12658333333333335,
+          "std": 0.10267390396568914
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.8544914998836247,
+          "std": 0.0015420286860453125
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.1375452320319326,
+          "std": 0.12724657549722082
+        }
+      }
+    }
+  ]
+}

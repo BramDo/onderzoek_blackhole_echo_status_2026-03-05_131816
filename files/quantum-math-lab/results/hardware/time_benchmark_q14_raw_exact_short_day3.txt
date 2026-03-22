@@ -1,0 +1,17 @@
+started_utc=2026-03-17T10:57:33.6497570Z
+completed_utc=2026-03-17T10:59:08.1106535Z
+elapsed_seconds=94.42
+classical_baseline_seconds=51.05
+perturbed_echo_mae=0.031142
+target_mae=0.05
+backend=ibm_fez
+output_json=results/hardware/benchmark_q14_raw_exact_short_day3.json
+job_status=DONE
+quantum_seconds=26
+billed_seconds=26
+usage_estimate_qs=28.178832416
+runtime_gate_metric=quantum_seconds
+runtime_gate_seconds=26
+ibm_created_timestamp=2026-03-17T10:58:23.437025Z
+ibm_running_timestamp=2026-03-17T10:58:24.797873Z
+ibm_finished_timestamp=2026-03-17T10:59:04.24819Z

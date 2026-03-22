@@ -1,0 +1,73 @@
+{
+  "diagnostic_only": true,
+  "source_json": "results/hardware/bonus_full_q80_2026-03-21/depth2_paired_capture/full_q80_q0_q79_paired_t5.json",
+  "hardware_job_id": "d6vblg2f84ks73df5680",
+  "calibration_job_id": "d6vblrgv5rlc73f4qq80",
+  "bootstrap_reps": 20,
+  "bootstrap_seed": 424242,
+  "bootstrap_model": "multinomial_resample_full_all0_all1_calibration_histograms",
+  "paired_compare": {
+    "anchor_perturb_qubit": 0,
+    "compare_perturb_qubit": 79
+  },
+  "local_relative_perturbed_echo_delta": {
+    "bootstrap_mean_of_trial_deltas": {
+      "mean": 0.027523665297116428,
+      "std": 0.006264893579131141,
+      "median": 0.026965020006445618,
+      "min": 0.017770226663013765,
+      "max": 0.040152172413522126,
+      "mad": 0.005376289146187773,
+      "q25": 0.02200068749072155,
+      "q75": 0.03225556827722705,
+      "iqr": 0.0102548807865055,
+      "q025": 0.01817481144589645,
+      "q975": 0.03959236391142173,
+      "positive_rate": 1.0
+    },
+    "bootstrap_median_of_trial_deltas": {
+      "mean": 0.01537216587637713,
+      "std": 0.002475937482750421,
+      "median": 0.0150653975444216,
+      "min": 0.011308609855608664,
+      "max": 0.021160279975031532,
+      "mad": 0.0017378690999813873,
+      "q25": 0.013719230525418652,
+      "q75": 0.01681827230901236,
+      "iqr": 0.0030990417835937076,
+      "q025": 0.011344424695641795,
+      "q975": 0.020028688279361866,
+      "positive_rate": 1.0
+    }
+  },
+  "local_relative_hamming_return_linear_delta": {
+    "bootstrap_mean_of_trial_deltas": {
+      "mean": -0.0004954197705945451,
+      "std": 3.770316549633547e-05,
+      "median": -0.0004894494690951378,
+      "min": -0.0005826261368048647,
+      "max": -0.0004036104943294427,
+      "mad": 1.6622683006528604e-05,
+      "q25": -0.0005083031950668004,
+      "q75": -0.00047725967547415096,
+      "iqr": 3.104351959264942e-05,
+      "q025": -0.0005715161789328521,
+      "q975": -0.00042601164312745636,
+      "positive_rate": 0.0
+    },
+    "bootstrap_median_of_trial_deltas": {
+      "mean": -0.000574822688778448,
+      "std": 4.587355805949571e-05,
+      "median": -0.0005750947551566021,
+      "min": -0.0006581272836158059,
+      "max": -0.00042943614158064136,
+      "mad": 2.2223182664982133e-05,
+      "q25": -0.0006003258447110638,
+      "q75": -0.0005546978093373678,
+      "iqr": 4.5628035373695974e-05,
+      "q025": -0.0006540839813899329,
+      "q975": -0.0004842822190471581,
+      "positive_rate": 0.0
+    }
+  }
+}

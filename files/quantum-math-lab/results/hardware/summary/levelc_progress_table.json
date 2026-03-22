@@ -1,0 +1,65 @@
+{
+  "classical": [
+    {
+      "tag": "q8_s5000",
+      "qubits": 8,
+      "shots": 5000,
+      "elapsed_s": 12.84,
+      "max_rss_gib": 0.26294708251953125,
+      "perturbed_echo_depthavg": 0.14498636197166653
+    },
+    {
+      "tag": "q8_s10000",
+      "qubits": 8,
+      "shots": 10000,
+      "elapsed_s": 13.18,
+      "max_rss_gib": 0.2629127502441406,
+      "perturbed_echo_depthavg": 0.14498636197166653
+    },
+    {
+      "tag": "q10_s5000",
+      "qubits": 10,
+      "shots": 5000,
+      "elapsed_s": 89.73,
+      "max_rss_gib": 0.3920097351074219,
+      "perturbed_echo_depthavg": 0.14537465121595808
+    },
+    {
+      "tag": "q10_s10000",
+      "qubits": 10,
+      "shots": 10000,
+      "elapsed_s": 90.0,
+      "max_rss_gib": 0.3772163391113281,
+      "perturbed_echo_depthavg": 0.14537465121595808
+    }
+  ],
+  "hardware": [
+    {
+      "tag": "q10_raw_short",
+      "qubits": 10,
+      "shots": 5000,
+      "backend": "ibm_marrakesh",
+      "hardware_job_id": "d6k9jk4mmeis739sg54g",
+      "calibration_job_id": null,
+      "perturbed_echo_depthavg": 0.16724999999999998
+    },
+    {
+      "tag": "q10_mit_short",
+      "qubits": 10,
+      "shots": 5000,
+      "backend": "ibm_fez",
+      "hardware_job_id": "d6k9k6sgmsgc73c02e70",
+      "calibration_job_id": "d6k9kjg60irc7395h41g",
+      "perturbed_echo_depthavg": 0.16153333333333333
+    },
+    {
+      "tag": "q14_raw_exact",
+      "qubits": 14,
+      "shots": 4000,
+      "backend": "ibm_fez",
+      "hardware_job_id": "d6k96nsmmeis739sfjg0",
+      "calibration_job_id": null,
+      "perturbed_echo_depthavg": 0.07793749999999999
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "metric_definition": {
+    "subset_depth1_depth2": "readout-mitigated shallow subset-proxy contrast = far-disjoint perturbed_subset_echo minus overlap perturbed_subset_echo",
+    "q14_checkpoint_zne_d2": "corrected local-fold checkpoint ZNE overlap minus disjoint on q14 at depth 2",
+    "q80_full_register_blockz_d2": "absolute median paired block-Z linear-return delta magnitude on the exploratory full-register bonus track at depth 2"
+  },
+  "data": {
+    "q14_checkpoint_zne_d2": {
+      "2": {
+        "overlap_minus_disjoint": 0.2795658830550067,
+        "overlap": 0.36591747736977287,
+        "disjoint": 0.08635159431476618
+      },
+      "3": {
+        "overlap_minus_disjoint": 0.017749049813616476,
+        "overlap": 0.025826464716747908,
+        "disjoint": 0.00807741490313143
+      }
+    },
+    "q20_subset_seeded_from_note": {
+      "depth1_delta": 0.98326,
+      "depth2_delta": 0.66936,
+      "source_note": ".gpd/research/OLE_HARDWARE_PATH.md lines 299-300"
+    },
+    "q24_subset_SA": {
+      "depth1_overlap": {
+        "mean": 0.008990347378672063,
+        "std": 0.0037364151008362927
+      },
+      "depth1_far": {
+        "mean": 0.9911460065320519,
+        "std": 0.0009057650284013424
+      },
+      "depth1_delta": 0.9821556591533798,
+      "depth2_overlap": {
+        "mean": 0.03728259734220975,
+        "std": 0.007018609173325766
+      },
+      "depth2_far": {
+        "mean": 0.8975834389600584,
+        "std": 0.001965463762759675
+      },
+      "depth2_delta": 0.8603008416178487
+    },
+    "q32_subset_SA": {
+      "depth1_overlap": {
+        "mean": 0.006293929804915118,
+        "std": 0.003419611933218393
+      },
+      "depth1_far": {
+        "mean": 0.993414365809743,
+        "std": 0.0010284775242603273
+      },
+      "depth1_delta": 0.9871204360048278,
+      "depth2_overlap": {
+        "mean": 0.27766082500484174,
+        "std": 0.16929383090856542
+      },
+      "depth2_far": {
+        "mean": 0.9400612460297184,
+        "std": 0.0022142159977284878
+      },
+      "depth2_delta": 0.6624004210248766
+    },
+    "q80_subset_SA_pilot": {
+      "depth1_overlap": {
+        "mean": 0.006685409026045137,
+        "std": 0.0029328082930899476
+      },
+      "depth1_far": {
+        "mean": 0.990889904634654,
+        "std": 0.000273491753378569
+      },
+      "depth1_delta": 0.9842044956086089,
+      "depth2_overlap": {
+        "mean": 0.06550835813687385,
+        "std": 0.03523416454034049
+      },
+      "depth2_far": {
+        "mean": 0.9566094093114649,
+        "std": 0.002270835762247177
+      },
+      "depth2_delta": 0.891101051174591
+    },
+    "q80_full_register_bonus_blockz": {
+      "front10_relative_linear_return_delta": {
+        "mean": 0.09856395493000818,
+        "std": 0.03287702546905763,
+        "median": 0.09417715399589621,
+        "min": 0.04243468259369054,
+        "max": 0.13748759948399114
+      },
+      "back10_relative_linear_return_delta": {
+        "mean": -0.10373091997446231,
+        "std": 0.052113586962024755,
+        "median": -0.12446937160170812,
+        "min": -0.1553396724038104,
+        "max": -0.005278698477172439
+      },
+      "full_register_signal_marker": 0.09417715399589621
+    }
+  }
+}

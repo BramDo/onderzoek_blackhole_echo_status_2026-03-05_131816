@@ -1,0 +1,50 @@
+{
+  "diagnostic_only": true,
+  "source_json": "C:\\Users\\Lenna\\SynologyDrive\\qlab\\onderzoek_blackhole_echo_status_2026-03-05_131816\\files\\quantum-math-lab\\results\\hardware\\bonus_full_q80_2026-03-21\\depth2_paired_capture\\full_q80_q0_q79_paired_t5.json",
+  "estimator_family": "relative_hamming_return_linear",
+  "comparison": {
+    "asymmetric_local_mitigation": {
+      "mean": -0.000499882027571652,
+      "std": 0.00934690465339076,
+      "median": -0.0005909543447883969,
+      "mad": 0.003998619725249175,
+      "min": -0.013842507949937133,
+      "max": 0.014914969801673728
+    },
+    "symmetrized_local_mitigation": {
+      "mean": -0.00043537765572585483,
+      "std": 0.009374938234505137,
+      "median": -0.0004674054654559834,
+      "mad": 0.004091704723905076,
+      "min": -0.013842053471249671,
+      "max": 0.01499725382142203
+    }
+  },
+  "per_trial": [
+    {
+      "trial": 0,
+      "asymmetric_delta": -0.013842507949937133,
+      "symmetrized_delta": -0.013842053471249671
+    },
+    {
+      "trial": 1,
+      "asymmetric_delta": 0.0016086564252311142,
+      "symmetrized_delta": 0.0016944270260154104
+    },
+    {
+      "trial": 2,
+      "asymmetric_delta": 0.014914969801673728,
+      "symmetrized_delta": 0.01499725382142203
+    },
+    {
+      "trial": 3,
+      "asymmetric_delta": -0.0005909543447883969,
+      "symmetrized_delta": -0.0004674054654559834
+    },
+    {
+      "trial": 4,
+      "asymmetric_delta": -0.004589574070037572,
+      "symmetrized_delta": -0.00455911018936106
+    }
+  ]
+}

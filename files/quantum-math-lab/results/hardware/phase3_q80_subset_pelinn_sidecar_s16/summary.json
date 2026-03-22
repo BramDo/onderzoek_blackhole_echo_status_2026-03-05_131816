@@ -1,0 +1,46 @@
+{
+  "dataset": "results/hardware/phase3_q80_subset_pelinn_surrogate_s16_ckpt/q80_subset_surrogate_dataset.npz",
+  "feature_names": [
+    "total_qubits",
+    "subset_size",
+    "depth",
+    "trial",
+    "branch_overlap",
+    "perturb_qubit_norm",
+    "raw_subset_perturbed_echo",
+    "mitigated_subset_perturbed_echo",
+    "mitigation_gain",
+    "logical_pert_depth",
+    "logical_pert_two_qubit_count",
+    "zne_factor",
+    "noise_dep_effective",
+    "noise_readout_effective",
+    "suppression_enabled"
+  ],
+  "target_mode": "residual",
+  "best_epoch": 59,
+  "epochs": 400,
+  "train_samples": 12,
+  "val_samples": 4,
+  "unique_logical_circuits": 8,
+  "train_metrics_sidecar": {
+    "mae": 0.24253809452056885,
+    "rmse": 0.2830568552017212
+  },
+  "val_metrics_sidecar": {
+    "mae": 0.16894860565662384,
+    "rmse": 0.18985994160175323
+  },
+  "train_metrics_baseline": {
+    "mae": 0.05589037016034126,
+    "rmse": 0.06612107902765274
+  },
+  "val_metrics_baseline": {
+    "mae": 0.08003176003694534,
+    "rmse": 0.08365987241268158
+  },
+  "val_improvement_over_baseline": {
+    "mae": -0.0889168456196785,
+    "rmse": -0.10620006918907166
+  }
+}

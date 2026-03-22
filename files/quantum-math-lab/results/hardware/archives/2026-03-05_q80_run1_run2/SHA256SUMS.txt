@@ -1,0 +1,2 @@
+a17c930d7b429ffcadde8d6838daf9ec848e3610e5b1a26abe59979b5b4f40a2  results/hardware/archives/2026-03-05_q80_run1_run2/black_hole_hardware_q80_raw.json
+a1e17f21ffcf4e0a604ffb0fe082ff5f393175f21577281a794597c45e92f25a  results/hardware/archives/2026-03-05_q80_run1_run2/black_hole_hardware_q80_subset01_mit.json

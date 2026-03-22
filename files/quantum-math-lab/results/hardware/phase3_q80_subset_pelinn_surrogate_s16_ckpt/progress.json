@@ -1,0 +1,50 @@
+{
+  "completed_samples": 16,
+  "total_samples": 16,
+  "percent_complete": 100.0,
+  "elapsed_seconds": 3654.823494911194,
+  "eta_seconds": 0.0,
+  "last_sample": {
+    "circuit_index": 7,
+    "depth": 2,
+    "trial": 1,
+    "seed": 451347887,
+    "perturb_qubit": 10,
+    "branch": "disjoint",
+    "subset_qubits": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "target_name": "exact_perturbed_subset_echo",
+    "zne_factor": 3.0,
+    "suppression_enabled": false,
+    "raw_subset_perturbed_echo": 0.0685,
+    "mitigated_subset_perturbed_echo": 0.09137564246458617,
+    "exact_perturbed_subset_echo": 0.003254538362748691
+  },
+  "feature_names": [
+    "total_qubits",
+    "subset_size",
+    "depth",
+    "trial",
+    "branch_overlap",
+    "perturb_qubit_norm",
+    "raw_subset_perturbed_echo",
+    "mitigated_subset_perturbed_echo",
+    "mitigation_gain",
+    "logical_pert_depth",
+    "logical_pert_two_qubit_count",
+    "zne_factor",
+    "noise_dep_effective",
+    "noise_readout_effective",
+    "suppression_enabled"
+  ]
+}

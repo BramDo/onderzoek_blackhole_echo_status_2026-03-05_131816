@@ -1,0 +1,725 @@
+{
+  "config": {
+    "qubits": 10,
+    "trials": 3,
+    "depths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10
+    ],
+    "seed": 424242
+  },
+  "results": [
+    {
+      "depth": 1,
+      "ideal_echo": {
+        "mean": 1.0000000000000002,
+        "std": 5.588000014763635e-16
+      },
+      "perturbed_echo": {
+        "mean": 0.003905671079689253,
+        "std": 0.0024815739079178827
+      },
+      "renyi2": {
+        "mean": 0.15021543849808752,
+        "std": 0.11397398389227373
+      },
+      "otoc_real": {
+        "mean": 1.0000000000000009,
+        "std": 1.0094282222676724e-15
+      },
+      "commutator_sq": {
+        "mean": -4.440892098500626e-16,
+        "std": 5.047141111338362e-16
+      },
+      "samples": [
+        {
+          "depth": 1,
+          "ideal_echo": 1.0,
+          "perturbed_echo": 0.003949732857479362,
+          "renyi2": 0.004304542893248739,
+          "otoc_real": 1.000000000000002,
+          "commutator_sq": -9.992007221626409e-16
+        },
+        {
+          "depth": 1,
+          "ideal_echo": 0.9999999999999996,
+          "perturbed_echo": 0.0069226955556225085,
+          "renyi2": 0.16386143162201747,
+          "otoc_real": 0.9999999999999996,
+          "commutator_sq": 2.220446049250313e-16
+        },
+        {
+          "depth": 1,
+          "ideal_echo": 1.0000000000000009,
+          "perturbed_echo": 0.000844584825965889,
+          "renyi2": 0.2824803409789963,
+          "otoc_real": 1.000000000000001,
+          "commutator_sq": -5.551115123125783e-16
+        }
+      ]
+    },
+    {
+      "depth": 2,
+      "ideal_echo": {
+        "mean": 1.0000000000000004,
+        "std": 6.280369834735101e-16
+      },
+      "perturbed_echo": {
+        "mean": 0.2989514032219125,
+        "std": 0.26028084163108556
+      },
+      "renyi2": {
+        "mean": 0.12866782191534074,
+        "std": 0.09497646907287285
+      },
+      "otoc_real": {
+        "mean": 1.0000000000000002,
+        "std": 4.486912934894983e-16
+      },
+      "commutator_sq": {
+        "mean": -1.295260195396016e-16,
+        "std": 2.235812641248164e-16
+      },
+      "samples": [
+        {
+          "depth": 2,
+          "ideal_echo": 1.0,
+          "perturbed_echo": 0.653410151579937,
+          "renyi2": 0.006612366568261528,
+          "otoc_real": 1.0,
+          "commutator_sq": 0.0
+        },
+        {
+          "depth": 2,
+          "ideal_echo": 1.0000000000000013,
+          "perturbed_echo": 0.2076779570794608,
+          "renyi2": 0.2382511247717409,
+          "otoc_real": 1.0000000000000009,
+          "commutator_sq": -4.440892098500626e-16
+        },
+        {
+          "depth": 2,
+          "ideal_echo": 1.0,
+          "perturbed_echo": 0.03576610100633974,
+          "renyi2": 0.14113997440601977,
+          "otoc_real": 0.9999999999999999,
+          "commutator_sq": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "depth": 3,
+      "ideal_echo": {
+        "mean": 1.0000000000000004,
+        "std": 7.251946429389431e-16
+      },
+      "perturbed_echo": {
+        "mean": 0.1959763276498481,
+        "std": 0.25860091409224545
+      },
+      "renyi2": {
+        "mean": 0.2708439632958226,
+        "std": 0.1785180776656207
+      },
+      "otoc_real": {
+        "mean": 1.0000000000000002,
+        "std": 6.903647322763728e-16
+      },
+      "commutator_sq": {
+        "mean": -2.220446049250313e-16,
+        "std": 3.268408087260198e-16
+      },
+      "samples": [
+        {
+          "depth": 3,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.0039780842078032085,
+          "renyi2": 0.5148352645035401,
+          "otoc_real": 1.0000000000000013,
+          "commutator_sq": -6.661338147750939e-16
+        },
+        {
+          "depth": 3,
+          "ideal_echo": 0.9999999999999996,
+          "perturbed_echo": 0.5615383456314544,
+          "renyi2": 0.09268569361693722,
+          "otoc_real": 0.9999999999999998,
+          "commutator_sq": 1.1102230246251565e-16
+        },
+        {
+          "depth": 3,
+          "ideal_echo": 1.0000000000000013,
+          "perturbed_echo": 0.02241255311028668,
+          "renyi2": 0.2050109317669905,
+          "otoc_real": 1.0000000000000002,
+          "commutator_sq": -1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "depth": 4,
+      "ideal_echo": {
+        "mean": 0.9999999999999994,
+        "std": 1.137640067256873e-15
+      },
+      "perturbed_echo": {
+        "mean": 0.13224725319852718,
+        "std": 0.17932568919732272
+      },
+      "renyi2": {
+        "mean": 0.4580505079572877,
+        "std": 0.12726490079156358
+      },
+      "otoc_real": {
+        "mean": 0.9999999999999992,
+        "std": 1.1853938111129682e-15
+      },
+      "commutator_sq": {
+        "mean": 3.515706244646329e-16,
+        "std": 5.915404226877116e-16
+      },
+      "samples": [
+        {
+          "depth": 4,
+          "ideal_echo": 0.9999999999999978,
+          "perturbed_echo": 0.005155865400443941,
+          "renyi2": 0.3305789896841201,
+          "otoc_real": 0.9999999999999977,
+          "commutator_sq": 1.1657341758564144e-15
+        },
+        {
+          "depth": 4,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.005734038940623675,
+          "renyi2": 0.6318216772220657,
+          "otoc_real": 0.9999999999999998,
+          "commutator_sq": 1.1102230246251565e-16
+        },
+        {
+          "depth": 4,
+          "ideal_echo": 0.9999999999999998,
+          "perturbed_echo": 0.38585185525451393,
+          "renyi2": 0.41175085696567737,
+          "otoc_real": 1.0000000000000004,
+          "commutator_sq": -2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "depth": 5,
+      "ideal_echo": {
+        "mean": 1.0000000000000004,
+        "std": 1.3073632349040793e-15
+      },
+      "perturbed_echo": {
+        "mean": 0.16432314675952978,
+        "std": 0.1536828875106554
+      },
+      "renyi2": {
+        "mean": 0.6865920951680523,
+        "std": 0.19624553143326384
+      },
+      "otoc_real": {
+        "mean": 1.0000000000000002,
+        "std": 1.7019396688362377e-15
+      },
+      "commutator_sq": {
+        "mean": -1.6653345369377348e-16,
+        "std": 8.491573300505515e-16
+      },
+      "samples": [
+        {
+          "depth": 5,
+          "ideal_echo": 1.0000000000000009,
+          "perturbed_echo": 0.37309869599865975,
+          "renyi2": 0.7670419197045447,
+          "otoc_real": 0.9999999999999997,
+          "commutator_sq": 1.6653345369377348e-16
+        },
+        {
+          "depth": 5,
+          "ideal_echo": 1.0000000000000018,
+          "perturbed_echo": 0.11225384306891925,
+          "renyi2": 0.41633602803090175,
+          "otoc_real": 1.0000000000000027,
+          "commutator_sq": -1.3322676295501878e-15
+        },
+        {
+          "depth": 5,
+          "ideal_echo": 0.9999999999999987,
+          "perturbed_echo": 0.007616901211010341,
+          "renyi2": 0.8763983377687107,
+          "otoc_real": 0.9999999999999987,
+          "commutator_sq": 6.661338147750939e-16
+        }
+      ]
+    },
+    {
+      "depth": 6,
+      "ideal_echo": {
+        "mean": 1.0000000000000002,
+        "std": 1.651709406611627e-15
+      },
+      "perturbed_echo": {
+        "mean": 0.08174853934319876,
+        "std": 0.11459223049725475
+      },
+      "renyi2": {
+        "mean": 0.5040290256672775,
+        "std": 0.2612199222530941
+      },
+      "otoc_real": {
+        "mean": 1.0000000000000007,
+        "std": 1.6467268631127714e-15
+      },
+      "commutator_sq": {
+        "mean": -3.7007434154171886e-16,
+        "std": 8.225313308571483e-16
+      },
+      "samples": [
+        {
+          "depth": 6,
+          "ideal_echo": 0.9999999999999989,
+          "perturbed_echo": 0.001295887072336271,
+          "renyi2": 0.17083492112257842,
+          "otoc_real": 0.9999999999999989,
+          "commutator_sq": 5.551115123125783e-16
+        },
+        {
+          "depth": 6,
+          "ideal_echo": 0.9999999999999996,
+          "perturbed_echo": 0.24380506285367207,
+          "renyi2": 0.5324593735736297,
+          "otoc_real": 1.0000000000000004,
+          "commutator_sq": -2.220446049250313e-16
+        },
+        {
+          "depth": 6,
+          "ideal_echo": 1.0000000000000027,
+          "perturbed_echo": 0.00014466810358793695,
+          "renyi2": 0.8087927823056242,
+          "otoc_real": 1.0000000000000029,
+          "commutator_sq": -1.4432899320127035e-15
+        }
+      ]
+    },
+    {
+      "depth": 8,
+      "ideal_echo": {
+        "mean": 1.0000000000000002,
+        "std": 2.220446049250313e-16
+      },
+      "perturbed_echo": {
+        "mean": 0.19999397203511993,
+        "std": 0.011654128901646242
+      },
+      "renyi2": {
+        "mean": 0.657983985964684,
+        "std": 0.2445733788673881
+      },
+      "otoc_real": {
+        "mean": 1.0,
+        "std": 7.364386412590295e-16
+      },
+      "commutator_sq": {
+        "mean": 3.700743415417188e-17,
+        "std": 3.663549070262141e-16
+      },
+      "samples": [
+        {
+          "depth": 8,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.21271780492023534,
+          "renyi2": 0.7814049757976562,
+          "otoc_real": 0.9999999999999998,
+          "commutator_sq": 1.1102230246251565e-16
+        },
+        {
+          "depth": 8,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.18455978254673622,
+          "renyi2": 0.3164527431980725,
+          "otoc_real": 1.0000000000000009,
+          "commutator_sq": -4.440892098500626e-16
+        },
+        {
+          "depth": 8,
+          "ideal_echo": 1.0,
+          "perturbed_echo": 0.20270432863838822,
+          "renyi2": 0.8760942388983233,
+          "otoc_real": 0.9999999999999991,
+          "commutator_sq": 4.440892098500626e-16
+        }
+      ]
+    },
+    {
+      "depth": 10,
+      "ideal_echo": {
+        "mean": 1.0000000000000002,
+        "std": 2.220446049250313e-16
+      },
+      "perturbed_echo": {
+        "mean": 0.08585089643983923,
+        "std": 0.11422795586736684
+      },
+      "renyi2": {
+        "mean": 0.9202134625199991,
+        "std": 0.20667066024038633
+      },
+      "otoc_real": {
+        "mean": 0.9998912725916257,
+        "std": 0.00015139982780396815
+      },
+      "commutator_sq": {
+        "mean": 5.4363704187117744e-05,
+        "std": 7.569991390198406e-05
+      },
+      "samples": [
+        {
+          "depth": 10,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.24733292022160897,
+          "renyi2": 1.126935214292625,
+          "otoc_real": 0.9996771649239385,
+          "commutator_sq": 0.00016141753803072811
+        },
+        {
+          "depth": 10,
+          "ideal_echo": 1.0,
+          "perturbed_echo": 0.008944705139754427,
+          "renyi2": 0.995790371112925,
+          "otoc_real": 0.9999994629846455,
+          "commutator_sq": 2.6850767725905555e-07
+        },
+        {
+          "depth": 10,
+          "ideal_echo": 1.0000000000000004,
+          "perturbed_echo": 0.0012750639581543036,
+          "renyi2": 0.6379148021544476,
+          "otoc_real": 0.9999971898662933,
+          "commutator_sq": 1.4050668533660549e-06
+        }
+      ]
+    }
+  ],
+  "noise": {
+    "enabled": true,
+    "config": {
+      "shots": 5000,
+      "noise_dep": 0.04,
+      "noise_readout": 0.02,
+      "readout_mitigation": false,
+      "mitigation_p_ro_effective": 0.02,
+      "zne": false,
+      "zne_factors": [
+        1.0
+      ],
+      "zne_order_requested": 2,
+      "zne_target_effective": "raw"
+    },
+    "per_depth": [
+      {
+        "depth": 1,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8154666666666669,
+                "std": 0.002168460795638821
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8154666666666669,
+              "std": 0.002168460795638821
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.056466666666666686,
+                "std": 0.010513906135315365
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.056466666666666686,
+              "std": 0.010513906135315365
+            }
+          }
+        }
+      },
+      {
+        "depth": 2,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8192,
+                "std": 0.004390899680020068
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8192,
+              "std": 0.004390899680020068
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.24460000000000004,
+                "std": 0.1741264674501458
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.24460000000000004,
+              "std": 0.1741264674501458
+            }
+          }
+        }
+      },
+      {
+        "depth": 3,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8135333333333334,
+                "std": 0.0008055363982396015
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8135333333333334,
+              "std": 0.0008055363982396015
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.1392,
+                "std": 0.1017750460574693
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.1392,
+              "std": 0.1017750460574693
+            }
+          }
+        }
+      },
+      {
+        "depth": 4,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8170000000000001,
+                "std": 0.0013063945294844897
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8170000000000001,
+              "std": 0.0013063945294844897
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.10539999999999998,
+                "std": 0.09108940662887202
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.10539999999999998,
+              "std": 0.09108940662887202
+            }
+          }
+        }
+      },
+      {
+        "depth": 5,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8177333333333334,
+                "std": 0.002067741655902866
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8177333333333334,
+              "std": 0.002067741655902866
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.07326666666666666,
+                "std": 0.0312961481477975
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.07326666666666666,
+              "std": 0.0312961481477975
+            }
+          }
+        }
+      },
+      {
+        "depth": 6,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8149333333333334,
+                "std": 0.003724990678586511
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8149333333333334,
+              "std": 0.003724990678586511
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.05893333333333334,
+                "std": 0.02822024490011067
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.05893333333333334,
+              "std": 0.02822024490011067
+            }
+          }
+        }
+      },
+      {
+        "depth": 8,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8196000000000003,
+                "std": 0.00016329931618561786
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8196000000000003,
+              "std": 0.00016329931618561786
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.03466666666666667,
+                "std": 0.006874752520798273
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.03466666666666667,
+              "std": 0.006874752520798273
+            }
+          }
+        }
+      },
+      {
+        "depth": 10,
+        "backend_modes": {
+          "aer depolarizing+readout": 6
+        },
+        "baseline_factor_used": 1.0,
+        "raw": {
+          "ideal_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.8169999999999998,
+                "std": 0.0031790984046844582
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.8169999999999998,
+              "std": 0.0031790984046844582
+            }
+          },
+          "perturbed_echo": {
+            "curve": [
+              {
+                "factor": 1.0,
+                "mean": 0.012266666666666667,
+                "std": 0.003920317447463776
+              }
+            ],
+            "baseline": {
+              "factor": 1.0,
+              "mean": 0.012266666666666667,
+              "std": 0.003920317447463776
+            }
+          }
+        }
+      }
+    ]
+  }
+}

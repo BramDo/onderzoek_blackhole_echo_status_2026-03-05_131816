@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.gpd/state.json.bak
+
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+
+paper/build/*.aux
+paper/build/*.bbl
+paper/build/*.blg
+paper/build/*.log
+paper/build/*.out

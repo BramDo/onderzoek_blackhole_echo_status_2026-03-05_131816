@@ -1,0 +1,191 @@
+{
+  "generated_utc": "2026-03-04T20:05:54.084715+00:00",
+  "scope": "Level-B evidence snapshot for IBM hardware black-hole echo workflow",
+  "jobs": {
+    "q10_pilot": {
+      "hardware_job_id": "d6k786o60irc7395dqkg",
+      "calibration_job_id": "d6k78r4mmeis739sct00",
+      "backend": "ibm_fez",
+      "sampler_options": null
+    },
+    "q80_subset01_mit": {
+      "hardware_job_id": "d6k818u33pjc73dmthcg",
+      "calibration_job_id": "d6k82skmmeis739sdtvg",
+      "backend": "ibm_fez",
+      "sampler_options": null
+    },
+    "q80_subset01_mit_xsup": {
+      "hardware_job_id": "d6k8ft860irc7395fep0",
+      "calibration_job_id": "d6k8g8860irc7395ff4g",
+      "backend": "ibm_torino",
+      "sampler_options": {
+        "dynamical_decoupling": {
+          "enable": true,
+          "sequence_type": "XY4",
+          "scheduling_method": "alap"
+        },
+        "twirling": {
+          "enable_gates": true,
+          "num_randomizations": 8,
+          "strategy": "active-accum"
+        }
+      }
+    },
+    "q80_subset02_mit_xsup_pq10": {
+      "hardware_job_id": "d6k8r1sgmsgc73c01b20",
+      "calibration_job_id": "d6k8rm860irc7395g2o0",
+      "backend": "ibm_fez",
+      "sampler_options": {
+        "dynamical_decoupling": {
+          "enable": true,
+          "sequence_type": "XY4",
+          "scheduling_method": "alap"
+        },
+        "twirling": {
+          "enable_gates": true,
+          "num_randomizations": 8,
+          "strategy": "active-accum"
+        }
+      }
+    },
+    "q80_subset02_mit_xsup_pq10_rerun1": {
+      "hardware_job_id": "d6k8tjsmmeis739sf5j0",
+      "calibration_job_id": "d6k8v8sgmsgc73c01ha0",
+      "backend": "ibm_fez",
+      "sampler_options": {
+        "dynamical_decoupling": {
+          "enable": true,
+          "sequence_type": "XY4",
+          "scheduling_method": "alap"
+        },
+        "twirling": {
+          "enable_gates": true,
+          "num_randomizations": 8,
+          "strategy": "active-accum"
+        }
+      }
+    },
+    "q80_subset02_mit_xsup_control_pq0": {
+      "hardware_job_id": "d6k8n7cgmsgc73c013og",
+      "calibration_job_id": "d6k8nhcmmeis739sepo0",
+      "backend": "ibm_torino",
+      "sampler_options": {
+        "dynamical_decoupling": {
+          "enable": true,
+          "sequence_type": "XY4",
+          "scheduling_method": "alap"
+        },
+        "twirling": {
+          "enable_gates": true,
+          "num_randomizations": 8,
+          "strategy": "active-accum"
+        }
+      }
+    }
+  },
+  "q10": {
+    "raw_ideal_err_mean": 0.20553333333333335,
+    "mit_ideal_err_mean": 0.0063962935766290795,
+    "raw_pert_err_mean": 0.04899192316229791,
+    "mit_pert_err_mean": 0.03429064929249297,
+    "ideal_err_abs_improvement": 0.19913703975670427,
+    "pert_err_abs_improvement": 0.014701273869804944,
+    "ideal_err_rel_improvement": 0.9688795317387492,
+    "pert_err_rel_improvement": 0.30007545980800393
+  },
+  "q80_subset_summaries": {
+    "q80_subset01_mit": {
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_subset_ideal_mean": 0.7732708333333334,
+      "raw_subset_pert_mean": 0.07716666666666666,
+      "mit_subset_ideal_mean": 0.8755236402114371,
+      "mit_subset_pert_mean": 0.07260264860916008,
+      "raw_gap_ideal_minus_pert": 0.6961041666666667,
+      "mit_gap_ideal_minus_pert": 0.802920991602277,
+      "raw_to_mit_ideal_shift": 0.10225280687810379,
+      "raw_to_mit_pert_shift": -0.004564018057506586
+    },
+    "q80_subset01_mit_xsup": {
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_subset_ideal_mean": 0.7313958333333334,
+      "raw_subset_pert_mean": 0.08766666666666667,
+      "mit_subset_ideal_mean": 0.8932661712593828,
+      "mit_subset_pert_mean": 0.06225019878045837,
+      "raw_gap_ideal_minus_pert": 0.6437291666666667,
+      "mit_gap_ideal_minus_pert": 0.8310159724789244,
+      "raw_to_mit_ideal_shift": 0.16187033792604943,
+      "raw_to_mit_pert_shift": -0.0254164678862083
+    },
+    "q80_subset02_mit_xsup_control_pq0": {
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_subset_ideal_mean": 0.764875,
+      "raw_subset_pert_mean": 0.7622291666666667,
+      "mit_subset_ideal_mean": 0.8793049888217382,
+      "mit_subset_pert_mean": 0.8800399920831241,
+      "raw_gap_ideal_minus_pert": 0.0026458333333332362,
+      "mit_gap_ideal_minus_pert": -0.0007350032613858692,
+      "raw_to_mit_ideal_shift": 0.11442998882173827,
+      "raw_to_mit_pert_shift": 0.11781082541645738
+    },
+    "q80_subset02_mit_xsup_pq10": {
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_subset_ideal_mean": 0.9012916666666667,
+      "raw_subset_pert_mean": 0.20764583333333334,
+      "mit_subset_ideal_mean": 0.9516566508434219,
+      "mit_subset_pert_mean": 0.21388957586301582,
+      "raw_gap_ideal_minus_pert": 0.6936458333333334,
+      "mit_gap_ideal_minus_pert": 0.7377670749804061,
+      "raw_to_mit_ideal_shift": 0.05036498417675517,
+      "raw_to_mit_pert_shift": 0.006243742529682489
+    },
+    "q80_subset02_mit_xsup_pq10_rerun1": {
+      "depths": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "raw_subset_ideal_mean": 0.9001458333333334,
+      "raw_subset_pert_mean": 0.2061875,
+      "mit_subset_ideal_mean": 0.9473651246040062,
+      "mit_subset_pert_mean": 0.21148987297088762,
+      "raw_gap_ideal_minus_pert": 0.6939583333333335,
+      "mit_gap_ideal_minus_pert": 0.7358752516331186,
+      "raw_to_mit_ideal_shift": 0.047219291270672814,
+      "raw_to_mit_pert_shift": 0.00530237297088762
+    }
+  },
+  "reproducibility_subset02_pq10": {
+    "mit_gap_run1": 0.7377670749804061,
+    "mit_gap_rerun1": 0.7358752516331186,
+    "mit_gap_delta": -0.0018918233472874357,
+    "mit_ideal_mean_delta": -0.004291526239415644,
+    "mit_pert_mean_delta": -0.002399702892128208
+  },
+  "usage_snapshot": {
+    "budget_seconds": 600,
+    "used_seconds": 255,
+    "remaining_seconds": 345,
+    "remaining_minutes": 5.75
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "scope": "q10 old-data quantum vs classical comparison (matched short setup: depths 1-4, trials 3)",
+  "classical_reference_file": "/home/bram/work/qlab/quantum-math-lab/results/benchmark/classical/black_hole_scrambling_q10_exact_short.json",
+  "hardware_raw_file": "/home/bram/work/qlab/quantum-math-lab/results/hardware/benchmark_q10_raw_short.json",
+  "hardware_mitigated_file": "/home/bram/work/qlab/quantum-math-lab/results/hardware/benchmark_q10_mit_short.json",
+  "rows_by_depth": [
+    {
+      "depth": 1,
+      "classical_exact_ideal": 1.0000000000000002,
+      "classical_exact_pert": 0.003905671079689253,
+      "hw_raw_ideal": 0.9949333333333333,
+      "hw_raw_pert": 0.0138,
+      "hw_mit_ideal": 0.9947980743946481,
+      "hw_mit_pert": 0.01642051982557358,
+      "abs_err_hw_raw_ideal_vs_classical": 0.005066666666666886,
+      "abs_err_hw_raw_pert_vs_classical": 0.009894328920310747,
+      "abs_err_hw_mit_ideal_vs_classical": 0.005201925605352153,
+      "abs_err_hw_mit_pert_vs_classical": 0.012514848745884327,
+      "abs_err_hw_mit_ideal_vs_hwmit_raw": 0.12779807439464808,
+      "abs_err_hw_mit_pert_vs_hwmit_raw": 0.01397948017442642
+    },
+    {
+      "depth": 2,
+      "classical_exact_ideal": 1.0000000000000004,
+      "classical_exact_pert": 0.2989514032219125,
+      "hw_raw_ideal": 0.9954666666666666,
+      "hw_raw_pert": 0.30319999999999997,
+      "hw_mit_ideal": 0.9963413707328481,
+      "hw_mit_pert": 0.29346737254161365,
+      "abs_err_hw_raw_ideal_vs_classical": 0.004533333333333833,
+      "abs_err_hw_raw_pert_vs_classical": 0.004248596778087477,
+      "abs_err_hw_mit_ideal_vs_classical": 0.0036586292671523246,
+      "abs_err_hw_mit_pert_vs_classical": 0.005484030680298846,
+      "abs_err_hw_mit_ideal_vs_hwmit_raw": 0.12167470406618142,
+      "abs_err_hw_mit_pert_vs_hwmit_raw": 0.02133403920828031
+    },
+    {
+      "depth": 3,
+      "classical_exact_ideal": 1.0000000000000004,
+      "classical_exact_pert": 0.1959763276498481,
+      "hw_raw_ideal": 0.9936000000000001,
+      "hw_raw_pert": 0.20953333333333332,
+      "hw_mit_ideal": 0.9910271971091174,
+      "hw_mit_pert": 0.18136663060912017,
+      "abs_err_hw_raw_ideal_vs_classical": 0.006400000000000294,
+      "abs_err_hw_raw_pert_vs_classical": 0.013557005683485224,
+      "abs_err_hw_mit_ideal_vs_classical": 0.008972802890883091,
+      "abs_err_hw_mit_pert_vs_classical": 0.014609697040727926,
+      "abs_err_hw_mit_ideal_vs_hwmit_raw": 0.1260938637757839,
+      "abs_err_hw_mit_pert_vs_hwmit_raw": 0.008299963942453498
+    },
+    {
+      "depth": 4,
+      "classical_exact_ideal": 0.9999999999999994,
+      "classical_exact_pert": 0.13224725319852718,
+      "hw_raw_ideal": 0.9944666666666665,
+      "hw_raw_pert": 0.14246666666666666,
+      "hw_mit_ideal": 0.9928604246593863,
+      "hw_mit_pert": 0.18383926472702336,
+      "abs_err_hw_raw_ideal_vs_classical": 0.005533333333332946,
+      "abs_err_hw_raw_pert_vs_classical": 0.010219413468139482,
+      "abs_err_hw_mit_ideal_vs_classical": 0.007139575340613158,
+      "abs_err_hw_mit_pert_vs_classical": 0.051592011528496184,
+      "abs_err_hw_mit_ideal_vs_hwmit_raw": 0.1251937579927197,
+      "abs_err_hw_mit_pert_vs_hwmit_raw": 0.013305931393690046
+    }
+  ],
+  "aggregate": {
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "mae_hw_raw_ideal_vs_classical": 0.00538333333333349,
+    "mae_hw_raw_pert_vs_classical": 0.009479836212505732,
+    "mae_hw_mit_ideal_vs_classical": 0.006243233276000182,
+    "mae_hw_mit_pert_vs_classical": 0.02105014699885182,
+    "delta_mae_ideal_mit_minus_raw": 0.000859899942666692,
+    "delta_mae_pert_mit_minus_raw": 0.011570310786346088
+  },
+  "runtime_usage": {
+    "raw_hw_job_id": "d6k9jk4mmeis739sg54g",
+    "mit_hw_job_id": "d6k9k6sgmsgc73c02e70",
+    "mit_cal_job_id": "d6k9kjg60irc7395h41g",
+    "raw_hw_usage_s": 36.0,
+    "mit_hw_usage_s": 32.0,
+    "mit_cal_usage_s": 3.0,
+    "mit_total_usage_s": 35.0,
+    "classical_wall_s": 26.02,
+    "ratio_hw_raw_to_classical_wall": 1.3835511145272867,
+    "ratio_hw_mit_to_classical_wall": 1.345119139123751,
+    "classical_max_rss_gib": 0.19268417358398438
+  },
+  "notes": [
+    "This is an interim q10 comparison using existing completed runs only.",
+    "Classical reference uses exact statevector workflow for q10 short setup.",
+    "Hardware jobs were run on different backends (raw on ibm_marrakesh, mitigated on ibm_fez), so this is indicative, not final Level-C proof."
+  ]
+}

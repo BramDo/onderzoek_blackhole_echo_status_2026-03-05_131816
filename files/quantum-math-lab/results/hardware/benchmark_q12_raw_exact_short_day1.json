@@ -1,0 +1,493 @@
+{
+  "config": {
+    "qubits": 12,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "trials": 3,
+    "seed": 424242,
+    "shots": 4000,
+    "perturb_qubit": 0,
+    "optimization_level": 1,
+    "readout_mitigation": false,
+    "cal_shots": 4000,
+    "skip_exact": false,
+    "subset_qubits": [],
+    "extra_error_suppression": false,
+    "dd_sequence": null,
+    "twirl_randomizations": null
+  },
+  "runtime": {
+    "timestamp_utc": "2026-03-16T14:06:43.560607+00:00",
+    "sampler_interface": "reused_hardware_job",
+    "hardware_job_id": "d6rcd94u243c73a192m0",
+    "calibration_job_id": null,
+    "sampler_options": null,
+    "hardware_job_metadata": {
+      "job_id": "d6rcd94u243c73a192m0",
+      "status": "DONE",
+      "creation_date": "2026-03-15T15:48:04.527361+01:00",
+      "usage": 26,
+      "usage_estimation": {
+        "quantum_seconds": 28.178832416
+      },
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.40.0,qiskit-1.4.5*,qiskit_aer-0.17.0*,qiskit_experiments-0.7.0,qiskit_nature-0.7.2,qiskit_machine_learning-0.7.2,qiskit_optimization-0.6.1,circuit_knitting_toolbox-0.7.2",
+        "timestamps": {
+          "created": "2026-03-15T14:48:04.527361Z",
+          "finished": "2026-03-15T14:48:39.508895Z",
+          "running": "2026-03-15T14:48:08.199799Z"
+        },
+        "bss": {
+          "seconds": 26
+        },
+        "usage": {
+          "quantum_seconds": 26,
+          "seconds": 26
+        }
+      },
+      "session_id": null,
+      "backend_name": "ibm_fez"
+    },
+    "calibration_job_metadata": null
+  },
+  "backend": {
+    "name": "ibm_fez",
+    "backend_version": "1.3.37",
+    "num_qubits": 156,
+    "properties_last_update": "2026-03-16 14:41:41+01:00"
+  },
+  "calibration": null,
+  "runs": [
+    {
+      "depth": 1,
+      "trial": 0,
+      "seed": 2100976124,
+      "raw": {
+        "ideal_echo": 0.766,
+        "perturbed_echo": 0.03525,
+        "ideal_abs_error_vs_exact": 0.23399999999999999,
+        "perturbed_abs_error_vs_exact": 0.03130026714252063
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.003949732857479369
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 1,
+      "seed": 2038377967,
+      "raw": {
+        "ideal_echo": 0.7695,
+        "perturbed_echo": 0.01675,
+        "ideal_abs_error_vs_exact": 0.23050000000000004,
+        "perturbed_abs_error_vs_exact": 0.009827304444377492
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0069226955556225085
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 2,
+      "seed": 4191763410,
+      "raw": {
+        "ideal_echo": 0.76625,
+        "perturbed_echo": 0.017,
+        "ideal_abs_error_vs_exact": 0.23375,
+        "perturbed_abs_error_vs_exact": 0.016155415174034113
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0008445848259658894
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 0,
+      "seed": 451347887,
+      "raw": {
+        "ideal_echo": 0.77425,
+        "perturbed_echo": 0.048,
+        "ideal_abs_error_vs_exact": 0.22575,
+        "perturbed_abs_error_vs_exact": 0.01805630948141756
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.02994369051858244
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 1,
+      "seed": 1322332347,
+      "raw": {
+        "ideal_echo": 0.78025,
+        "perturbed_echo": 0.2885,
+        "ideal_abs_error_vs_exact": 0.21975,
+        "perturbed_abs_error_vs_exact": 0.04818775868720421
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.3366877586872042
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 2,
+      "seed": 1237866825,
+      "raw": {
+        "ideal_echo": 0.758,
+        "perturbed_echo": 0.08125,
+        "ideal_abs_error_vs_exact": 0.242,
+        "perturbed_abs_error_vs_exact": 0.04304740298126114
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 18,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.03820259701873886
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 0,
+      "seed": 2877251197,
+      "raw": {
+        "ideal_echo": 0.774,
+        "perturbed_echo": 0.03,
+        "ideal_abs_error_vs_exact": 0.22599999999999998,
+        "perturbed_abs_error_vs_exact": 0.0025807172952028445
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.03258071729520284
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 1,
+      "seed": 1033149845,
+      "raw": {
+        "ideal_echo": 0.7675,
+        "perturbed_echo": 0.32725,
+        "ideal_abs_error_vs_exact": 0.23250000000000004,
+        "perturbed_abs_error_vs_exact": 0.04020023183934884
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.36745023183934883
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 2,
+      "seed": 476211274,
+      "raw": {
+        "ideal_echo": 0.77475,
+        "perturbed_echo": 0.202,
+        "ideal_abs_error_vs_exact": 0.22524999999999995,
+        "perturbed_abs_error_vs_exact": 0.050739310416605954
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.25273931041660597
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 0,
+      "seed": 3058314195,
+      "raw": {
+        "ideal_echo": 0.76475,
+        "perturbed_echo": 0.02425,
+        "ideal_abs_error_vs_exact": 0.23524999999999996,
+        "perturbed_abs_error_vs_exact": 0.018632720957404092
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.005617279042595909
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 1,
+      "seed": 64606459,
+      "raw": {
+        "ideal_echo": 0.77225,
+        "perturbed_echo": 0.30725,
+        "ideal_abs_error_vs_exact": 0.22775,
+        "perturbed_abs_error_vs_exact": 0.054248264204131647
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.36149826420413167
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 2,
+      "seed": 2294287624,
+      "raw": {
+        "ideal_echo": 0.7685,
+        "perturbed_echo": 0.22875,
+        "ideal_abs_error_vs_exact": 0.23150000000000004,
+        "perturbed_abs_error_vs_exact": 0.11311197705438114
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 42,
+          "two_qubit_gate_count": 8
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.34186197705438115
+      }
+    }
+  ],
+  "summary_by_depth": [
+    {
+      "depth": 1,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7672499999999999,
+          "std": 0.001594260539142397
+        },
+        "perturbed_echo": {
+          "mean": 0.023000000000000003,
+          "std": 0.008662659329944046
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.23275,
+          "std": 0.001594260539142397
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.01909432892031074,
+          "std": 0.009009252365022747
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.003905671079689256,
+          "std": 0.0024815739079178827
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7708333333333334,
+          "std": 0.009399320306395677
+        },
+        "perturbed_echo": {
+          "mean": 0.13924999999999998,
+          "std": 0.106405082898641
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.22916666666666666,
+          "std": 0.009399320306395677
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.0364304903832943,
+          "std": 0.013160894271972918
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.1349446820748418,
+          "std": 0.1426937375521685
+        }
+      }
+    },
+    {
+      "depth": 3,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7720833333333333,
+          "std": 0.0032553374974374715
+        },
+        "perturbed_echo": {
+          "mean": 0.18641666666666667,
+          "std": 0.12185105890206926
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.22791666666666666,
+          "std": 0.0032553374974374715
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.03117341985038588,
+          "std": 0.020670833298334117
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.21759008651705256,
+          "std": 0.1389508279891696
+        }
+      }
+    },
+    {
+      "depth": 4,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7685,
+          "std": 0.0030618621784789524
+        },
+        "perturbed_echo": {
+          "mean": 0.18675,
+          "std": 0.11929026224577875
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.2315,
+          "std": 0.0030618621784789524
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.061997654071972295,
+          "std": 0.03895828744227504
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.23632584010036958,
+          "std": 0.16333243411780002
+        }
+      }
+    }
+  ]
+}

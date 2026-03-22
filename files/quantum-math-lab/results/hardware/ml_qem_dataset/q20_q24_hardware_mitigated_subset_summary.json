@@ -1,0 +1,36 @@
+{
+  "dataset_path": "results/hardware/ml_qem_dataset/q20_q24_hardware_mitigated_subset.npz",
+  "n_rows": 72,
+  "n_features": 16,
+  "n_groups": 72,
+  "feature_names": [
+    "qubits",
+    "subset_size",
+    "depth",
+    "trial",
+    "branch_overlap",
+    "perturb_qubit_norm",
+    "raw_perturbed_echo",
+    "mitigated_perturbed_echo",
+    "mitigation_gain",
+    "transpiled_depth",
+    "two_qubit_gate_count",
+    "zne_factor",
+    "optimization_level",
+    "seed_transpiler",
+    "extra_error_suppression",
+    "twirl_randomizations"
+  ],
+  "hardware_inputs": [
+    "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "results/hardware/phase3_q24_SA_q0_raw_vs_mit.json",
+    "results/hardware/phase3_q24_SA_q23_raw_vs_mit.json",
+    "results/hardware/phase3_q24_SB_q14_raw_vs_mit.json",
+    "results/hardware/phase3_q24_SB_q0_raw_vs_mit.json"
+  ],
+  "surrogate_inputs": [],
+  "target_field_for_hardware": "readout_mitigated.perturbed_subset_echo"
+}

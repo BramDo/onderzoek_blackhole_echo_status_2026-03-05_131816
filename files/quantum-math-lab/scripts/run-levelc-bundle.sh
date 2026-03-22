@@ -22,6 +22,7 @@ Stages:
   hardware-pilot       Hardware pilot on q=8,10 (raw + readout mitigation)
   hardware-80-subset   80q raw + subset mitigated runs (subset 0-9 and 10-19)
   hardware-80-xsup     80q subset run with extra suppression (DD + twirling)
+  hardware-q80-subset-proxy-sidecar 20q subset-locality proxy bundle with optional PE-LiNN diagnostic sidecar
   all                  Run all stages above in order
 
 Flags:
@@ -124,6 +125,10 @@ stage_hardware_80_xsup() {
   run_cmd "scripts/run-in-qiskit-venv.sh python qiskit_black_hole_hardware_runner.py --qubits 80 --depths ${depths} --trials 3 --shots 4000 --readout-mitigation --cal-shots 6000 --subset-qubits 0-9 --skip-exact --extra-error-suppression --dd-sequence XY4 --twirl-randomizations 8 --output-json results/hardware/black_hole_hardware_q80_subset01_mit_xsup.json"
 }
 
+stage_hardware_q80_sidecar() {
+  run_cmd "scripts/run-q80-subset-sidecar-bundle.sh --stage all$([[ $EXECUTE -eq 1 ]] && printf ' --execute')"
+}
+
 run_stage() {
   case "$1" in
     plan)
@@ -132,6 +137,7 @@ run_stage() {
       stage_hardware_pilot
       stage_hardware_80_subset
       stage_hardware_80_xsup
+      stage_hardware_q80_sidecar
       ;;
     classical-pilot)
       print_plan
@@ -149,12 +155,17 @@ run_stage() {
       print_plan
       stage_hardware_80_xsup
       ;;
+    hardware-q80-subset-proxy-sidecar|hardware-q80-sidecar)
+      print_plan
+      stage_hardware_q80_sidecar
+      ;;
     all)
       print_plan
       stage_classical_pilot
       stage_hardware_pilot
       stage_hardware_80_subset
       stage_hardware_80_xsup
+      stage_hardware_q80_sidecar
       ;;
     *)
       echo "Unknown stage: $1" >&2
