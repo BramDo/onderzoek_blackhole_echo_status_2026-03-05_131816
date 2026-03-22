@@ -13,5 +13,6 @@ paper/*.out
 paper/build/*.aux
 paper/build/*.bbl
 paper/build/*.blg
+paper/build/figure_signal_scale.png
 paper/build/*.log
 paper/build/*.out

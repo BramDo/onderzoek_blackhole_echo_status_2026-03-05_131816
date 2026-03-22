@@ -14,8 +14,8 @@ tags:
   - scale-up
   - guardrail
 requires:
-  - "files/quantum-math-lab/results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json"
-  - "files/quantum-math-lab/results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json"
+  - "files/quantum-math-lab/results/hardware/phase3_q20_SA_q0_raw_vs_mit.json"
+  - "files/quantum-math-lab/results/hardware/phase3_q20_SA_q19_raw_vs_mit.json"
   - "files/quantum-math-lab/results/hardware/phase3_q32_SA_q0_raw_vs_mit.json"
   - "files/quantum-math-lab/results/hardware/phase3_q32_SA_q31_raw_vs_mit.json"
   - "files/quantum-math-lab/results/hardware/phase3_q80pilot_SA_q0_raw_vs_mit.json"

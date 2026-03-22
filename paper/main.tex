@@ -25,7 +25,7 @@
 \maketitle
 
 \begin{abstract}
-We report a staged hardware evidence snapshot across q14, q20, q24, q32, and q80 echo-based scrambling benchmarks, with emphasis on locality-sensitive overlap-versus-far-disjoint controls. The strongest large-system evidence remains subset-proxy: for q20, q24, q32, and q80, shallow-depth readout-mitigated subset contrasts remain large and positive, showing a clear signal above a pure-noise baseline under fixed control geometry. At q14, the strongest admissible checkpoint-level hardware anchor remains the corrected local-fold zero-noise-extrapolated overlap-minus-disjoint separation at depth 2. At q80, an exploratory full-register bonus analysis based on a block-$Z$ fallback observable yields a smaller but still structured residual locality signal. We interpret these results as strong staged continuity for locality-sensitive echo observables across scale, while keeping explicit the gap between the current echo-family observables, subset-level diagnostics, and the still-unresolved fixed-observable operator Loschmidt echo target.
+We report a staged hardware evidence snapshot across q14, q20, q24, q32, and q80 echo-based scrambling benchmarks, with emphasis on locality-sensitive overlap-versus-far-disjoint controls. The strongest large-system evidence remains subset-proxy: for q20, q24, q32, and q80, shallow-depth readout-mitigated subset contrasts remain large and positive, showing a clear signal above a pure-noise baseline under fixed control geometry. At q14, the strongest admissible checkpoint-level hardware anchor remains the corrected local-fold zero-noise-extrapolated overlap-minus-disjoint separation at depth 2, selected from a broader mixed q14 hardware-control picture. At q80, the subset evidence reported here is still a first \texttt{S\_A = 0..9} pilot only, while an exploratory full-register bonus analysis based on a mirrored block-$Z$ fallback observable yields a smaller but still structured residual locality signal. We interpret these results as strong staged continuity for locality-sensitive echo observables across scale, while keeping explicit the gap between the current echo-family observables, subset-level diagnostics, and the still-unresolved fixed-observable operator Loschmidt echo target.
 \end{abstract}
 
 \section{Introduction}
@@ -194,7 +194,7 @@ and the q80 full-register point is a block-$Z$ fallback marker.
 
 \begin{table}[t]
 \centering
-\caption{Cross-scale signal magnitudes used in the present draft. Subset entries are readout-mitigated far-minus-overlap contrasts, the q14 anchor is the corrected local-fold checkpoint ZNE overlap-minus-disjoint signal, and the q80 bonus point is the absolute median paired block-$Z$ linear-return delta.}
+\caption{Cross-scale signal magnitudes used in the present draft. This table mixes three related but non-identical observables: subset entries are readout-mitigated far-minus-overlap contrasts, the q14 anchor is the corrected local-fold checkpoint ZNE overlap-minus-disjoint signal, and the q80 bonus point is the symmetric mean absolute paired block-$Z$ linear-return delta across `front10` and `back10`.}
 \label{tab:signals}
 \begin{tabular}{@{}llll@{}}
 \toprule
@@ -209,42 +209,31 @@ q32 & subset-proxy & 1 & 0.98712 \\
 q32 & subset-proxy & 2 & 0.66240 \\
 q80 & subset-proxy pilot & 1 & 0.98420 \\
 q80 & subset-proxy pilot & 2 & 0.89110 \\
-q80 & full-register bonus block-$Z$ & 2 & 0.09418 \\
+q80 & full-register bonus block-$Z$ & 2 & 0.10932 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[t]
 \centering
-\fbox{%
-\parbox{0.9\linewidth}{%
-\centering
-\vspace{1.25cm}
-\textbf{Figure placeholder}\\[0.5em]
-The repository plot asset for this figure is\\
-\texttt{signal\_above\_noise\_scale\_plot\_2026-03-21.png}\\
-and remains available in the summary artifacts.\\
-This placeholder is used only because the local TeX runtime refused direct binary image inclusion from this workspace during verification.
-\vspace{1.25cm}
-}%
-}
-\caption{Cross-scale snapshot of locality-sensitive signal magnitude across q14, q20, q24, q32, and q80. Blue and red lines show the readout-mitigated subset-proxy far-minus-overlap contrast at depths 1 and 2. The green marker shows the corrected local-fold q14 checkpoint ZNE overlap-minus-disjoint signal at depth 2. The purple marker shows the exploratory 80q full-register bonus signal based on the absolute median paired block-$Z$ linear-return delta. The final rendered plot asset is kept separately in the repository summary artifacts.}
+\includegraphics[width=0.96\linewidth]{figure_signal_scale.png}
+\caption{Cross-scale snapshot of locality-sensitive signal magnitude across q14, q20, q24, q32, and q80. Blue and red lines show the readout-mitigated subset-proxy far-minus-overlap contrast at depths 1 and 2. The green marker shows the corrected local-fold q14 checkpoint ZNE overlap-minus-disjoint signal at depth 2, selected as the cleanest checkpoint within a broader mixed q14 hardware picture. The q80 subset point is a first \texttt{S\_A = 0..9} pilot only. The purple marker shows the exploratory 80q full-register bonus signal based on the symmetric mean absolute paired block-$Z$ linear-return delta across \texttt{front10} and \texttt{back10}. The figure should be read as a staged evidence ladder rather than as a single observable family.}
 \label{fig:signal-scale}
 \end{figure}
 
 The strongest admissible q14 hardware anchor is the corrected local-fold checkpoint ZNE separation.
 At depth 2, its overlap-minus-disjoint signal is 0.27957.
-This is smaller than the later subset-proxy line, but still clearly positive and more disciplined than the broader whole-grid raw-versus-mitigated picture.
+This is smaller than the later subset-proxy line, but still clearly positive and more disciplined than the broader whole-grid raw-versus-mitigated picture. The broader q14 readout-mitigated controls remain mixed, so this point should be read as the best admissible checkpoint rather than as uniformly positive q14 hardware behavior.
 
 The cross-scale subset line is the main hardware result.
 At depth 1, the readout-mitigated far-minus-overlap contrast remains near 0.98 for q20, q24, q32, and q80.
 At depth 2, the signal decreases but remains strongly positive at every scale.
-The q80 subset pilot does not collapse relative to intermediate sizes; in this snapshot it remains among the strongest shallow-depth subset contrasts.
+The q80 subset pilot does not collapse relative to intermediate sizes; in this snapshot it remains among the strongest shallow-depth subset contrasts. The scope remains narrower than a whole-machine statement: this is the first \texttt{S\_A = 0..9} subset pilot, not a symmetric two-subset or full-register closure.
 This is the cleanest current evidence that locality-sensitive signal survives the scale-up path to 80 qubits in the subset-observable sense.
 
 The exploratory q80 full-register bonus path is intentionally harder than the subset line.
 Global full-register state-return observables proved fragile and mitigation-sensitive, so the stronger follow-up was a block-local $Z$ fallback on the same paired capture.
-This gives a smaller signal, with a robust median marker of 0.09418, but crucially it remains structured rather than null.
+This gives a smaller signal, with a symmetric mirrored-block marker of 0.10932, but crucially it remains structured rather than null.
 The sign pattern is spatially correct: a perturbation near $q=0$ primarily suppresses the front block, whereas a perturbation near $q=79$ primarily suppresses the back block.
 The correct reading is not that the full-register route is as strong as the subset route, but that locality structure still survives after a stricter observable change.
 
@@ -262,7 +251,7 @@ If the observed branch separation were only a generic decay artifact, moving the
 Instead, the data show that support geometry matters strongly on the subset line and remains visible, though weaker, in the q80 block-$Z$ bonus track.
 
 The present evidence therefore supports a two-tiered conclusion.
-First, subset-level locality language is already strong through q80.
+First, subset-level locality language is already strong through q80 on the current first-subset pilot.
 Second, the stricter full-register q80 bonus track retains a smaller but nonzero structured residual signal.
 What the evidence still does \emph{not} support is full-q80 OLE closure, global-q80 hardware confirmation, or a claim that the current observables already implement the final fixed-observable OLE estimator.
 

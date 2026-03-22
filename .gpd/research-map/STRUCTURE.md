@@ -149,7 +149,7 @@ powershell -ExecutionPolicy Bypass -File C:\Users\Lenna\SynologyDrive\qlab\onder
 
 **Missing expected helper assets:**
 
-- The snapshot does not contain `scripts/run-in-qiskit-venv.sh`, `quant_math_lab.py`, `qcqi_pure_math_playground.py`, `quantum_app.py`, or `quantumapp/`, even though `README.md` still references them.
+- The snapshot now contains `scripts/run-in-qiskit-venv.sh`, but it still does not contain `quant_math_lab.py`, `qcqi_pure_math_playground.py`, `quantum_app.py`, or `quantumapp/`, even though `README.md` still references them.
 
 ---
 

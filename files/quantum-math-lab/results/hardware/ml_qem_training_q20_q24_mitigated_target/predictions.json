@@ -1,7 +1,7 @@
 [
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -30,7 +30,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -59,7 +59,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -88,7 +88,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -117,7 +117,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -146,7 +146,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -175,7 +175,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -204,7 +204,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -233,7 +233,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -262,7 +262,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -291,7 +291,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -320,7 +320,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -349,7 +349,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -378,7 +378,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -407,7 +407,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -436,7 +436,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -465,7 +465,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -494,7 +494,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -523,7 +523,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -552,7 +552,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -581,7 +581,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -610,7 +610,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -639,7 +639,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -668,7 +668,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -697,7 +697,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -726,7 +726,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -755,7 +755,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -784,7 +784,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -813,7 +813,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -842,7 +842,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -871,7 +871,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -900,7 +900,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -929,7 +929,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -958,7 +958,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -987,7 +987,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1016,7 +1016,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1045,7 +1045,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1074,7 +1074,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1103,7 +1103,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1132,7 +1132,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1161,7 +1161,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1190,7 +1190,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1219,7 +1219,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1248,7 +1248,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1277,7 +1277,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1306,7 +1306,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1335,7 +1335,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [
@@ -1364,7 +1364,7 @@
   },
   {
     "source_kind": "hardware_json",
-    "source_path": "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json",
+    "source_path": "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json",
     "target_name": "readout_mitigated.perturbed_subset_echo",
     "qubits": 20,
     "subset_qubits": [

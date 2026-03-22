@@ -19,6 +19,8 @@ Primary artifacts for this note:
 - `results/hardware/summary/signal_above_noise_scale_plot_2026-03-21.png`
 - `results/hardware/summary/signal_above_noise_scale_plot_2026-03-21.json`
 - `results/hardware/phase3_q14_zne_xsup_s8000_f135_localfold.json`
+- `results/hardware/phase3_q20_SA_q0_raw_vs_mit.json`
+- `results/hardware/phase3_q20_SA_q19_raw_vs_mit.json`
 - `results/hardware/phase3_q24_SA_q0_raw_vs_mit.json`
 - `results/hardware/phase3_q24_SA_q23_raw_vs_mit.json`
 - `results/hardware/phase3_q32_SA_q0_raw_vs_mit.json`
@@ -40,7 +42,7 @@ Three related but not identical signal metrics are used in the plot:
    using the corrected local-fold checkpoint ZNE estimate at fixed depth.
 
 3. 80q exploratory full-register bonus signal:
-   `signal = |median paired block-Z linear-return delta|`
+   `signal = 0.5 * (|median(front10 delta)| + |median(back10 delta)|)`
    from the depth-2 `front10/back10` reuse analysis.
 
 These should be read together as a scale snapshot, not as one perfectly uniform observable family.
@@ -58,7 +60,7 @@ These should be read together as a scale snapshot, not as one perfectly uniform 
 | q32 | subset-proxy | 2 | 0.66240 |
 | q80 | subset-proxy pilot | 1 | 0.98420 |
 | q80 | subset-proxy pilot | 2 | 0.89110 |
-| q80 | full-register bonus block-Z | 2 | 0.09418 |
+| q80 | full-register bonus block-Z | 2 | 0.10932 |
 
 ## Immediate Readout
 
@@ -68,7 +70,7 @@ What the plot shows:
 - The same subset-proxy signal remains clearly positive at depth 2 on all recorded scales.
 - The q80 subset pilot is not weaker than the intermediate scales; in this snapshot it remains one of the cleanest shallow-depth separations.
 - The stricter q14 checkpoint metric is smaller but still clearly positive at depth 2.
-- The exploratory q80 full-register bonus track is much smaller than the subset line, but it does not collapse to zero; the block-local reuse still retains a visible structured signal.
+- The exploratory q80 full-register bonus track is much smaller than the subset line, but it does not collapse to zero; the mirrored block-local reuse still retains a visible structured signal.
 
 ## Interpretation Boundary
 

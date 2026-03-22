@@ -110,7 +110,7 @@
 **Operational Boundaries:**
 
 - `run_levelc_exact_short_day.ps1` no longer performs a distinct legacy flow; it forwards to the active q14-only runner.
-- The snapshot contains benchmark outputs and summary logic, but not the helper launcher `scripts/run-in-qiskit-venv.sh` referenced by the README and shell bundle.
+- The snapshot now contains the helper launcher `scripts/run-in-qiskit-venv.sh`, so the README and shell-bundle commands are again runnable from the packed repo.
 
 ---
 

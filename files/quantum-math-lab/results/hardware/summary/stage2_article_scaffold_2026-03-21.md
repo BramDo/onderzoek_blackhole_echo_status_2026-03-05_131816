@@ -241,19 +241,19 @@ The strongest admissible q14 hardware anchor is the corrected local-fold checkpo
 
 Draft text:
 
-The cross-scale subset line is the main result of the current hardware report. At depth 1 the readout-mitigated far-minus-overlap contrast is near `0.98` for q20, q24, q32, and q80. At depth 2 the signal decreases but remains strongly positive at every scale. The q80 pilot does not collapse relative to intermediate sizes; in this snapshot it remains among the strongest shallow-depth subset contrasts. This is the cleanest evidence that locality-sensitive signal survives the scale-up path to 80 qubits in the subset-observable sense.
+The cross-scale subset line is the main result of the current hardware report. At depth 1 the readout-mitigated far-minus-overlap contrast is near `0.98` for q20, q24, q32, and q80. At depth 2 the signal decreases but remains strongly positive at every scale. The q80 result here is specifically the first `S_A = 0..9` subset pilot rather than symmetric whole-machine coverage, but even with that narrower scope it does not collapse relative to intermediate sizes and remains among the strongest shallow-depth subset contrasts. This is the cleanest evidence that locality-sensitive signal survives the scale-up path to 80 qubits in the subset-observable sense.
 
 #### 5.3 Exploratory q80 full-register bonus track
 
 Draft text:
 
-The exploratory q80 full-register bonus path is intentionally harder than the subset line. Global full-register state-return observables were fragile and mitigation-sensitive, so the stronger follow-up was a block-local `Z` fallback on the same paired capture. This produces a smaller signal, with a robust median marker of `0.09418`, but crucially it remains structured rather than null. Moreover, the sign pattern is spatially correct: a perturbation near `q=0` primarily suppresses the `front10` block, while a perturbation near `q=79` suppresses the `back10` block. The right interpretation is not that the full-register route is “as strong” as the subset route, but that it still retains locality structure after a stricter observable change.
+The exploratory q80 full-register bonus path is intentionally harder than the subset line. Global full-register state-return observables were fragile and mitigation-sensitive, so the stronger follow-up was a block-local `Z` fallback on the same paired capture. This produces a smaller signal, with a symmetric mirrored-block marker of `0.10932` defined as the mean absolute median delta across `front10` and `back10`, but crucially it remains structured rather than null. Moreover, the sign pattern is spatially correct: a perturbation near `q=0` primarily suppresses the `front10` block, while a perturbation near `q=79` suppresses the `back10` block. The right interpretation is not that the full-register route is “as strong” as the subset route, but that it still retains locality structure after a stricter observable change.
 
 ### 6. Figure Caption Draft
 
 Suggested caption for the current plot:
 
-> Cross-scale snapshot of locality-sensitive signal magnitude across q14, q20, q24, q32, and q80. Blue and red lines show the readout-mitigated subset-proxy far-minus-overlap contrast at depths 1 and 2. The green marker shows the corrected local-fold q14 checkpoint ZNE overlap-minus-disjoint signal at depth 2. The purple marker shows the exploratory 80q full-register bonus signal based on the absolute median paired block-`Z` linear-return delta. The plot should be read as a staged evidence ladder rather than as a single observable family.
+> Cross-scale snapshot of locality-sensitive signal magnitude across q14, q20, q24, q32, and q80. Blue and red lines show the readout-mitigated subset-proxy far-minus-overlap contrast at depths 1 and 2. The green marker shows the corrected local-fold q14 checkpoint ZNE overlap-minus-disjoint signal at depth 2, selected as the cleanest checkpoint within a broader mixed q14 hardware picture. The q80 subset point is the first `S_A = 0..9` pilot only. The purple marker shows the exploratory 80q full-register bonus signal based on the symmetric mean absolute paired block-`Z` linear-return delta across `front10` and `back10`. The plot should be read as a staged evidence ladder rather than as a single observable family.
 
 ### 7. Claim Boundary Section
 

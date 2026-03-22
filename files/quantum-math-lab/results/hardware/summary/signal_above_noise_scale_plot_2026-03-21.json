@@ -2,7 +2,7 @@
   "metric_definition": {
     "subset_depth1_depth2": "readout-mitigated shallow subset-proxy contrast = far-disjoint perturbed_subset_echo minus overlap perturbed_subset_echo",
     "q14_checkpoint_zne_d2": "corrected local-fold checkpoint ZNE overlap minus disjoint on q14 at depth 2",
-    "q80_full_register_blockz_d2": "absolute median paired block-Z linear-return delta magnitude on the exploratory full-register bonus track at depth 2"
+    "q80_full_register_blockz_d2": "symmetric mean absolute paired block-Z linear-return delta across front10 and back10 on the exploratory full-register bonus track at depth 2"
   },
   "data": {
     "q14_checkpoint_zne_d2": {
@@ -17,10 +17,29 @@
         "disjoint": 0.00807741490313143
       }
     },
-    "q20_subset_seeded_from_note": {
-      "depth1_delta": 0.98326,
-      "depth2_delta": 0.66936,
-      "source_note": ".gpd/research/OLE_HARDWARE_PATH.md lines 299-300"
+    "q20_subset_SA_seeded": {
+      "source_files": [
+        "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
+        "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json"
+      ],
+      "depth1_overlap": {
+        "mean": 0.007489051062334766,
+        "std": 0.005390878626431586
+      },
+      "depth1_far": {
+        "mean": 0.990745116019261,
+        "std": 0.00010185765674136491
+      },
+      "depth1_delta": 0.9832560649569262,
+      "depth2_overlap": {
+        "mean": 0.28135316785819536,
+        "std": 0.34182597327216807
+      },
+      "depth2_far": {
+        "mean": 0.9507167379274613,
+        "std": 0.002024061674855825
+      },
+      "depth2_delta": 0.669363570069266
     },
     "q24_subset_SA": {
       "depth1_overlap": {
@@ -97,7 +116,8 @@
         "min": -0.1553396724038104,
         "max": -0.005278698477172439
       },
-      "full_register_signal_marker": 0.09417715399589621
+      "full_register_signal_marker": 0.10932326279880217,
+      "full_register_signal_marker_definition": "0.5 * (abs(front10 median delta) + abs(back10 median delta))"
     }
   }
 }

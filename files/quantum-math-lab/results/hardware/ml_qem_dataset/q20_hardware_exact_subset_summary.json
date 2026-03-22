@@ -22,10 +22,10 @@
     "twirl_randomizations"
   ],
   "hardware_inputs": [
-    "results/hardware/phase3_q80_SA_q0_raw_vs_mit_sidecar.json",
-    "results/hardware/phase3_q80_SA_q19_raw_vs_mit_sidecar.json",
-    "results/hardware/phase3_q80_SB_q10_raw_vs_mit_sidecar.json",
-    "results/hardware/phase3_q80_SB_q0_raw_vs_mit_sidecar.json"
+    "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
+    "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
+    "results/hardware/phase3_q20_SB_q10_raw_vs_mit.json",
+    "results/hardware/phase3_q20_SB_q0_raw_vs_mit.json"
   ],
   "surrogate_inputs": [],
   "target_field_for_hardware": "exact.perturbed_subset_echo"

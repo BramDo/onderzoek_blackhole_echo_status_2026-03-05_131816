@@ -32,6 +32,8 @@ def subset_branch_values(path: Path):
 
 
 def main() -> int:
+    q20_q0 = subset_branch_values(HARDWARE / "phase3_q20_SA_q0_raw_vs_mit.json")
+    q20_q19 = subset_branch_values(HARDWARE / "phase3_q20_SA_q19_raw_vs_mit.json")
     q24_q0 = subset_branch_values(HARDWARE / "phase3_q24_SA_q0_raw_vs_mit.json")
     q24_q23 = subset_branch_values(HARDWARE / "phase3_q24_SA_q23_raw_vs_mit.json")
     q32_q0 = subset_branch_values(HARDWARE / "phase3_q32_SA_q0_raw_vs_mit.json")
@@ -66,16 +68,19 @@ def main() -> int:
     block_cmp = q80_fullreg["summary_by_depth"][0]["paired_branch_comparison"]["comparisons"][0][
         "z_observable_blocks"
     ]["readout_mitigated"]
+    front10_median = abs(float(block_cmp["front10"]["relative_linear_return_delta"]["median"]))
+    back10_median = abs(float(block_cmp["back10"]["relative_linear_return_delta"]["median"]))
+    symmetric_block_marker = 0.5 * (front10_median + back10_median)
 
     series = {
         "subset_depth1": {
-            20: 0.98326,
+            20: q20_q19[1]["mean"] - q20_q0[1]["mean"],
             24: q24_q23[1]["mean"] - q24_q0[1]["mean"],
             32: q32_q31[1]["mean"] - q32_q0[1]["mean"],
             80: q80_q79[1]["mean"] - q80_q0[1]["mean"],
         },
         "subset_depth2": {
-            20: 0.66936,
+            20: q20_q19[2]["mean"] - q20_q0[2]["mean"],
             24: q24_q23[2]["mean"] - q24_q0[2]["mean"],
             32: q32_q31[2]["mean"] - q32_q0[2]["mean"],
             80: q80_q79[2]["mean"] - q80_q0[2]["mean"],
@@ -84,7 +89,7 @@ def main() -> int:
             14: q14_gap[2]["overlap_minus_disjoint"],
         },
         "q80_full_register_blockz_d2": {
-            80: abs(float(block_cmp["front10"]["relative_linear_return_delta"]["median"])),
+            80: symmetric_block_marker,
         },
     }
 
@@ -98,16 +103,23 @@ def main() -> int:
                 "corrected local-fold checkpoint ZNE overlap minus disjoint on q14 at depth 2"
             ),
             "q80_full_register_blockz_d2": (
-                "absolute median paired block-Z linear-return delta magnitude on the "
-                "exploratory full-register bonus track at depth 2"
+                "symmetric mean absolute paired block-Z linear-return delta across "
+                "front10 and back10 on the exploratory full-register bonus track at depth 2"
             ),
         },
         "data": {
             "q14_checkpoint_zne_d2": q14_gap,
-            "q20_subset_seeded_from_note": {
-                "depth1_delta": 0.98326,
-                "depth2_delta": 0.66936,
-                "source_note": ".gpd/research/OLE_HARDWARE_PATH.md lines 299-300",
+            "q20_subset_SA_seeded": {
+                "source_files": [
+                    "results/hardware/phase3_q20_SA_q0_raw_vs_mit.json",
+                    "results/hardware/phase3_q20_SA_q19_raw_vs_mit.json",
+                ],
+                "depth1_overlap": q20_q0[1],
+                "depth1_far": q20_q19[1],
+                "depth1_delta": q20_q19[1]["mean"] - q20_q0[1]["mean"],
+                "depth2_overlap": q20_q0[2],
+                "depth2_far": q20_q19[2],
+                "depth2_delta": q20_q19[2]["mean"] - q20_q0[2]["mean"],
             },
             "q24_subset_SA": {
                 "depth1_overlap": q24_q0[1],
@@ -136,8 +148,9 @@ def main() -> int:
             "q80_full_register_bonus_blockz": {
                 "front10_relative_linear_return_delta": block_cmp["front10"]["relative_linear_return_delta"],
                 "back10_relative_linear_return_delta": block_cmp["back10"]["relative_linear_return_delta"],
-                "full_register_signal_marker": abs(
-                    float(block_cmp["front10"]["relative_linear_return_delta"]["median"])
+                "full_register_signal_marker": symmetric_block_marker,
+                "full_register_signal_marker_definition": (
+                    "0.5 * (abs(front10 median delta) + abs(back10 median delta))"
                 ),
             },
         },
