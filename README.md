@@ -18,6 +18,18 @@ The plot is a staged evidence ladder from q14 to q80.
 
 The important message is not that all points are the same observable. They are not. The message is that the signal does not disappear as the system gets larger, and that even the stricter 80-qubit full-register bonus analysis still shows structured residual locality rather than pure noise.
 
+## Popular intuition
+
+The next picture is not a measurement plot. It is a visual explanation of the story the repo is trying to tell:
+
+- a sharp local perturbation starts on the left
+- the response spreads into a broader, lower scrambling front
+- later a smaller residual echo remains visible as a separate feature
+
+![Popular echo illustration](paper/figure_echo_pulse_popular.png)
+
+This image is intentionally illustrative only. It is meant to make the Hawking-information / scrambling intuition easier to see at a glance, not to replace the actual q14-to-q80 hardware evidence plot above.
+
 ## The 80-qubit result
 
 The cleanest current 80-qubit result is a first subset pilot on `S_A = 0..9`, comparing an overlap perturbation at `q=0` to a far-disjoint perturbation at `q=79`.
