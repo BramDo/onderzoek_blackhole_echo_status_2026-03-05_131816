@@ -1,0 +1,1528 @@
+{
+  "config": {
+    "qubits": 20,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "trials": 3,
+    "seed": 424242,
+    "shots": 8000,
+    "perturb_qubit": 10,
+    "optimization_level": 1,
+    "seed_transpiler": 424242,
+    "initial_layout": [],
+    "readout_mitigation": true,
+    "cal_shots": 6000,
+    "skip_exact": false,
+    "subset_qubits": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "ml_sidecar_checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+    "ml_sidecar_model": "/tmp/pelinnq.G4gAic/repo/src/model.py",
+    "ml_diagnostic_only": true,
+    "extra_error_suppression": true,
+    "dd_sequence": "XY4",
+    "twirl_randomizations": 8
+  },
+  "runtime": {
+    "timestamp_utc": "2026-03-19T22:07:40.997667+00:00",
+    "sampler_interface": "SamplerV2",
+    "hardware_job_id": "d6u72u8v5rlc73f3k93g",
+    "calibration_job_id": "d6u73es69uic73chtug0",
+    "sampler_options": {
+      "dynamical_decoupling": {
+        "enable": true,
+        "sequence_type": "XY4",
+        "scheduling_method": "alap"
+      },
+      "twirling": {
+        "enable_gates": true,
+        "num_randomizations": 8,
+        "strategy": "active-accum"
+      }
+    },
+    "hardware_job_metadata": {
+      "job_id": "d6u72u8v5rlc73f3k93g",
+      "status": "DONE",
+      "creation_date": "2026-03-19T22:58:17.871633+01:00",
+      "usage": 51,
+      "usage_estimation": {
+        "quantum_seconds": 46.351732677
+      },
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.40.0,qiskit-1.4.5*,qiskit_aer-0.17.0*,qiskit_experiments-0.7.0,qiskit_nature-0.7.2,qiskit_machine_learning-0.7.2,qiskit_optimization-0.6.1,circuit_knitting_toolbox-0.7.2",
+        "timestamps": {
+          "created": "2026-03-19T21:58:17.871633Z",
+          "finished": "2026-03-19T21:59:20.279532Z",
+          "running": "2026-03-19T21:58:19.271002Z"
+        },
+        "bss": {
+          "seconds": 51
+        },
+        "usage": {
+          "quantum_seconds": 51,
+          "seconds": 51
+        }
+      },
+      "session_id": null,
+      "backend_name": "ibm_fez"
+    },
+    "calibration_job_metadata": {
+      "job_id": "d6u73es69uic73chtug0",
+      "status": "DONE",
+      "creation_date": "2026-03-19T22:59:23.682636+01:00",
+      "usage": 5,
+      "usage_estimation": {
+        "quantum_seconds": 5.956003029
+      },
+      "metrics": {
+        "caller": "qiskit_ibm_runtime~sampler.py",
+        "qiskit_version": "qiskit_ibm_runtime-0.40.0,qiskit-1.4.5*,qiskit_aer-0.17.0*,qiskit_experiments-0.7.0,qiskit_nature-0.7.2,qiskit_machine_learning-0.7.2,qiskit_optimization-0.6.1,circuit_knitting_toolbox-0.7.2",
+        "timestamps": {
+          "created": "2026-03-19T21:59:23.682636Z",
+          "finished": "2026-03-19T22:03:55.362421Z",
+          "running": "2026-03-19T21:59:25.117126Z"
+        },
+        "bss": {
+          "seconds": 5
+        },
+        "usage": {
+          "quantum_seconds": 5,
+          "seconds": 5
+        }
+      },
+      "session_id": null,
+      "backend_name": "ibm_fez"
+    }
+  },
+  "backend": {
+    "name": "ibm_fez",
+    "backend_version": "1.3.37",
+    "num_qubits": 156,
+    "properties_last_update": "2026-03-19 22:18:23+01:00"
+  },
+  "calibration": {
+    "shots_all0": 6000,
+    "shots_all1": 6000,
+    "p01_per_qubit": [
+      0.016,
+      0.03166666666666667,
+      0.014,
+      0.0115,
+      0.0055,
+      0.0315,
+      0.013666666666666667,
+      0.024333333333333332,
+      0.0028333333333333335,
+      0.024,
+      0.008166666666666666,
+      0.012833333333333334,
+      0.029833333333333333,
+      0.0285,
+      0.0036666666666666666,
+      0.020166666666666666,
+      0.0016666666666666668,
+      0.011166666666666667,
+      0.009666666666666667,
+      0.009666666666666667
+    ],
+    "p10_per_qubit": [
+      0.027833333333333335,
+      0.03,
+      0.008333333333333333,
+      0.072,
+      0.018666666666666668,
+      0.050833333333333335,
+      0.015833333333333335,
+      0.0405,
+      0.012833333333333334,
+      0.017666666666666667,
+      0.008833333333333334,
+      0.0605,
+      0.028,
+      0.018333333333333333,
+      0.004333333333333333,
+      0.021833333333333333,
+      0.015333333333333332,
+      0.016,
+      0.01,
+      0.012166666666666666
+    ],
+    "local_model": "independent per-qubit asymmetric readout",
+    "calibration_job_id": "d6u73es69uic73chtug0",
+    "p01_mean": 0.015516666666666665,
+    "p10_mean": 0.02449166666666667,
+    "mitigation_qubits": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "mitigation_qubit_count": 10,
+    "mitigation_strategy": "dense_assignment",
+    "assignment_condition_number": 1.4329467687511854
+  },
+  "runs": [
+    {
+      "depth": 1,
+      "trial": 0,
+      "seed": 2100976124,
+      "raw": {
+        "ideal_echo": 0.764,
+        "perturbed_echo": 0.006125,
+        "ideal_abs_error_vs_exact": 0.236,
+        "perturbed_abs_error_vs_exact": 0.005131029420833724,
+        "ideal_subset_echo": 0.892125,
+        "perturbed_subset_echo": 0.007125,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0009939705791662762
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9954997122630621,
+        "perturbed_subset_echo": 0.0043710864588946035,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.027741133828987585,
+        "perturbed_negative_mass_before_clip": 0.025681734707602898
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.17036688854244053,
+        "delta_vs_mitigated": -0.0043710864588946035,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 1,
+      "seed": 2038377967,
+      "raw": {
+        "ideal_echo": 0.762875,
+        "perturbed_echo": 0.02175,
+        "ideal_abs_error_vs_exact": 0.23712500000000003,
+        "perturbed_abs_error_vs_exact": 0.020983779761277525,
+        "ideal_subset_echo": 0.889,
+        "perturbed_subset_echo": 0.026125,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0007662202387224735
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9936777039181809,
+        "perturbed_subset_echo": 0.021968555448701327,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.026110818098365452,
+        "perturbed_negative_mass_before_clip": 0.02038351453974943
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.14793230891401535,
+        "delta_vs_mitigated": -0.021968555448701327,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 1,
+      "trial": 2,
+      "seed": 4191763410,
+      "raw": {
+        "ideal_echo": 0.7525,
+        "perturbed_echo": 0.208625,
+        "ideal_abs_error_vs_exact": 0.24750000000000005,
+        "perturbed_abs_error_vs_exact": 0.06424179780662936,
+        "ideal_subset_echo": 0.881375,
+        "perturbed_subset_echo": 0.242875,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 14,
+          "two_qubit_gate_count": 2
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.27286679780662937
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9917616452652638,
+        "perturbed_subset_echo": 0.2651640900976329,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.018886239062061164,
+        "perturbed_negative_mass_before_clip": 0.02472114448876578
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.09462220758267931,
+        "unclipped_prediction": 0.09462220758267931,
+        "delta_vs_mitigated": -0.1705418825149536,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 0,
+      "seed": 451347887,
+      "raw": {
+        "ideal_echo": 0.792,
+        "perturbed_echo": 0.006125,
+        "ideal_abs_error_vs_exact": 0.20799999999999996,
+        "perturbed_abs_error_vs_exact": 0.005848010965089493,
+        "ideal_subset_echo": 0.909625,
+        "perturbed_subset_echo": 0.019875,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 26,
+          "two_qubit_gate_count": 6
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0002769890349105065
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9851180089297782,
+        "perturbed_subset_echo": 0.011722064459710734,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.059533097402343284,
+        "perturbed_negative_mass_before_clip": 0.060023356219704144
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.17691146687230525,
+        "delta_vs_mitigated": -0.011722064459710734,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 1,
+      "seed": 1322332347,
+      "raw": {
+        "ideal_echo": 0.794375,
+        "perturbed_echo": 0.15125,
+        "ideal_abs_error_vs_exact": 0.20562499999999995,
+        "perturbed_abs_error_vs_exact": 0.017169249159035255,
+        "ideal_subset_echo": 0.908,
+        "perturbed_subset_echo": 0.518125,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 26,
+          "two_qubit_gate_count": 6
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.16841924915903525
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9850096920631819,
+        "perturbed_subset_echo": 0.5529116466570928,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.05793252094459216,
+        "perturbed_negative_mass_before_clip": 0.0665355979022483
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.37588801234255576,
+        "unclipped_prediction": 0.37588801234255576,
+        "delta_vs_mitigated": -0.17702363431453705,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 2,
+      "trial": 2,
+      "seed": 1237866825,
+      "raw": {
+        "ideal_echo": 0.791625,
+        "perturbed_echo": 0.01075,
+        "ideal_abs_error_vs_exact": 0.20837499999999998,
+        "perturbed_abs_error_vs_exact": 0.006378239316170707,
+        "ideal_subset_echo": 0.909375,
+        "perturbed_subset_echo": 0.063125,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 26,
+          "two_qubit_gate_count": 6
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.004371760683829292
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9866153059225395,
+        "perturbed_subset_echo": 0.0593318441736973,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.057813287653685264,
+        "perturbed_negative_mass_before_clip": 0.0626319320241459
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.09808755425331228,
+        "delta_vs_mitigated": -0.0593318441736973,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 0,
+      "seed": 2877251197,
+      "raw": {
+        "ideal_echo": 0.79925,
+        "perturbed_echo": 0.008,
+        "ideal_abs_error_vs_exact": 0.20074999999999998,
+        "perturbed_abs_error_vs_exact": 0.007999429077377844,
+        "ideal_subset_echo": 0.873375,
+        "perturbed_subset_echo": 0.0165,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 12
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 5.709226221554325e-07
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9490389921043599,
+        "perturbed_subset_echo": 0.015476390141304492,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.05500181226668084,
+        "perturbed_negative_mass_before_clip": 0.01347819156898029
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.4509795760929027,
+        "delta_vs_mitigated": -0.015476390141304492,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 1,
+      "seed": 1033149845,
+      "raw": {
+        "ideal_echo": 0.801125,
+        "perturbed_echo": 0.02725,
+        "ideal_abs_error_vs_exact": 0.19887500000000002,
+        "perturbed_abs_error_vs_exact": 0.005311522873988447,
+        "ideal_subset_echo": 0.87675,
+        "perturbed_subset_echo": 0.04775,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 12
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.021938477126011553
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.949724370252578,
+        "perturbed_subset_echo": 0.029519934370241373,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.058483980378654474,
+        "perturbed_negative_mass_before_clip": 0.013410398655915846
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.4612147322156809,
+        "delta_vs_mitigated": -0.029519934370241373,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 3,
+      "trial": 2,
+      "seed": 476211274,
+      "raw": {
+        "ideal_echo": 0.805375,
+        "perturbed_echo": 0.011625,
+        "ideal_abs_error_vs_exact": 0.19462500000000005,
+        "perturbed_abs_error_vs_exact": 0.011427972971828813,
+        "ideal_subset_echo": 0.876375,
+        "perturbed_subset_echo": 0.045625,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 38,
+          "two_qubit_gate_count": 12
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.00019702702817118675
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9504631392024518,
+        "perturbed_subset_echo": 0.04736604969230871,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.057286970595064955,
+        "perturbed_negative_mass_before_clip": 0.014095526689887103
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.4480748804357888,
+        "delta_vs_mitigated": -0.04736604969230871,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 0,
+      "seed": 3058314195,
+      "raw": {
+        "ideal_echo": 0.802,
+        "perturbed_echo": 0.025625,
+        "ideal_abs_error_vs_exact": 0.19799999999999995,
+        "perturbed_abs_error_vs_exact": 0.012420136846343664,
+        "ideal_subset_echo": 0.875,
+        "perturbed_subset_echo": 0.082,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 50,
+          "two_qubit_gate_count": 20
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.03804513684634366
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9492888986680691,
+        "perturbed_subset_echo": 0.08802889308178379,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.056777018938171595,
+        "perturbed_negative_mass_before_clip": 0.01584269637672574
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.37042833843982265,
+        "delta_vs_mitigated": -0.08802889308178379,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 1,
+      "seed": 64606459,
+      "raw": {
+        "ideal_echo": 0.808,
+        "perturbed_echo": 0.03825,
+        "ideal_abs_error_vs_exact": 0.19199999999999995,
+        "perturbed_abs_error_vs_exact": 0.010080925592003798,
+        "ideal_subset_echo": 0.87575,
+        "perturbed_subset_echo": 0.097875,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 50,
+          "two_qubit_gate_count": 20
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.0483309255920038
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9524383469965203,
+        "perturbed_subset_echo": 0.09784727649887931,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.05415050397484718,
+        "perturbed_negative_mass_before_clip": 0.016079865041061382
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.36624158067504037,
+        "delta_vs_mitigated": -0.09784727649887931,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "depth": 4,
+      "trial": 2,
+      "seed": 2294287624,
+      "raw": {
+        "ideal_echo": 0.801,
+        "perturbed_echo": 0.206,
+        "ideal_abs_error_vs_exact": 0.19899999999999995,
+        "perturbed_abs_error_vs_exact": 0.14629219021670672,
+        "ideal_subset_echo": 0.877875,
+        "perturbed_subset_echo": 0.294125,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "transpiled": {
+        "ideal": {
+          "depth": 1,
+          "two_qubit_gate_count": 0
+        },
+        "perturbed": {
+          "depth": 50,
+          "two_qubit_gate_count": 20
+        }
+      },
+      "exact": {
+        "ideal_echo": 1.0,
+        "perturbed_echo": 0.3522921902167067
+      },
+      "readout_mitigated": {
+        "ideal_subset_echo": 0.9518935154603166,
+        "perturbed_subset_echo": 0.3194025166128763,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_negative_mass_before_clip": 0.0575347721794168,
+        "perturbed_negative_mass_before_clip": 0.02420505067334148
+      },
+      "ml_diagnostic": {
+        "perturbed_subset_echo": 0.0,
+        "unclipped_prediction": -0.18487381862653413,
+        "delta_vs_mitigated": -0.3194025166128763,
+        "diagnostic_only": true,
+        "source": "pelinn_sidecar",
+        "checkpoint": "results/hardware/phase3_q80_subset_pelinn_sidecar_s16/q80_subset_pelinn_sidecar.pt",
+        "feature_noise_mode": "surrogate_nominal",
+        "nominal_noise_dep_effective": 0.03,
+        "nominal_noise_readout_effective": 0.017,
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      }
+    }
+  ],
+  "summary_by_depth": [
+    {
+      "depth": 1,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7597916666666666,
+          "std": 0.005176402118159786
+        },
+        "perturbed_echo": {
+          "mean": 0.07883333333333332,
+          "std": 0.09199798080513628
+        },
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.8874999999999998,
+          "std": 0.004515021225494564
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.09204166666666667,
+          "std": 0.1069369622202206
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.24020833333333336,
+          "std": 0.005176402118159786
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.03011886899624687,
+          "std": 0.02498143479049904
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.09154232954150604,
+          "std": 0.1282157948181546
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9936463538155023,
+          "std": 0.0015262204606392273
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.09716791066840962,
+          "std": 0.11900827689933628
+        }
+      },
+      "ml_diagnostic": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "perturbed_subset_echo": {
+          "mean": 0.0315407358608931,
+          "std": 0.04460533642170247
+        },
+        "delta_vs_mitigated": {
+          "mean": -0.06562717480751652,
+          "std": 0.07453294416437393
+        }
+      }
+    },
+    {
+      "depth": 2,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.7926666666666667,
+          "std": 0.0012176365996835496
+        },
+        "perturbed_echo": {
+          "mean": 0.05604166666666666,
+          "std": 0.06734893074297633
+        },
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9090000000000001,
+          "std": 0.0007144345083117592
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.20037499999999997,
+          "std": 0.22537588971907943
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.2073333333333333,
+          "std": 0.0012176365996835496
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.009798499813431819,
+          "std": 0.005216400097312174
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.05768933295925835,
+          "std": 0.07831571806868831
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9855810023051665,
+          "std": 0.0007326987173367895
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.20798851843016694,
+          "std": 0.24467072576626983
+        }
+      },
+      "ml_diagnostic": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "perturbed_subset_echo": {
+          "mean": 0.12529600411418526,
+          "std": 0.17719530832943586
+        },
+        "delta_vs_mitigated": {
+          "mean": -0.0826925143159817,
+          "std": 0.0694763409669794
+        }
+      }
+    },
+    {
+      "depth": 3,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.8019166666666667,
+          "std": 0.0025624153102536086
+        },
+        "perturbed_echo": {
+          "mean": 0.015625,
+          "std": 0.008352270150484039
+        },
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.8755000000000001,
+          "std": 0.001510380746699327
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.036625,
+          "std": 0.014256942753152467
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.19808333333333336,
+          "std": 0.0025624153102536086
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.008246308307731702,
+          "std": 0.0025031250422392595
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.007378691692268298,
+          "std": 0.010295635407227458
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9497421671864633,
+          "std": 0.0005815417940800062
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.030787458067951523,
+          "std": 0.013049714142793352
+        }
+      },
+      "ml_diagnostic": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "perturbed_subset_echo": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "delta_vs_mitigated": {
+          "mean": -0.030787458067951523,
+          "std": 0.013049714142793352
+        }
+      }
+    },
+    {
+      "depth": 4,
+      "raw": {
+        "ideal_echo": {
+          "mean": 0.8036666666666666,
+          "std": 0.0030912061651652374
+        },
+        "perturbed_echo": {
+          "mean": 0.08995833333333332,
+          "std": 0.08221556607817984
+        },
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.8762083333333334,
+          "std": 0.0012176365996835168
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.158,
+          "std": 0.09647284807999953
+        },
+        "ideal_abs_error_vs_exact": {
+          "mean": 0.19633333333333328,
+          "std": 0.0030912061651652374
+        },
+        "perturbed_abs_error_vs_exact": {
+          "mean": 0.05626441755168473,
+          "std": 0.06366641116314405
+        }
+      },
+      "exact": {
+        "ideal_echo": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "perturbed_echo": {
+          "mean": 0.14622275088501804,
+          "std": 0.1457735909607486
+        }
+      },
+      "readout_mitigated": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "ideal_subset_echo": {
+          "mean": 0.9512069203749687,
+          "std": 0.0013743642898479797
+        },
+        "perturbed_subset_echo": {
+          "mean": 0.16842622873117982,
+          "std": 0.10683158019404171
+        }
+      },
+      "ml_diagnostic": {
+        "subset_qubits": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "perturbed_subset_echo": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "delta_vs_mitigated": {
+          "mean": -0.16842622873117982,
+          "std": 0.10683158019404171
+        }
+      }
+    }
+  ]
+}
