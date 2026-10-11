@@ -1,5 +1,7 @@
 # Echo, Scrambling, and the Black-Hole Information Story on 80 Qubits
 
+> **Software licensing:** Bram Dobbelaar's contributions to [`qiskit_black_hole_hardware_runner.py`](files/quantum-math-lab/qiskit_black_hole_hardware_runner.py) in the two source versions identified in [LICENSE_SCOPE.md](LICENSE_SCOPE.md) are licensed under Apache-2.0. Other repository content is outside this grant. See [PROVENANCE.md](docs/licensing/PROVENANCE.md) for upstream attribution.
+
 Stephen Hawking made the black-hole information problem famous: if black holes radiate, what happens to the information that falls in? The modern quantum-information answer is usually not "the information is destroyed," but "the information gets scrambled." It becomes hard to recover locally because it is spread over many degrees of freedom.
 
 This repository studies a hardware-accessible version of that story. The core question is: if we disturb one qubit locally and run an echo-style circuit, does the response stay local, or does it spread in a structured way across the system?
@@ -75,10 +77,27 @@ What this repo does not claim:
 - Cross-scale data snapshot: [signal_above_noise_scale_plot_2026-03-21.json](files/quantum-math-lab/results/hardware/summary/signal_above_noise_scale_plot_2026-03-21.json)
 - 80q block-Z bonus artifact: [full_q80_q0_q79_paired_t5_blockz_front10_back10.json](files/quantum-math-lab/results/hardware/bonus_full_q80_2026-03-21/depth2_paired_blockz_reuse/full_q80_q0_q79_paired_t5_blockz_front10_back10.json)
 
+## Quick start: inspect the hardware runner
+
+The runner imports NumPy, PyTorch, Qiskit, and the local companion module [`qiskit_black_hole_scrambling.py`](files/quantum-math-lab/qiskit_black_hole_scrambling.py). IBM hardware execution also uses `qiskit-ibm-runtime`. The companion module is outside the runner's Apache-2.0 grant; dependencies retain their own terms.
+
+In an activated Python virtual environment, from the repository root:
+
+```sh
+python -m pip install numpy torch qiskit qiskit-ibm-runtime
+python files/quantum-math-lab/qiskit_black_hole_hardware_runner.py --help
+```
+
+`--help` displays the available options and exits before connecting to IBM or submitting jobs. Keep both Python files in the same directory. Install `mthree` separately if using `--readout-mitigation-method m3`, and `qiskit-aer` if using the companion module's Aer simulation features.
+
+This is an inspection quick start. Historical dependency versions have not been reconstructed, so these commands do not define a pinned environment for reproducing the published hardware results. Hardware execution additionally requires IBM account credentials and access to the selected backend; choose the backend, qubit count, depths, trials, and shots explicitly before submitting a run.
+
 ## One-sentence summary
 
 This repository tracks a staged hardware result in which a locality-sensitive echo signal remains visible from q14 up to an 80-qubit pilot, offering a concrete many-body scrambling use case with a clear conceptual link to the black-hole information story.
 
 ## Software licence for the echo hardware runner
 
-Bram Dobbelaar's contributions in `files/quantum-math-lab/qiskit_black_hole_hardware_runner.py`, including its comments and docstrings, are licensed under Apache-2.0 from 11 October 2026. See [the exact file and version scope](LICENSE_SCOPE.md), [the full licence](LICENSES/Apache-2.0.txt), and [provenance and separate upstream notices](docs/licensing/PROVENANCE.md). Bram Dobbelaar is the sole credited author of his runner contributions. The notice does not grant a blanket licence for other repository content.
+Bram Dobbelaar's contributions, including comments and docstrings, in the two recorded source versions of `files/quantum-math-lab/qiskit_black_hole_hardware_runner.py` identified in [LICENSE_SCOPE.md](LICENSE_SCOPE.md) are licensed under Apache-2.0 from 11 October 2026. See [the exact file and version scope](LICENSE_SCOPE.md), [the full licence](LICENSES/Apache-2.0.txt), and [provenance and separate upstream notices](docs/licensing/PROVENANCE.md). Bram Dobbelaar is the sole credited author of his runner contributions. The notice does not grant a blanket licence for other repository content.
+
+For those licensed contributions, Apache-2.0 permits commercial use, modification, and redistribution subject to its conditions. When redistributing, include a copy of the licence, preserve applicable copyright and attribution notices (including the separate IBM/M3 notices and any supplied NOTICE attribution), and prominently mark modified files. This summary does not replace [the full licence](LICENSES/Apache-2.0.txt).
