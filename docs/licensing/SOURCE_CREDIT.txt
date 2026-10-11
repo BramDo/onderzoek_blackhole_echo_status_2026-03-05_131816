@@ -1,0 +1,24 @@
+Dobbelaar, Bram. 2026.
+qiskit_black_hole_hardware_runner.py.
+Repository: BramDo/onderzoek_blackhole_echo_status_2026-03-05_131816
+Path: files/quantum-math-lab/qiskit_black_hole_hardware_runner.py
+Sole credited author of Bram's runner contributions: Bram Dobbelaar.
+Development assistance: ChatGPT/Codex (tools, not co-authors).
+
+Recorded source snapshot commit: 78e09c48ab25b3c6ebc3fed36c483123fc057a61
+Recorded source Git blob: 30905b5b42a559f233527f0ea487f330cb6b1888
+Source with licensing/provenance comments, Git blob: b9909c78d25779aeb715caa2350bb12e4001becc
+Original source:
+https://github.com/BramDo/onderzoek_blackhole_echo_status_2026-03-05_131816/blob/78e09c48ab25b3c6ebc3fed36c483123fc057a61/files/quantum-math-lab/qiskit_black_hole_hardware_runner.py
+
+Licence notice publication date: 2026-10-11
+Software licence: Apache-2.0 for Bram-controlled contributions identified
+in LICENSE_SCOPE.md. Separate upstream material retains its own terms.
+Full standard licence text: LICENSES/Apache-2.0.txt
+Provenance and modification notices: docs/licensing/PROVENANCE.md
+Upstream IBM/M3 licence notice: LICENSES/third-party/M3-LICENSE.txt
+
+This is a suggested source credit, not an additional licence condition.
+Retain required licence texts and applicable third-party notices separately.
+The citation does not imply endorsement, require co-authorship or establish
+dataset inclusion or experimental validation.

@@ -78,3 +78,7 @@ What this repo does not claim:
 ## One-sentence summary
 
 This repository tracks a staged hardware result in which a locality-sensitive echo signal remains visible from q14 up to an 80-qubit pilot, offering a concrete many-body scrambling use case with a clear conceptual link to the black-hole information story.
+
+## Software licence for the echo hardware runner
+
+Bram Dobbelaar's contributions in `files/quantum-math-lab/qiskit_black_hole_hardware_runner.py`, including its comments and docstrings, are licensed under Apache-2.0 from 11 October 2026. See [the exact file and version scope](LICENSE_SCOPE.md), [the full licence](LICENSES/Apache-2.0.txt), and [provenance and separate upstream notices](docs/licensing/PROVENANCE.md). Bram Dobbelaar is the sole credited author of his runner contributions; ChatGPT/Codex was used as a development tool. The notice does not grant a blanket licence for other repository content.

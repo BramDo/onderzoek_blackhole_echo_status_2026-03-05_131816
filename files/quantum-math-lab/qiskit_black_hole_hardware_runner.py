@@ -1,4 +1,26 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Bram Dobbelaar
+# SPDX-License-Identifier: Apache-2.0
+#
+# qiskit_black_hole_hardware_runner.py
+# Licensed contributions: Copyright 2026 Bram Dobbelaar.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use the licensed contributions except in compliance with
+# the License. You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, the licensed
+# contributions are distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+# OR CONDITIONS OF ANY KIND, either express or implied. See the License
+# for the specific language governing permissions and limitations.
+#
+# See ../../LICENSE_SCOPE.md and ../../LICENSES/Apache-2.0.txt.
+# Sole credited author of Bram's runner contributions: Bram Dobbelaar.
+# ChatGPT/Codex provided development assistance as tools, not co-authors.
+# Separate IBM/M3 attribution applies to the calibration adapter below.
+# Changed on 2026-10-11: licensing and provenance comments added only;
+# executable code is identical to Git blob
+# 30905b5b42a559f233527f0ea487f330cb6b1888.
 """Hardware runner for black-hole scrambling echoes via IBM Runtime.
 
 This script runs ideal and perturbed Loschmidt-echo circuits on real IBM hardware,
@@ -779,6 +801,21 @@ def _estimate_local_readout_params(
     return p01, p10, info
 
 
+# Potentially adapted IBM/M3 material; upstream notice retained:
+# (C) Copyright IBM 2021.
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in LICENSES/Apache-2.0.txt at the repository
+# root or at http://www.apache.org/licenses/LICENSE-2.0.
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
+#
+# Comparison source: Qiskit/qiskit-addon-mthree, mthree/mitigation.py,
+# commit 8402654566900aed11b64f625e18b49aefb902eb, marginal _job_thread logic.
+# Possible adaptation: consumes existing zero/one histograms, normalises
+# bitstrings, populates M3Mitigation directly, and returns diagnostics.
+# This is a comparison version, not the verified development checkout.
+# Details and the original upstream header: ../../docs/licensing/PROVENANCE.md.
 def _build_m3_marginal_mitigator(
     counts_all0: Dict[str, int],
     counts_all1: Dict[str, int],
